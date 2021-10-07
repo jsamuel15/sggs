@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react';
 
 // Images
@@ -21,13 +22,13 @@ import {
 
 const HomePage: React.FC = () => {
     function ViewSlide() {
-        let totalSlides: any = document.querySelectorAll("slide-item").length;
+        let totalSlides: any = document.querySelectorAll('slide-item').length;
         let currentSlide = 0;
 
         console.log(totalSlides);
         // window.("#slide-width").style.width = `calc(100vw * ${totalSlides}*)`;
         // (document.getElementById("slide-control") as HTMLElement).style.height = `${(document.querySelector("slider") as HTMLElement).clientHeight}px`;
-    
+
         function goPrev() {
             currentSlide--;
             if (currentSlide < 0){
@@ -35,7 +36,7 @@ const HomePage: React.FC = () => {
             }
             updateMargin();
         };
-    
+
         function goNext(){
             currentSlide++;
             if (currentSlide > (totalSlides -1)){
@@ -43,7 +44,7 @@ const HomePage: React.FC = () => {
             }
             updateMargin();
         };
-    
+
         function updateMargin() {
             let newMargin = (currentSlide * document.body.clientWidth);
             (document.getElementById("slide-width") as HTMLElement).style.marginLeft = `-${newMargin}`;
@@ -76,7 +77,7 @@ const HomePage: React.FC = () => {
                     <Text>Hello!</Text>
                 </DivSection>
             </Body>
-        </Home> 
+        </Home>
     );
 };
 

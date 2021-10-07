@@ -2,10 +2,11 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 
-import GlobalStyle from './Pages/styles/global';
+import GlobalStyle from './ListCakes/Pages/styles/global';
 
 // js
-import Routes from './routes';
+// import Routes from './ListCakes/routes';
+import Routes from './ListPerformanceCompany/routes';
 
 const App: React.FC = () => (
     <>
