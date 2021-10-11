@@ -18,4 +18,18 @@ export const Header = styled.div`
     align-items: center;
     display: flex;
     justify-content: center;
+    background-color: red;
 `;
+
+export const ContainerInfoUser = styled.div``;
+
+export const DivNameUser = styled.div``;
+
+export const DivPhotoUser = styled.img`
+    width: 200px;
+    height: 100px;
+`;
+
+export const ButtonExit = styled.div``;
+
+export const NameUser = styled.div``;

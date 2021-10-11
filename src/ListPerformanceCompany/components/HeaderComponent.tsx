@@ -1,8 +1,19 @@
 // libraries
 import React from 'react';
 
+// images
+import iconProfile from '../assets/images/iconProfile.jpg';
+
 // js
-import { Input, Header } from './headerStyles';
+import {
+    Input,
+    Header,
+    ContainerInfoUser,
+    DivNameUser,
+    DivPhotoUser,
+    ButtonExit,
+    NameUser,
+} from './headerStyles';
 import { itemCardInterfaces } from '../interfaces';
 import allListJson from '../utils/AllListJson';
 
@@ -37,6 +48,13 @@ const HeaderComponent = (props: Props): React.ReactElement => {
     return (
         <Header>
             <Input placeholder="Faça sua busca" value={search} onChange={onChangeSearch} />
+            <ContainerInfoUser>
+                <DivNameUser>
+                    <DivPhotoUser src={iconProfile} />
+                    <NameUser>Nome</NameUser>
+                    <ButtonExit>Sair</ButtonExit>
+                </DivNameUser>
+            </ContainerInfoUser>
         </Header>
     );
 };
