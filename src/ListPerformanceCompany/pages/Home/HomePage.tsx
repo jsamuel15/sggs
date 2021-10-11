@@ -20,7 +20,6 @@ import allListJson from '../../utils/AllListJson';
 import { itemCardInterfaces } from '../../interfaces';
 
 // components
-import HeaderComponent from '../../components/HeaderComponent';
 
 const HomePage: React.FC = () => {
     // states
@@ -96,12 +95,6 @@ const HomePage: React.FC = () => {
     // main
     return (
         <Home>
-            <HeaderComponent
-                search={search}
-                setSearch={setSearch}
-                setAllList={setAllList}
-                setOpenScrollBar={setOpenScrollBar}
-            />
             <Body openScrollBar={openScrollBar}>
                 {RenderItens(1)}
             </Body>
