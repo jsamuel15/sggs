@@ -10,8 +10,17 @@ interface ColorTitleIcon {
     color: any,
 
 }
+
+interface BodyInterfaces {
+    openScrollBar?: boolean,
+}
+
 interface backGrounColor {
     backGrounColor: any,
+}
+
+interface ContainerCardInterfaces {
+    qtdSearch?: boolean,
 }
 
 const rotate = keyframes`
@@ -30,33 +39,32 @@ export const Home = styled.div`
     min-width: 100vw;
     min-height: 100vh;
     background-color: ${colors.basic.black};
+    padding-top: 20px;
 `;
 
-export const Header = styled.div``;
-
-export const Body = styled.div`
+export const Body = styled.div<BodyInterfaces>`
     min-width: 100vw;
     display: flex;
-    flex-direction: row;
-    overflow-x: scroll;
+    margin-bottom: 20px;
+    overflow-x: ${(props) => (props.openScrollBar ? 'auto' : 'hidden')};
     ::-webkit-scrollbar {
         height: 10px;
         border-radius: 10px;
         background-color: white;
     }
     ::-webkit-scrollbar-track {
-        -webkit-box-shadow: inset 0 0 6px ${colors.basic.ligthBlack};
+        /* -webkit-box-shadow: inset 0 0 6px ${colors.basic.ligthBlack}; */
         border-radius: 10px;
     }
 
     ::-webkit-scrollbar-thumb {
         border-radius: 10px;
-        -webkit-box-shadow: inset 0 0 4px ${colors.basic.black};
+        /* -webkit-box-shadow: inset 0 0 4px ${colors.basic.black}; */
         background-color: ${colors.basic.ligthBlack};
     }
 `;
 
-export const ContainerCard = styled.div`
+export const ContainerCard = styled.div<ContainerCardInterfaces>`
     padding: 14px;
     animation: ${rotate} 2s;
 `;

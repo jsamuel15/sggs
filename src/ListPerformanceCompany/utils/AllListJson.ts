@@ -1,4 +1,8 @@
-const allListJson = {
+// js
+import { allLisCardInterfaces } from '../interfaces';
+
+// json
+const allListJson: allLisCardInterfaces = {
     name: 'Pedro Silva',
     profession: 'Developer Front-end',
     allCards: [

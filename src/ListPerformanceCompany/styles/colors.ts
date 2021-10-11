@@ -7,7 +7,7 @@ const colors = {
         green: '#08B900',
         grenRGB: 'rgba(0, 255, 0, 0.1)',
         redRGB: 'rgba(255,0,0, 0.1)',
-        red: '#CC0000',
+        red: '#FF5353',
     },
     theme: {},
 };
