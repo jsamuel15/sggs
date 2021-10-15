@@ -1,6 +1,8 @@
+/* eslint-disable max-len */
 /* eslint-disable consistent-return */
 // libraries
 import React, { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
 
 // js
 import { AiOutlineArrowUp, AiOutlineArrowDown } from 'react-icons/ai';
@@ -16,17 +18,28 @@ import {
     TextValorize,
     DivItemPorcent,
 } from './homeStyles';
-import allListJson from '../../utils/AllListJson';
-import { itemCardInterfaces } from '../../interfaces';
+import { RootState } from '../../store';
 
 // components
 import HeaderComponent from '../../components/HeaderComponent';
+import ModalCard from '../../components/modalCard/modalCard';
 
 const HomePage: React.FC = () => {
+    const user = useSelector((state: RootState) => state.user.allCards);
+
     // states
     const [openScrollBar, setOpenScrollBar] = useState(false);
-    const [allList, setAllList] = useState(allListJson.allCards);
+    const [allList, setAllList] = useState(user);
     const [search, setSearch] = useState('');
+    const [open, setOpen] = useState<any>(false);
+
+    const handleOpen = () => {
+        setOpen(true);
+    };
+
+    const handleClose = () => {
+        setOpen(false);
+    };
 
     // useEffect
     useEffect(() => {
@@ -40,7 +53,7 @@ const HomePage: React.FC = () => {
     }, [search]);
 
     // renders
-    const RenderValorizeCard = (item: itemCardInterfaces) => {
+    const RenderValorizeCard = (item: any) => {
         if (item.valorize) {
             return (
                 <TextValorize color>
@@ -63,8 +76,8 @@ const HomePage: React.FC = () => {
     };
 
     const RenderItens = (type: number) => {
-        const allItemValorized = allList.filter((item) => item.valorize === true);
-        const allItemNotValorized = allList.filter((item) => item.valorize === false);
+        const allItemValorized = allList.filter((item: any) => item.valorize === true);
+        const allItemNotValorized = allList.filter((item: any) => item.valorize === false);
 
         const itemNumberRender = () => {
             if (type === 1) {
@@ -78,9 +91,9 @@ const HomePage: React.FC = () => {
             }
         };
 
-        return itemNumberRender()?.map((item) => (
+        return itemNumberRender()?.map((item: any) => (
             <ContainerCard qtdSearch={search.length > 0}>
-                <DivInfoArea>
+                <DivInfoArea onClick={handleOpen}>
                     <DivArea>
                         <TextAreaName>{item.title}</TextAreaName>
                     </DivArea>
@@ -111,6 +124,7 @@ const HomePage: React.FC = () => {
             <Body openScrollBar={openScrollBar}>
                 {RenderItens(3)}
             </Body>
+            {ModalCard(open, handleClose)}
         </Home>
     );
 };

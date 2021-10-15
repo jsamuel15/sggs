@@ -1,21 +1,29 @@
 // libraries
-import React from 'react';
+import React, { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 
 // images
-import iconProfile from '../assets/images/iconProfile.jpg';
+import iconProfile from '../assets/images/iconProfile.png';
 
 // js
 import {
     Input,
     Header,
-    ContainerInfoUser,
     DivNameUser,
     DivPhotoUser,
     ButtonExit,
     NameUser,
+    ButtonMyAccount,
+    DivInputArea,
+    ContainerAreaUser,
+    ContainerAreaInfo,
 } from './headerStyles';
 import { itemCardInterfaces } from '../interfaces';
-import allListJson from '../utils/AllListJson';
+import { RootState } from '../store';
+import { logoutAuth } from '../store/modules/user/actions';
+
+// components
+import ModalUserPage from './modalUserInfo/modaUserPage';
 
 // interfaces
 interface Props {
@@ -26,6 +34,16 @@ interface Props {
 }
 
 const HeaderComponent = (props: Props): React.ReactElement => {
+    // useSelector
+    const user = useSelector((state: RootState) => state.user.user);
+
+    // dispatch
+    const dispatch = useDispatch();
+
+    // consts
+    const [visibleProfile, setVisibleProfile] = useState(false);
+    const [open, setOpen] = useState<any>(false);
+
     // constants
     const {
         search,
@@ -39,22 +57,48 @@ const HeaderComponent = (props: Props): React.ReactElement => {
         setOpenScrollBar(false);
         const { value } = txt.target;
         setSearch(value);
-        const newList = allListJson.allCards.filter(
-            (v) => v.title.toUpperCase().includes(value.toUpperCase()),
+        const newList = user.allCards.filter(
+            (v: any) => v.title.toUpperCase().includes(value.toUpperCase()),
         );
         setAllList(newList);
     };
+    const VisibleItem = () => {
+        setVisibleProfile(!visibleProfile);
+    };
 
+    // methods
+    const onLogout = () => {
+        dispatch(logoutAuth());
+    };
+
+    const handleOpen = () => {
+        setOpen(true);
+    };
+
+    const handleClose = () => {
+        setOpen(false);
+    };
+
+    // main
     return (
         <Header>
-            <Input placeholder="Faça sua busca" value={search} onChange={onChangeSearch} />
-            <ContainerInfoUser>
-                <DivNameUser>
-                    <DivPhotoUser src={iconProfile} />
-                    <NameUser>Nome</NameUser>
-                    <ButtonExit>Sair</ButtonExit>
-                </DivNameUser>
-            </ContainerInfoUser>
+            <DivInputArea>
+                <Input placeholder="Faça sua busca" value={search} onChange={onChangeSearch} />
+                <ContainerAreaInfo>
+                    <DivNameUser>
+                        <DivPhotoUser
+                            src={iconProfile}
+                            onClick={VisibleItem}
+                        />
+                        <ContainerAreaUser visibleProfile={visibleProfile}>
+                            <NameUser>{user.name}</NameUser>
+                            <ButtonMyAccount onClick={handleOpen}>Minha Conta</ButtonMyAccount>
+                            <ButtonExit onClick={onLogout}>Sair</ButtonExit>
+                        </ContainerAreaUser>
+                    </DivNameUser>
+                </ContainerAreaInfo>
+            </DivInputArea>
+            {ModalUserPage(open, handleClose)}
         </Header>
     );
 };
