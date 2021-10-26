@@ -25,11 +25,11 @@ import HeaderComponent from '../../components/HeaderComponent';
 import ModalCard from '../../components/modalCard/modalCard';
 
 const HomePage: React.FC = () => {
-    const user = useSelector((state: RootState) => state.user.allCards);
+    const allCards = useSelector((state: RootState) => state.user.allCards);
 
     // states
     const [openScrollBar, setOpenScrollBar] = useState(false);
-    const [allList, setAllList] = useState(user);
+    const [allList, setAllList] = useState(allCards);
     const [search, setSearch] = useState('');
     const [open, setOpen] = useState<any>(false);
 
@@ -42,15 +42,15 @@ const HomePage: React.FC = () => {
     };
 
     // useEffect
-    useEffect(() => {
-        if (search.length) {
-            setOpenScrollBar(true);
-        } else {
-            setTimeout(() => {
-                setOpenScrollBar(true);
-            }, 2200);
-        }
-    }, [search]);
+    // useEffect(() => {
+    //     if (search.length) {
+    //         setOpenScrollBar(true);
+    //     } else {
+    //         setTimeout(() => {
+    //             setOpenScrollBar(true);
+    //         }, 2200);
+    //     }
+    // }, [search]);
 
     // renders
     const RenderValorizeCard = (item: any) => {
