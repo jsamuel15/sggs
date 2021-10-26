@@ -23,6 +23,7 @@ interface ContainerCardInterfaces {
     qtdSearch?: boolean,
 }
 
+// keyframes
 const rotate = keyframes`
   from {
     padding-left: 100vw;
@@ -53,13 +54,11 @@ export const Body = styled.div<BodyInterfaces>`
         background-color: white;
     }
     ::-webkit-scrollbar-track {
-        /* -webkit-box-shadow: inset 0 0 6px ${colors.basic.ligthBlack}; */
         border-radius: 10px;
     }
 
     ::-webkit-scrollbar-thumb {
         border-radius: 10px;
-        /* -webkit-box-shadow: inset 0 0 4px ${colors.basic.black}; */
         background-color: ${colors.basic.ligthBlack};
     }
 `;
@@ -71,11 +70,15 @@ export const ContainerCard = styled.div<ContainerCardInterfaces>`
 
 export const DivInfoArea = styled.div`
     padding: 20px 8px;
-    background-color: ${colors.basic.ligthBlack};
+    background-color: ${colors.basic.greyRGB};
     border-radius: 8px;
-    min-width: 20vw;
+    min-width: 22vw;
     height: 14vh;
     cursor: pointer;
+
+    @media(max-width: 580px) {
+        width: 50vw;
+    }
 `;
 
 export const DivAreaTotal = styled.div`
@@ -123,7 +126,8 @@ export const TextPriceArea = styled.h1`
     color: ${colors.basic.white};
 
     /* media query */
-    @media ( max-width: 920px ) {
+    @media ( max-width: 580px ) {
+        width: 100%;
         font-size: 16px;
     }
 `;

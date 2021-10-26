@@ -5,9 +5,11 @@ export interface itemCardInterfaces {
     valorize: boolean,
     percentage: number,
 }
-
 export interface allLisCardInterfaces {
     name: string,
     profession: string,
-    allCards: Array<itemCardInterfaces>
+    email: string,
+    password: string,
+    newPassword: string,
+    allCards: Array<itemCardInterfaces>,
 }
