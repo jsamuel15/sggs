@@ -12,6 +12,7 @@ import {
     Button,
     Home,
     ContainerInner,
+    TextAction,
 } from './loginStyles';
 // import functions from '../../utils/functions';
 import { updateUser } from '../../store/modules/user/actions';
@@ -114,6 +115,7 @@ const LoginPage: React.FC = () => {
                     >
                         Entrar
                     </Button>
+                    <TextAction onClick={() => window.location.replace('/RecoverPasswordPage')}>Lembrar senha</TextAction>
                 </ContainerInner>
             </Home>
         </Container>

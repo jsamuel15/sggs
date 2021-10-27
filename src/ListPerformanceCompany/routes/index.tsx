@@ -10,6 +10,7 @@ import { useSelector } from 'react-redux';
 // Pages
 import LoginPage from '../pages/Login/LoginPage';
 import HomePage from '../pages/Home/HomePage';
+import RecoverPasswordPage from '../pages/RecoverPassword';
 
 // js
 import { RootState } from '../store';
@@ -35,6 +36,7 @@ const Routes: React.FC = () => {
             <Route path="/" exact component={LoginPage} />
             <Route path="/home" exact component={HomePage} />
             <Route path={pathNotFound} component={RouteNotFound} />
+            <Route path="/RecoverPassword" exact component={RecoverPasswordPage} />
             <Redirect to={pathNotFound} />
         </Switch>
     );
