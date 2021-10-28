@@ -25,13 +25,24 @@ export const Container = styled.div`
 
 export const Input = styled.input`
     color: ${colors.basic.black};
-    border-radius: 5px;
-    border: 2px solid ${colors.basic.grey};
     background-color: ${colors.basic.white};
-    width: 60%;
+    padding-left: 10px;
+    border-radius: 5px;
+    border: none;
+    width: 70%;
     height: 40px;
     margin-bottom: 15px;
-    padding: 8px;
+    ::placeholder{
+       color: ${colors.basic.dimGrey};
+    }
+    @media (max-width: 1024px) {
+        height: 35px;
+        font-size: 12px;
+    }
+    @media (max-width: 600px) {
+        height: 30px;
+        font-size: 10px;
+    }
 `;
 
 export const TextButton = styled.text`
@@ -58,21 +69,18 @@ export const TextAction = styled.text<TextActionInterFaces>`
 `;
 
 export const Button = styled.button<ButtonInterfaces>`
-    border-radius: 3px;
-    border: none;
-    background-color: ${(props) => (props.activeCursor ? colors.basic.grey : colors.basic.green)};;
-    width: 200px;
-    cursor: ${(props) => (props.activeCursor ? 'default' : 'pointer')};
-    height: 40px;
-    border-radius: 20px;
+    background-color: ${(props) => (props.activeCursor ? colors.basic.dimGrey : colors.basic.green)};
     color: ${colors.basic.white};
-    margin-bottom: 15px;
-    margin-top: 5px;
-    transition-duration: 400ms;
+    padding: 15px 0px 15px 0px;
+    width: 200px;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: ${(props) => (props.activeCursor ? 'default' : 'pointer')};
+    border: none;
     :hover {
-        background-color: ${(props) => (props.activeCursor ? colors.basic.grey : colors.basic.green)};
+        background-color: ${(props) => (props.activeCursor ? colors.basic.dimGrey : colors.basic.greenLimon)};
     }
-    @media (max-width: 1300px) {
+    @media (max-width: 600px) {
         width: 150px;
     }
     @media (max-width: 500px) {
