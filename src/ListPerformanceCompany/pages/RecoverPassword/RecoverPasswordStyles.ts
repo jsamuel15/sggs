@@ -16,7 +16,7 @@ export const Container = styled.div`
     display: flex;
     flex: 1;
     min-height: 100vh;
-    background-color: ${colors.theme.backgroundScreenLogin};
+    background-color: ${colors.basic.ligthBlack};
     align-items: center;
     justify-content: center;
     flex-direction:column;
@@ -24,9 +24,9 @@ export const Container = styled.div`
 `;
 
 export const Input = styled.input`
-    color: ${colors.theme.blueDark};
+    color: ${colors.basic.black};
     border-radius: 5px;
-    border: 2px solid ${colors.theme.backgroundScreenLogin};
+    border: 2px solid ${colors.basic.grey};
     background-color: ${colors.basic.white};
     width: 60%;
     height: 40px;
@@ -48,19 +48,19 @@ export const TextButton = styled.text`
 
 export const TextAction = styled.text<TextActionInterFaces>`
     border-radius: 20px;
-    color: ${colors.theme.blueDark};
+    color: ${colors.basic.ligthBlack};
     animation-name: none;
     font-size: 16px;
     cursor: pointer;
     :hover {
-        color: ${(props) => (props.activeText ? colors.basic.gray : colors.theme.blue)};
+        color: ${(props) => (props.activeText ? colors.basic.grey : colors.basic.green)};
     }
 `;
 
 export const Button = styled.button<ButtonInterfaces>`
     border-radius: 3px;
     border: none;
-    background-color: ${(props) => (props.activeCursor ? colors.basic.gray : colors.theme.blueDark)};;
+    background-color: ${(props) => (props.activeCursor ? colors.basic.grey : colors.basic.green)};;
     width: 200px;
     cursor: ${(props) => (props.activeCursor ? 'default' : 'pointer')};
     height: 40px;
@@ -70,7 +70,7 @@ export const Button = styled.button<ButtonInterfaces>`
     margin-top: 5px;
     transition-duration: 400ms;
     :hover {
-        background-color: ${(props) => (props.activeCursor ? colors.basic.gray : colors.theme.blue)};
+        background-color: ${(props) => (props.activeCursor ? colors.basic.grey : colors.basic.green)};
     }
     @media (max-width: 1300px) {
         width: 150px;

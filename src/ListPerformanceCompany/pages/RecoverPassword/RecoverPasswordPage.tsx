@@ -7,9 +7,8 @@ import {
     Input,
     Button,
     TextAction,
-    Logo,
     TextButton,
-} from './recoverPasswordStyles';
+} from './RecoverPasswordStyles';
 
 const App: React.FC = () => {
     // states
@@ -30,17 +29,15 @@ const App: React.FC = () => {
     // main
     return (
         <Container>
-            <Logo src={imgLogo} />
             <Input type="email" placeholder="E-mail" value={email} onChange={onChangeEmail} />
             <Button
                 disabled={ValidationDisabled()}
                 activeCursor={ValidationDisabled()}
-                onClick={ActionRecoverPassword}
             >
                 <TextButton>Acessar</TextButton>
             </Button>
             <TextAction onClick={() => window.location.replace('/')}>
-                Já tem uma conta? Acesse
+                Caso tenha uma conta, Acesse.
             </TextAction>
         </Container>
     );

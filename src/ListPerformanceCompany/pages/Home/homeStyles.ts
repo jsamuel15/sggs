@@ -6,6 +6,10 @@ import styled, { keyframes } from 'styled-components';
 import colors from '../../styles/colors';
 
 // Interface
+
+interface TextActionInterFaces{
+    activeText?: boolean,
+}
 interface ColorTitleIcon {
     color: any,
 
@@ -167,16 +171,4 @@ export const ContainerPercentage = styled.div`
     display: flex;
     align-items: center;
     background-color: pink;
-`;
-
-export const TextAction = styled.text<TextActionInterFaces>`
-    border-radius: 20px;
-    color: ${(props) => (props.activeText ? colors.basic.green : colors.basic.greenLimon)};
-    cursor: ${(props) => (props.activeText ? 'default' : 'pointer')};
-    animation-name: none;
-    font-size: 16px;
-    cursor: pointer;
-    :hover {
-        color: ${(props) => (props.activeText ? colors.basic.green : colors.theme.greenLimon)};
-    }
 `;

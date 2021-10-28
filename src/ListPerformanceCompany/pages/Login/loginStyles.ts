@@ -9,6 +9,10 @@ interface ButtonInterfaces {
     activeCursor?: boolean,
 }
 
+interface TextActionInterFaces{
+    activeText?: boolean,
+}
+
 // styles
 export const Header = styled.header`
     color: ${colors.basic.black};
@@ -85,5 +89,17 @@ export const Button = styled.button<ButtonInterfaces>`
     }
     @media (max-width: 500px) {
         width: 100px;
+    }
+`;
+
+export const TextAction = styled.text<TextActionInterFaces>`
+    border-radius: 20px;
+    color: ${(props) => (props.activeText ? colors.basic.green : colors.basic.greenLimon)};
+    cursor: ${(props) => (props.activeText ? 'default' : 'pointer')};
+    animation-name: none;
+    font-size: 16px;
+    cursor: pointer;
+    :hover {
+        color: ${(props) => (props.activeText ? colors.basic.green : colors.basic.greenLimon)};
     }
 `;
