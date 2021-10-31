@@ -99,6 +99,7 @@ export const TextAction = styled.text<TextActionInterFaces>`
     animation-name: none;
     font-size: 16px;
     cursor: pointer;
+    padding: 15px 0px 0px 0px;
     :hover {
         color: ${(props) => (props.activeText ? colors.basic.green : colors.basic.greenLimon)};
     }

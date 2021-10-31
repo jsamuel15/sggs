@@ -115,7 +115,7 @@ const LoginPage: React.FC = () => {
                     >
                         Entrar
                     </Button>
-                    <TextAction onClick={() => window.location.replace('/RecoverPasswordPage')}>Lembrar senha</TextAction>
+                    <TextAction onClick={() => window.location.replace('/RecoverPassword')}>Lembrar senha</TextAction>
                 </ContainerInner>
             </Home>
         </Container>

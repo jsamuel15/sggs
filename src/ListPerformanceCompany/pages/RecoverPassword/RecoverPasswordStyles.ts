@@ -59,12 +59,13 @@ export const TextButton = styled.text`
 
 export const TextAction = styled.text<TextActionInterFaces>`
     border-radius: 20px;
-    color: ${colors.basic.ligthBlack};
+    color: ${colors.basic.black};
     animation-name: none;
     font-size: 16px;
     cursor: pointer;
+    padding: 15px 0px 0px 0px;
     :hover {
-        color: ${(props) => (props.activeText ? colors.basic.grey : colors.basic.green)};
+        color: ${(props) => (props.activeText ? colors.basic.dimGrey : colors.basic.green)};
     }
 `;
 

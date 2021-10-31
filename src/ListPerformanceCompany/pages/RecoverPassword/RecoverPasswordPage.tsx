@@ -1,6 +1,8 @@
 // libraries
 import React, { useState } from 'react';
 
+import Navigation from '../../routes/navigation';
+
 // js
 import {
     Container,
@@ -13,6 +15,8 @@ import {
 const App: React.FC = () => {
     // states
     const [email, setEmail] = useState('');
+    const [pathRoute, setPathRoute] = useState('');
+    const [redirect, setRedirect] = useState(false);
 
     // methods
     const onChangeEmail = (txt: React.ChangeEvent<HTMLInputElement>) => {
@@ -26,9 +30,15 @@ const App: React.FC = () => {
         return true;
     };
 
+    const Signin = () => {
+        setRedirect(true);
+        setPathRoute('/');
+    };
+
     // main
     return (
         <Container>
+            <Navigation pathRoute={pathRoute} redirect={redirect} />
             <Input type="email" placeholder="E-mail" value={email} onChange={onChangeEmail} />
             <Button
                 disabled={ValidationDisabled()}
@@ -36,8 +46,8 @@ const App: React.FC = () => {
             >
                 <TextButton>Acessar</TextButton>
             </Button>
-            <TextAction onClick={() => window.location.replace('/')}>
-                Caso tenha uma conta, Acesse.
+            <TextAction onClick={Signin}>
+                Já tem uma conta, Acesse.
             </TextAction>
         </Container>
     );
