@@ -6,6 +6,10 @@ import styled, { keyframes } from 'styled-components';
 import colors from '../../styles/colors';
 
 // Interface
+
+interface TextActionInterFaces{
+    activeText?: boolean,
+}
 interface ColorTitleIcon {
     color: any,
 

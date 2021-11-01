@@ -7,10 +7,10 @@ import { LOGOUT, UPDATE_USER, UPDATE_CARD } from './constants';
 
 const initialState = {
     user: {
-        name: 'Pedro Silva',
-        profession: 'Developer Front-end',
-        email: 'estudo@dotcoding.com.br',
-        password: '123iop',
+        name: 'dsa',
+        email: 'pedro@gmail.com',
+        profession: 'sdasda',
+        password: '123123',
     },
     allCards: [
         {

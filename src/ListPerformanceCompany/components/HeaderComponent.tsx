@@ -24,6 +24,8 @@ import { logoutAuth } from '../store/modules/user/actions';
 
 // components
 import ModalUserPage from './modalUserInfo/modaUserPage';
+// navigation
+import Navigation from '../routes/navigation';
 
 // interfaces
 interface Props {
@@ -43,6 +45,8 @@ const HeaderComponent = (props: Props): React.ReactElement => {
     // consts
     const [visibleProfile, setVisibleProfile] = useState(false);
     const [open, setOpen] = useState<any>(false);
+    const [redirect, setRedirect] = useState<boolean>(false);
+    const [pathRoute, setPathRoute] = useState<string>('');
 
     // constants
     const {
@@ -69,6 +73,8 @@ const HeaderComponent = (props: Props): React.ReactElement => {
     // methods
     const onLogout = () => {
         dispatch(logoutAuth());
+        setRedirect(true);
+        setPathRoute('/');
     };
 
     const handleOpen = () => {
@@ -83,6 +89,7 @@ const HeaderComponent = (props: Props): React.ReactElement => {
     return (
         <Header>
             <DivInputArea>
+                <Navigation pathRoute={pathRoute} redirect={redirect} />
                 <Input placeholder="Faça sua busca" value={search} onChange={onChangeSearch} />
                 <ContainerAreaInfo>
                     <DivNameUser>
@@ -91,7 +98,7 @@ const HeaderComponent = (props: Props): React.ReactElement => {
                             onClick={VisibleItem}
                         />
                         <ContainerAreaUser visibleProfile={visibleProfile}>
-                            <NameUser>{user.name}</NameUser>
+                            <NameUser>{user?.name}</NameUser>
                             <ButtonMyAccount onClick={handleOpen}>Minha Conta</ButtonMyAccount>
                             <ButtonExit onClick={onLogout}>Sair</ButtonExit>
                         </ContainerAreaUser>

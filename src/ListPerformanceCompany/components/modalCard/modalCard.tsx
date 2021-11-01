@@ -23,7 +23,6 @@ const ModalCard: React.FC = (
 ) => {
     // useSelector
     const userCard = useSelector((state: RootState) => state.user.allCards);
-    console.log(userCard.id);
 
     // dispatch
     const dispatch = useDispatch();

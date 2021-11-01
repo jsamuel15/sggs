@@ -27,9 +27,9 @@ const ModalUserPage: React.FC = (
     const dispatch = useDispatch();
 
     // states
-    const [name, setName] = useState(user.name);
-    const [profession, setProfession] = useState(user.profession);
-    const [email, setEmail] = useState(user.email);
+    const [name, setName] = useState(user?.name);
+    const [profession, setProfession] = useState(user?.profession);
+    const [email, setEmail] = useState(user?.email);
     const [password, setPassword] = useState('');
     const [newPassword, setNewPassword] = useState('');
 
@@ -76,9 +76,9 @@ const ModalUserPage: React.FC = (
 
     // useEffect
     useEffect(() => {
-        setName(user.name);
-        setProfession(user.profession);
-        setEmail(user.email);
+        setName(user?.name);
+        setProfession(user?.profession);
+        setEmail(user?.email);
         setPassword('');
         setNewPassword('');
     }, [user]);
