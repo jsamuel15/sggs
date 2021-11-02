@@ -8,7 +8,8 @@ import GlobalStyle from './ListCakes/Pages/styles/global';
 import { store } from './ListPerformanceCompany/store/index';
 
 // import Routes from './ListCakes/routes';
-import Routes from './ListPerformanceCompany/routes';
+// import Routes from './ListPerformanceCompany/routes';
+import Routes from './FrozenWorldProject/routes';
 
 const App: React.FC = () => (
     <Provider store={store}>
