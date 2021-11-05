@@ -6,6 +6,7 @@ import img from '../../assets/images/paisagem.jpg';
 import {
     Container,
     Header,
+    Text,
     H1,
     H4,
     H6,
@@ -23,7 +24,7 @@ import {
 const HomePage: React.FC = () => (
     <Container background={img}>
         <Header>
-            texto de tester do Header
+            <Text>ARCTIC AIR</Text>
             <ButtonTree>HOME</ButtonTree>
             <ButtonFour>PAGES</ButtonFour>
             <ButtonFive>ABOUT</ButtonFive>

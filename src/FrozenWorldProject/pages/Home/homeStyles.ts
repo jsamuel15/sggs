@@ -24,8 +24,13 @@ export const Container = styled.div<Container>`
 export const Header = styled.div`
     background-color: transparent;
     color: ${colors.basic.black};
-    height: 55px;
+    height: 60px;
     border: solid 1px ${colors.basic.black};
+`;
+
+export const Text = styled.text`
+    color: ${colors.basic.black};
+    margin-right: auto;
 `;
 
 export const ButtonTree = styled.button`
@@ -38,9 +43,10 @@ export const ButtonTree = styled.button`
     width: 100px;
     height: 45px;
     border: solid 2px ${colors.basic.black};
-    border-radius: 15px;
+    border-radius: 20px;
     font-size: 15px;
     padding-left: 10px;
+    margin-left: auto;
 `;
 
 export const ButtonFour = styled.button`
@@ -56,6 +62,7 @@ export const ButtonFour = styled.button`
     border-radius: 15px;
     font-size: 15px;
     padding-left: 10px;
+    margin-left: auto;
 `;
 
 export const ButtonFive = styled.button`
@@ -71,6 +78,7 @@ export const ButtonFive = styled.button`
     border-radius: 15px;
     font-size: 15px;
     padding-left: 10px;
+    margin-left: auto;
 `;
 
 export const ButtonSix = styled.button`
@@ -86,6 +94,7 @@ export const ButtonSix = styled.button`
     border-radius: 15px;
     font-size: 15px;
     padding-left: 10px;
+    margin-left: auto;
 `;
 
 export const ButtonSeven = styled.button`
@@ -101,6 +110,7 @@ export const ButtonSeven = styled.button`
     border-radius: 15px;
     font-size: 15px;
     padding-left: 10px;
+    margin-left: auto;
 `;
 
 export const ButtonEigth = styled.button`
@@ -116,11 +126,13 @@ export const ButtonEigth = styled.button`
     border-radius: 15px;
     font-size: 15px;
     padding-left: 10px;
+    margin-left: auto;
 `;
 
 export const H1 = styled.h1`
     color: ${colors.basic.black};
     padding: 250px 300px 10px 400px;
+    align-items: center;
 `;
 
 export const H4 = styled.h4`
@@ -144,7 +156,7 @@ export const Button = styled.button`
     width: 100px;
     height: 45px;
     border: solid 2px ${colors.basic.black};
-    border-radius: 15px;
+    border-radius: 20px;
     font-size: 15px;
     padding-left: 10px;
 `;
@@ -159,7 +171,7 @@ export const ButtonTwo = styled.button`
     width: 100px;
     height: 45px;
     border: solid 2px ${colors.basic.black};
-    border-radius: 15px;
+    border-radius: 20px;
     font-size: 15px;
     padding-left: 10px;
 `;
