@@ -26,6 +26,10 @@ export const Header = styled.div`
     color: ${colors.basic.black};
     height: 60px;
     border: solid 1px ${colors.basic.black};
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
 `;
 
 export const Text = styled.text`
@@ -129,6 +133,12 @@ export const ButtonEigth = styled.button`
     margin-left: auto;
 `;
 
+export const ContainerInner = styled.div`
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+`;
+
 export const H1 = styled.h1`
     color: ${colors.basic.black};
     padding: 250px 300px 10px 400px;
@@ -158,7 +168,9 @@ export const Button = styled.button`
     border: solid 2px ${colors.basic.black};
     border-radius: 20px;
     font-size: 15px;
-    padding-left: 10px;
+    padding: 11px 21px;
+    float: right;
+    vertical-align: middle;
 `;
 
 export const ButtonTwo = styled.button`
@@ -173,5 +185,7 @@ export const ButtonTwo = styled.button`
     border: solid 2px ${colors.basic.black};
     border-radius: 20px;
     font-size: 15px;
-    padding-left: 10px;
+    padding: 11px 21px;
+    float: center;
+    vertical-align: middle;
 `;
