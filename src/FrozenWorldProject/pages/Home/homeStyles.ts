@@ -42,6 +42,7 @@ export const ButtonTree = styled.button`
     display: flex;
     flex-direction: column;
     color: ${colors.basic.black};
+    cursor: pointer;
     margin-left: 400px;
     margin-top: 1px;
     width: 100px;
@@ -58,6 +59,7 @@ export const ButtonFour = styled.button`
     display: flex;
     flex-direction: column;
     color: ${colors.basic.black};
+    cursor: pointer;
     margin-left: 400px;
     margin-top: 1px;
     width: 100px;
@@ -74,6 +76,7 @@ export const ButtonFive = styled.button`
     display: flex;
     flex-direction: column;
     color: ${colors.basic.black};
+    cursor: pointer;
     margin-left: 400px;
     margin-top: 1px;
     width: 100px;
@@ -90,6 +93,7 @@ export const ButtonSix = styled.button`
     display: flex;
     flex-direction: column;
     color: ${colors.basic.black};
+    cursor: pointer;
     margin-left: 400px;
     margin-top: 1px;
     width: 100px;
@@ -106,6 +110,7 @@ export const ButtonSeven = styled.button`
     display: flex;
     flex-direction: column;
     color: ${colors.basic.black};
+    cursor: pointer;
     margin-left: 400px;
     margin-top: 1px;
     width: 100px;
@@ -122,6 +127,7 @@ export const ButtonEigth = styled.button`
     display: flex;
     flex-direction: column;
     color: ${colors.basic.black};
+    cursor: pointer;
     margin-left: 400px;
     margin-top: 2px;
     width: 100px;
@@ -141,7 +147,7 @@ export const ContainerInner = styled.div`
 
 export const H1 = styled.h1`
     color: ${colors.basic.black};
-    padding: 250px 300px 10px 400px;
+    padding: 170px 280px 10px 400px;
     align-items: center;
 `;
 
@@ -161,6 +167,7 @@ export const Button = styled.button`
     background-color: ${colors.basic.black};;
     display: flex;
     color: ${colors.basic.white};
+    cursor: pointer;
     margin-left: 400px;
     margin-top: 10px;
     width: 100px;
@@ -178,6 +185,7 @@ export const ButtonTwo = styled.button`
     display: flex;
     flex-direction: column;
     color: ${colors.basic.white};
+    cursor: pointer;
     margin-left: 400px;
     margin-top: 10px;
     width: 100px;
