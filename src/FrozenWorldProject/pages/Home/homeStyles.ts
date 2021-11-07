@@ -168,7 +168,7 @@ export const Button = styled.button`
     display: flex;
     color: ${colors.basic.white};
     cursor: pointer;
-    margin-left: 400px;
+    margin-right: 10px;
     margin-top: 10px;
     width: 100px;
     height: 45px;
