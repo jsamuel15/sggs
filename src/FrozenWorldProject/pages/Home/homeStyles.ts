@@ -24,34 +24,39 @@ export const Container = styled.div<Container>`
 export const Header = styled.div`
     background-color: transparent;
     color: ${colors.basic.black};
-    height: 60px;
-    border: solid 1px ${colors.basic.black};
+    height: 70px;
+    border: solid 0.2px ${colors.basic.black};
     display: flex;
     justify-content: space-between;
     align-items: center;
+    text-align: center;
     padding: 20px;
+    flex-wrap: wrap;
 `;
 
 export const Text = styled.text`
     color: ${colors.basic.black};
     margin-right: auto;
+    align-items: center;
+    text-align: center;
 `;
 
 export const ButtonTree = styled.button`
     background-color: transparent;
     display: flex;
-    flex-direction: column;
     color: ${colors.basic.black};
     cursor: pointer;
-    margin-left: 400px;
-    margin-top: 1px;
     width: 100px;
-    height: 45px;
+    height: 40px;
     border: solid 2px ${colors.basic.black};
     border-radius: 20px;
     font-size: 15px;
+    float: right;
+    vertical-align: middle;
     padding-left: 10px;
-    margin-left: auto;
+    text-align: center;
+    top: 50%;
+    float: left;
 `;
 
 export const ButtonFour = styled.button`
@@ -182,6 +187,7 @@ export const Button = styled.button`
     float: right;
     vertical-align: middle;
     align-items: center;
+    text-align: center;
 `;
 
 export const ButtonTwo = styled.button`
