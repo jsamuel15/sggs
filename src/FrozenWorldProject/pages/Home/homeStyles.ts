@@ -135,7 +135,7 @@ export const ButtonEigth = styled.button`
     border: none;
     border-radius: 15px;
     font-size: 15px;
-    padding-left: 10px;
+    padding-left: 5px;
     margin-left: auto;
 `;
 
@@ -155,12 +155,14 @@ export const H4 = styled.h4`
     color: ${colors.basic.black};
     padding: 20px 300px 10px 400px;
     margin-top: 10px;
+    align-items: center;
 `;
 
 export const H6 = styled.h6`
     color: ${colors.basic.black};
     padding: 20px 300px 10px 400px;
     margin-top: 10px;
+    align-items: center;
 `;
 
 export const Button = styled.button`
@@ -168,6 +170,26 @@ export const Button = styled.button`
     display: flex;
     color: ${colors.basic.white};
     cursor: pointer;
+    margin-left: 10px;
+    margin-right: 600px;
+    margin-top: 10px;
+    width: 100px;
+    height: 45px;
+    border: solid 2px ${colors.basic.black};
+    border-radius: 20px;
+    font-size: 15px;
+    padding: 11px 21px;
+    float: right;
+    vertical-align: middle;
+    align-items: center;
+`;
+
+export const ButtonTwo = styled.button`
+    background-color: transparent;
+    display: flex;
+    color: ${colors.basic.black};
+    cursor: pointer;
+    margin-left: 10px;
     margin-right: 10px;
     margin-top: 10px;
     width: 100px;
@@ -178,22 +200,5 @@ export const Button = styled.button`
     padding: 11px 21px;
     float: right;
     vertical-align: middle;
-`;
-
-export const ButtonTwo = styled.button`
-    background-color: transparent;
-    display: flex;
-    flex-direction: column;
-    color: ${colors.basic.white};
-    cursor: pointer;
-    margin-left: 400px;
-    margin-top: 10px;
-    width: 100px;
-    height: 45px;
-    border: solid 2px ${colors.basic.black};
-    border-radius: 20px;
-    font-size: 15px;
-    padding: 11px 21px;
-    float: center;
-    vertical-align: middle;
+    align-items: center;
 `;
