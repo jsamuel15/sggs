@@ -40,8 +40,8 @@ const HomePage: React.FC = () => (
                 We elp global leaders with their organiation most critical issues and opportunities,
                 Together, we create enduring charge and results.
             </H6>
-            <Button>DETAILS</Button>
-            <ButtonTwo>CONTACT US</ButtonTwo>
+            <Button>CONTACT US</Button>
+            <ButtonTwo>DETAILS</ButtonTwo>
         </ContainerInner>
     </Container>
 );

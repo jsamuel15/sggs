@@ -25,7 +25,7 @@ export const Header = styled.div`
     background-color: transparent;
     color: ${colors.basic.black};
     height: 70px;
-    border: solid 0.2px ${colors.basic.black};
+    border: none;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -36,7 +36,8 @@ export const Header = styled.div`
 
 export const Text = styled.text`
     color: ${colors.basic.black};
-    margin-right: auto;
+    margin-right: 100px;
+    margin-left: 100px;
     align-items: center;
     text-align: center;
 `;
@@ -51,12 +52,10 @@ export const ButtonTree = styled.button`
     border: solid 2px ${colors.basic.black};
     border-radius: 20px;
     font-size: 15px;
+    margin-top: 1px;
     float: right;
     vertical-align: middle;
     padding-left: 10px;
-    text-align: center;
-    top: 50%;
-    float: left;
 `;
 
 export const ButtonFour = styled.button`
@@ -73,7 +72,7 @@ export const ButtonFour = styled.button`
     border-radius: 15px;
     font-size: 15px;
     padding-left: 10px;
-    margin-left: auto;
+    margin-left: 5px;
 `;
 
 export const ButtonFive = styled.button`
@@ -82,7 +81,6 @@ export const ButtonFive = styled.button`
     flex-direction: column;
     color: ${colors.basic.black};
     cursor: pointer;
-    margin-left: 400px;
     margin-top: 1px;
     width: 100px;
     height: 45px;
@@ -90,7 +88,7 @@ export const ButtonFive = styled.button`
     border-radius: 15px;
     font-size: 15px;
     padding-left: 10px;
-    margin-left: auto;
+    margin-left: 5px;
 `;
 
 export const ButtonSix = styled.button`
@@ -99,7 +97,6 @@ export const ButtonSix = styled.button`
     flex-direction: column;
     color: ${colors.basic.black};
     cursor: pointer;
-    margin-left: 400px;
     margin-top: 1px;
     width: 100px;
     height: 45px;
@@ -107,7 +104,7 @@ export const ButtonSix = styled.button`
     border-radius: 15px;
     font-size: 15px;
     padding-left: 10px;
-    margin-left: auto;
+    margin-left: 5px;
 `;
 
 export const ButtonSeven = styled.button`
@@ -116,7 +113,6 @@ export const ButtonSeven = styled.button`
     flex-direction: column;
     color: ${colors.basic.black};
     cursor: pointer;
-    margin-left: 400px;
     margin-top: 1px;
     width: 100px;
     height: 45px;
@@ -124,7 +120,7 @@ export const ButtonSeven = styled.button`
     border-radius: 15px;
     font-size: 15px;
     padding-left: 10px;
-    margin-left: auto;
+    margin-left: 5px;
 `;
 
 export const ButtonEigth = styled.button`
@@ -133,15 +129,15 @@ export const ButtonEigth = styled.button`
     flex-direction: column;
     color: ${colors.basic.black};
     cursor: pointer;
-    margin-left: 400px;
-    margin-top: 2px;
+    margin-top: 1px;
     width: 100px;
     height: 45px;
     border: none;
     border-radius: 15px;
     font-size: 15px;
     padding-left: 5px;
-    margin-left: auto;
+    margin-left: 5px;
+    margin-right: 350px;
 `;
 
 export const ContainerInner = styled.div`
@@ -171,9 +167,9 @@ export const H6 = styled.h6`
 `;
 
 export const Button = styled.button`
-    background-color: ${colors.basic.black};;
+    background-color: transparent;
     display: flex;
-    color: ${colors.basic.white};
+    color: ${colors.basic.black};
     cursor: pointer;
     margin-left: 10px;
     margin-right: 600px;
@@ -191,9 +187,9 @@ export const Button = styled.button`
 `;
 
 export const ButtonTwo = styled.button`
-    background-color: transparent;
+    background-color: ${colors.basic.black};
     display: flex;
-    color: ${colors.basic.black};
+    color: ${colors.basic.white};
     cursor: pointer;
     margin-left: 10px;
     margin-right: 10px;
