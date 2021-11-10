@@ -140,6 +140,11 @@ export const ButtonEigth = styled.button`
     margin-right: 350px;
 `;
 
+export const Icon = styled.img`
+    width: 100px;
+    height: 45px;
+`;
+
 export const ContainerInner = styled.div`
     justify-content: space-between;
     align-items: center;

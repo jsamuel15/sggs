@@ -19,7 +19,9 @@ import {
     ButtonSix,
     ButtonSeven,
     ButtonEigth,
+    Icon,
 } from './homeStyles';
+import { imgIcon } from '../../assets/index';
 
 // renders
 const HomePage: React.FC = () => (
@@ -32,6 +34,7 @@ const HomePage: React.FC = () => (
             <ButtonSix>GALERY</ButtonSix>
             <ButtonSeven>CONTACTS</ButtonSeven>
             <ButtonEigth>OUR TEAM</ButtonEigth>
+            <Icon src={imgIcon} />
         </Header>
         <ContainerInner>
             <H1> Feel the Fresh, Business Perspectivel </H1>

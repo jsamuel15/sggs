@@ -1,1 +1,1 @@
-export { default as iconProfile } from './images/iconProfile.jpg';
+export { default as imgIcon } from './images/icon.png';
