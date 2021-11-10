@@ -37,7 +37,7 @@ const HomePage: React.FC = () => (
             <Icon src={imgIcon} />
         </Header>
         <ContainerInner>
-            <H1> Feel the Fresh, Business Perspectivel </H1>
+            <H1> Feel the Fresh Business Perspectivel </H1>
             <H4> INNOVATIVE SOLUTIONS AND GLOBAL CONSULTING </H4>
             <H6>
                 We elp global leaders with their organiation most critical issues and opportunities,

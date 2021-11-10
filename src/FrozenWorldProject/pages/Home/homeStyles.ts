@@ -40,6 +40,7 @@ export const Text = styled.text`
     margin-left: 100px;
     align-items: center;
     text-align: center;
+    font-family: "Times New Roman";
 `;
 
 export const ButtonTree = styled.button`
@@ -141,8 +142,9 @@ export const ButtonEigth = styled.button`
 `;
 
 export const Icon = styled.img`
-    width: 100px;
-    height: 45px;
+    width: 50px;
+    height: 50px;
+    display: flex;
 `;
 
 export const ContainerInner = styled.div`
@@ -155,6 +157,7 @@ export const H1 = styled.h1`
     color: ${colors.basic.black};
     padding: 170px 280px 10px 400px;
     align-items: center;
+    font-size: 60px;
 `;
 
 export const H4 = styled.h4`
