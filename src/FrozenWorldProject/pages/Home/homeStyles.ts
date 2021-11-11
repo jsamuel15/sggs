@@ -37,10 +37,11 @@ export const Header = styled.div`
 export const Text = styled.text`
     color: ${colors.basic.black};
     margin-right: 100px;
-    margin-left: 100px;
+    margin-left: 70px;
     align-items: center;
     text-align: center;
     font-family: "Times New Roman";
+    font-size: 30px;
 `;
 
 export const ButtonTree = styled.button`
@@ -48,15 +49,15 @@ export const ButtonTree = styled.button`
     display: flex;
     color: ${colors.basic.black};
     cursor: pointer;
-    width: 100px;
+    width: 90px;
     height: 40px;
     border: solid 2px ${colors.basic.black};
     border-radius: 20px;
-    font-size: 15px;
-    margin-top: 1px;
-    float: right;
+    font-size: 12px;
     vertical-align: middle;
     padding-left: 10px;
+    align-items: center;
+    justify-content: center;
 `;
 
 export const ButtonFour = styled.button`
@@ -71,9 +72,11 @@ export const ButtonFour = styled.button`
     height: 45px;
     border: none;
     border-radius: 15px;
-    font-size: 15px;
+    font-size: 12px;
     padding-left: 10px;
     margin-left: 5px;
+    align-items: center;
+    justify-content: center;
 `;
 
 export const ButtonFive = styled.button`
@@ -87,9 +90,11 @@ export const ButtonFive = styled.button`
     height: 45px;
     border: none;
     border-radius: 15px;
-    font-size: 15px;
+    font-size: 12px;
     padding-left: 10px;
     margin-left: 5px;
+    align-items: center;
+    justify-content: center;
 `;
 
 export const ButtonSix = styled.button`
@@ -103,9 +108,11 @@ export const ButtonSix = styled.button`
     height: 45px;
     border: none;
     border-radius: 15px;
-    font-size: 15px;
+    font-size: 12px;
     padding-left: 10px;
     margin-left: 5px;
+    align-items: center;
+    justify-content: center;
 `;
 
 export const ButtonSeven = styled.button`
@@ -119,9 +126,11 @@ export const ButtonSeven = styled.button`
     height: 45px;
     border: none;
     border-radius: 15px;
-    font-size: 15px;
+    font-size: 12px;
     padding-left: 10px;
     margin-left: 5px;
+    align-items: center;
+    justify-content: center;
 `;
 
 export const ButtonEigth = styled.button`
@@ -135,16 +144,20 @@ export const ButtonEigth = styled.button`
     height: 45px;
     border: none;
     border-radius: 15px;
-    font-size: 15px;
+    font-size: 12px;
     padding-left: 5px;
     margin-left: 5px;
-    margin-right: 350px;
+    margin-right: 300px;
+    align-items: center;
+    justify-content: center;
 `;
 
 export const Icon = styled.img`
     width: 50px;
     height: 50px;
     display: flex;
+    align-items: center;
+    justify-content: center;
 `;
 
 export const ContainerInner = styled.div`
@@ -177,20 +190,21 @@ export const H6 = styled.h6`
 export const Button = styled.button`
     background-color: transparent;
     display: flex;
-    color: ${colors.basic.black};
+    color: ${colors.basic.white};
     cursor: pointer;
     margin-left: 10px;
-    margin-right: 600px;
+    margin-right: 500px;
     margin-top: 10px;
-    width: 100px;
+    width: 140px;
     height: 45px;
-    border: solid 2px ${colors.basic.black};
+    border: solid 2px ${colors.basic.white};
     border-radius: 20px;
     font-size: 15px;
     padding: 11px 21px;
     float: right;
     vertical-align: middle;
     align-items: center;
+    justify-content: center;
     text-align: center;
 `;
 
@@ -202,7 +216,7 @@ export const ButtonTwo = styled.button`
     margin-left: 10px;
     margin-right: 10px;
     margin-top: 10px;
-    width: 100px;
+    width: 140px;
     height: 45px;
     border: solid 2px ${colors.basic.black};
     border-radius: 20px;
@@ -211,4 +225,5 @@ export const ButtonTwo = styled.button`
     float: right;
     vertical-align: middle;
     align-items: center;
+    justify-content: center;
 `;
