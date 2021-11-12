@@ -152,14 +152,6 @@ export const ButtonEigth = styled.button`
     justify-content: center;
 `;
 
-export const Icon = styled.img`
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-`;
-
 export const ContainerInner = styled.div`
     justify-content: space-between;
     align-items: center;
@@ -224,6 +216,14 @@ export const ButtonTwo = styled.button`
     padding: 11px 21px;
     float: right;
     vertical-align: middle;
+    align-items: center;
+    justify-content: center;
+`;
+
+export const Icon = styled.img`
+    width: 50px;
+    height: 50px;
+    display: flex;
     align-items: center;
     justify-content: center;
 `;

@@ -34,7 +34,6 @@ const HomePage: React.FC = () => (
             <ButtonSix>GALERY</ButtonSix>
             <ButtonSeven>CONTACTS</ButtonSeven>
             <ButtonEigth>OUR TEAM</ButtonEigth>
-            <Icon src={imgIcon} />
         </Header>
         <ContainerInner>
             <H1> Feel the Fresh Business Perspectivel </H1>
@@ -45,6 +44,7 @@ const HomePage: React.FC = () => (
             </H6>
             <Button>CONTACT US</Button>
             <ButtonTwo>DETAILS</ButtonTwo>
+            <Icon src={imgIcon} />
         </ContainerInner>
     </Container>
 );
