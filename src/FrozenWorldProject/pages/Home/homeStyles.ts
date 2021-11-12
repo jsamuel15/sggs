@@ -156,12 +156,11 @@ export const ButtonEigth = styled.button`
 export const ContainerInner = styled.div`
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
 `;
 
 export const H1 = styled.h1`
     color: ${colors.basic.black};
-    padding: 170px 280px 10px 400px;
+    padding: 100px 200px 10px 300px;
     align-items: center;
     font-size: 60px;
 `;
@@ -175,7 +174,7 @@ export const H4 = styled.h4`
 
 export const H6 = styled.h6`
     color: ${colors.basic.black};
-    padding: 20px 300px 10px 400px;
+    padding: 20px 300px 10px 200px;
     margin-top: 10px;
     align-items: center;
 `;
@@ -187,7 +186,6 @@ export const Button = styled.button`
     cursor: pointer;
     margin-left: 10px;
     margin-right: 500px;
-    margin-top: 10px;
     width: 140px;
     height: 45px;
     border: solid 2px ${colors.basic.white};
@@ -208,7 +206,6 @@ export const ButtonTwo = styled.button`
     cursor: pointer;
     margin-left: 10px;
     margin-right: 10px;
-    margin-top: 10px;
     width: 140px;
     height: 45px;
     border: solid 2px ${colors.basic.black};
@@ -233,6 +230,7 @@ export const IconTwo = styled.img`
     width: 50px;
     height: 50px;
     display: flex;
+    margin-left: 1290px;
     align-items: center;
     justify-content: center;
 `;
