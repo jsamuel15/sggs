@@ -12,6 +12,7 @@ interface Container {
 
 export const Container = styled.div<Container>`
     background-image: ${(props) => (`url(${props.background})`)};
+    background-color: ${colors.theme.SlateBlue};
     background-size: cover;
     width: 100vw;
     height: 100vh;
@@ -221,6 +222,14 @@ export const ButtonTwo = styled.button`
 `;
 
 export const Icon = styled.img`
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`;
+
+export const IconTwo = styled.img`
     width: 50px;
     height: 50px;
     display: flex;

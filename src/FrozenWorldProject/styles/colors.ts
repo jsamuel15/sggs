@@ -3,7 +3,9 @@ const colors = {
         black: '#000000',
         white: '#ffffff',
     },
-    theme: {},
+    theme: {
+        SlateBlue: '#6A5ACD',
+    },
 };
 
 export default colors;

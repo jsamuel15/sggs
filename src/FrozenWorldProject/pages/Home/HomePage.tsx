@@ -20,8 +20,9 @@ import {
     ButtonSeven,
     ButtonEigth,
     Icon,
+    IconTwo,
 } from './homeStyles';
-import { imgIcon } from '../../assets/index';
+import { imgIcon, imgIconTwo } from '../../assets/index';
 
 // renders
 const HomePage: React.FC = () => (
@@ -42,6 +43,7 @@ const HomePage: React.FC = () => (
                 We elp global leaders with their organiation most critical issues and opportunities,
                 Together, we create enduring charge and results.
             </H6>
+            <IconTwo src={imgIconTwo} />
             <Button>CONTACT US</Button>
             <ButtonTwo>DETAILS</ButtonTwo>
             <Icon src={imgIcon} />
