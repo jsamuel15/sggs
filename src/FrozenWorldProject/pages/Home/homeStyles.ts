@@ -247,15 +247,24 @@ export const Icon = styled.img`
     width: 50px;
     height: 50px;
     display: flex;
+    margin-right: 390px;
+    float: right;
+    vertical-align: middle;
     align-items: center;
     justify-content: center;
+    text-align: center;
+    //margin-bottom: 20px;
 `;
 
 export const IconTwo = styled.img`
     width: 50px;
     height: 50px;
     display: flex;
-    margin-left: 1290px;
+    margin-left: 12px;
+    //margin-bottom: 20px;
+    float: right;
+    vertical-align: middle;
     align-items: center;
     justify-content: center;
+    text-align: center;
 `;
