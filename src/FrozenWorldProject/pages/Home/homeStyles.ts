@@ -160,21 +160,21 @@ export const ContainerInner = styled.div`
 
 export const H1 = styled.h1`
     color: ${colors.basic.black};
-    padding: 100px 200px 10px 300px;
+    padding: 100px 200px 10px 400px;
     align-items: center;
     font-size: 60px;
 `;
 
 export const H4 = styled.h4`
     color: ${colors.basic.black};
-    padding: 20px 300px 10px 400px;
+    padding: 20px 300px 10px 470px;
     margin-top: 10px;
     align-items: center;
 `;
 
 export const H6 = styled.h6`
     color: ${colors.basic.black};
-    padding: 20px 300px 10px 200px;
+    padding: 20px 300px 80px 440px;
     margin-top: 10px;
     align-items: center;
 `;
