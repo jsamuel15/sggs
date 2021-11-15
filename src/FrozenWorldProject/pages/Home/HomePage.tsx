@@ -8,8 +8,11 @@ import {
     ContainerInner,
     Header,
     Text,
+    Soon,
+    SoonTwo,
+    SoonTree,
     H1,
-    H4,
+    H3,
     H6,
     Button,
     ButtonTwo,
@@ -22,7 +25,13 @@ import {
     Icon,
     IconTwo,
 } from './homeStyles';
-import { imgIcon, imgIconTwo } from '../../assets/index';
+import {
+    imgIcon,
+    imgIconTwo,
+    logoG,
+    logoM,
+    logoW,
+} from '../../assets/index';
 
 // renders
 const HomePage: React.FC = () => (
@@ -35,10 +44,13 @@ const HomePage: React.FC = () => (
             <ButtonSix>GALERY</ButtonSix>
             <ButtonSeven>CONTACTS</ButtonSeven>
             <ButtonEigth>OUR TEAM</ButtonEigth>
+            <Soon src={logoG} />
+            <SoonTwo src={logoM} />
+            <SoonTree src={logoW} />
         </Header>
         <ContainerInner>
             <H1> Feel the Fresh Business Perspectivel </H1>
-            <H4> INNOVATIVE SOLUTIONS AND GLOBAL CONSULTING </H4>
+            <H3> INNOVATIVE SOLUTIONS AND GLOBAL CONSULTING </H3>
             <H6>
                 We elp global leaders with their organiation most critical issues and opportunities,
                 Together, we create enduring charge and results.

@@ -37,7 +37,7 @@ export const Header = styled.div`
 
 export const Text = styled.text`
     color: ${colors.basic.black};
-    margin-right: 100px;
+    margin-right: 90px;
     margin-left: 70px;
     align-items: center;
     text-align: center;
@@ -75,7 +75,7 @@ export const ButtonFour = styled.button`
     border-radius: 15px;
     font-size: 12px;
     padding-left: 10px;
-    margin-left: 5px;
+    margin-left: 2px;
     align-items: center;
     justify-content: center;
 `;
@@ -93,7 +93,7 @@ export const ButtonFive = styled.button`
     border-radius: 15px;
     font-size: 12px;
     padding-left: 10px;
-    margin-left: 5px;
+    //margin-left: 5px;
     align-items: center;
     justify-content: center;
 `;
@@ -111,7 +111,7 @@ export const ButtonSix = styled.button`
     border-radius: 15px;
     font-size: 12px;
     padding-left: 10px;
-    margin-left: 5px;
+    //margin-left: 5px;
     align-items: center;
     justify-content: center;
 `;
@@ -129,7 +129,7 @@ export const ButtonSeven = styled.button`
     border-radius: 15px;
     font-size: 12px;
     padding-left: 10px;
-    margin-left: 5px;
+    //margin-left: 5px;
     align-items: center;
     justify-content: center;
 `;
@@ -147,10 +147,35 @@ export const ButtonEigth = styled.button`
     border-radius: 15px;
     font-size: 12px;
     padding-left: 5px;
-    margin-left: 5px;
-    margin-right: 300px;
+    //margin-left: 3px;
+    margin-right: 30px;
     align-items: center;
     justify-content: center;
+`;
+
+export const Soon = styled.img`
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`;
+
+export const SoonTwo = styled.img`
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`;
+
+export const SoonTree = styled.img`
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 300px;
 `;
 
 export const ContainerInner = styled.div`
@@ -160,12 +185,12 @@ export const ContainerInner = styled.div`
 
 export const H1 = styled.h1`
     color: ${colors.basic.black};
-    padding: 100px 200px 10px 400px;
+    padding: 90px 200px 10px 400px;
     align-items: center;
-    font-size: 60px;
+    font-size: 70px;
 `;
 
-export const H4 = styled.h4`
+export const H3 = styled.h3`
     color: ${colors.basic.black};
     padding: 20px 300px 10px 470px;
     margin-top: 10px;
@@ -174,7 +199,7 @@ export const H4 = styled.h4`
 
 export const H6 = styled.h6`
     color: ${colors.basic.black};
-    padding: 20px 300px 80px 440px;
+    padding: 20px 300px 60px 440px;
     margin-top: 10px;
     align-items: center;
 `;
@@ -185,7 +210,7 @@ export const Button = styled.button`
     color: ${colors.basic.white};
     cursor: pointer;
     margin-left: 10px;
-    margin-right: 500px;
+    margin-right: 550px;
     width: 140px;
     height: 45px;
     border: solid 2px ${colors.basic.white};
