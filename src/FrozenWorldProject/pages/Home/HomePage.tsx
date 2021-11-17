@@ -11,6 +11,7 @@ import {
     Soon,
     SoonTwo,
     SoonTree,
+    Hr,
     H1,
     H3,
     H6,
@@ -51,6 +52,7 @@ const HomePage: React.FC = () => (
         <ContainerInner>
             <H1> Feel the Fresh Business Perspectivel </H1>
             <H3> INNOVATIVE SOLUTIONS AND GLOBAL CONSULTING </H3>
+            <Hr />
             <H6>
                 We elp global leaders with their organiation most critical issues and opportunities,
                 Together, we create enduring charge and results.

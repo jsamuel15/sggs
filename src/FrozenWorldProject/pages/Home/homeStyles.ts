@@ -57,6 +57,7 @@ export const ButtonTree = styled.button`
     font-size: 12px;
     vertical-align: middle;
     padding-left: 10px;
+    text-align: center;
     align-items: center;
     justify-content: center;
 `;
@@ -185,23 +186,33 @@ export const ContainerInner = styled.div`
 
 export const H1 = styled.h1`
     color: ${colors.basic.black};
-    padding: 90px 200px 10px 400px;
+    padding: 90px 300px 10px 300px;
     align-items: center;
     font-size: 70px;
+    text-align: center;
 `;
 
 export const H3 = styled.h3`
     color: ${colors.basic.black};
-    padding: 20px 300px 10px 470px;
+    padding: 20px 300px 10px 250px;
+    font-size: 20px;
     margin-top: 10px;
     align-items: center;
+    text-align: center;
 `;
 
 export const H6 = styled.h6`
     color: ${colors.basic.black};
-    padding: 20px 300px 60px 440px;
+    padding: 20px 400px 10px 400px;
     margin-top: 10px;
     align-items: center;
+    text-align: center;
+`;
+
+export const Hr = styled.div`
+    color: ${colors.basic.black};
+    width: 50px;
+    height: 5px;
 `;
 
 export const Button = styled.button`
@@ -261,7 +272,7 @@ export const IconTwo = styled.img`
     height: 50px;
     display: flex;
     margin-left: 100px;
-    margin-right: 100px;
+    margin-right: 70px;
     margin-bottom: 200px;
     float: right;
     vertical-align: middle;
