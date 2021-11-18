@@ -12,7 +12,7 @@ interface Container {
 
 export const Container = styled.div<Container>`
     background-image: ${(props) => (`url(${props.background})`)};
-    background-color: ${colors.theme.SlateBlue};
+    background: linear-gradient(45deg, #6A5ACD, #6A5ACD,);
     background-size: cover;
     width: 100vw;
     height: 100vh;
@@ -36,7 +36,7 @@ export const Header = styled.div`
 `;
 
 export const Text = styled.text`
-    color: ${colors.basic.black};
+    color: ${colors.basic.white};
     margin-right: 90px;
     margin-left: 70px;
     align-items: center;
@@ -48,7 +48,7 @@ export const Text = styled.text`
 export const ButtonTree = styled.button`
     background-color: transparent;
     display: flex;
-    color: ${colors.basic.black};
+    color: ${colors.basic.white};
     cursor: pointer;
     width: 90px;
     height: 40px;
@@ -66,7 +66,7 @@ export const ButtonFour = styled.button`
     background-color: transparent;
     display: flex;
     flex-direction: column;
-    color: ${colors.basic.black};
+    color: ${colors.basic.white};
     cursor: pointer;
     margin-left: 400px;
     margin-top: 1px;
@@ -85,7 +85,7 @@ export const ButtonFive = styled.button`
     background-color: transparent;
     display: flex;
     flex-direction: column;
-    color: ${colors.basic.black};
+    color: ${colors.basic.white};
     cursor: pointer;
     margin-top: 1px;
     width: 100px;
@@ -103,7 +103,7 @@ export const ButtonSix = styled.button`
     background-color: transparent;
     display: flex;
     flex-direction: column;
-    color: ${colors.basic.black};
+    color: ${colors.basic.white};
     cursor: pointer;
     margin-top: 1px;
     width: 100px;
@@ -121,7 +121,7 @@ export const ButtonSeven = styled.button`
     background-color: transparent;
     display: flex;
     flex-direction: column;
-    color: ${colors.basic.black};
+    color: ${colors.basic.white};
     cursor: pointer;
     margin-top: 1px;
     width: 100px;
@@ -139,7 +139,7 @@ export const ButtonEigth = styled.button`
     background-color: transparent;
     display: flex;
     flex-direction: column;
-    color: ${colors.basic.black};
+    color: ${colors.basic.white};
     cursor: pointer;
     margin-top: 1px;
     width: 100px;
@@ -185,7 +185,7 @@ export const ContainerInner = styled.div`
 `;
 
 export const H1 = styled.h1`
-    color: ${colors.basic.black};
+    color: ${colors.basic.white};
     padding: 90px 300px 10px 300px;
     align-items: center;
     font-size: 70px;
@@ -193,7 +193,7 @@ export const H1 = styled.h1`
 `;
 
 export const H3 = styled.h3`
-    color: ${colors.basic.black};
+    color: ${colors.basic.white};
     padding: 20px 300px 10px 250px;
     font-size: 20px;
     margin-top: 10px;
@@ -202,7 +202,7 @@ export const H3 = styled.h3`
 `;
 
 export const H6 = styled.h6`
-    color: ${colors.basic.black};
+    color: ${colors.basic.white};
     padding: 20px 400px 10px 400px;
     margin-top: 10px;
     align-items: center;
@@ -210,7 +210,7 @@ export const H6 = styled.h6`
 `;
 
 export const Hr = styled.div`
-    color: ${colors.basic.black};
+    color: ${colors.basic.white};
     width: 50px;
     height: 5px;
 `;
