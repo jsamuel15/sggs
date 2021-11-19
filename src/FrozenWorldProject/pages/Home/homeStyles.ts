@@ -12,7 +12,7 @@ interface Container {
 
 export const Container = styled.div<Container>`
     background-image: ${(props) => (`url(${props.background})`)};
-    background: linear-gradient(45deg, #6A5ACD, #6A5ACD,);
+    background: "linear-gradient(#6A5ACD, #6A5ACD)";
     background-size: cover;
     width: 100vw;
     height: 100vh;
@@ -57,6 +57,7 @@ export const ButtonTree = styled.button`
     font-size: 12px;
     vertical-align: middle;
     padding-left: 10px;
+    vertical-align: middle;
     text-align: center;
     align-items: center;
     justify-content: center;
@@ -70,8 +71,8 @@ export const ButtonFour = styled.button`
     cursor: pointer;
     margin-left: 400px;
     margin-top: 1px;
-    width: 100px;
-    height: 45px;
+    width: 90px;
+    height: 40px;
     border: none;
     border-radius: 15px;
     font-size: 12px;
@@ -88,8 +89,8 @@ export const ButtonFive = styled.button`
     color: ${colors.basic.white};
     cursor: pointer;
     margin-top: 1px;
-    width: 100px;
-    height: 45px;
+    width: 90px;
+    height: 40px;
     border: none;
     border-radius: 15px;
     font-size: 12px;
@@ -106,8 +107,8 @@ export const ButtonSix = styled.button`
     color: ${colors.basic.white};
     cursor: pointer;
     margin-top: 1px;
-    width: 100px;
-    height: 45px;
+    width: 90px;
+    height: 40px;
     border: none;
     border-radius: 15px;
     font-size: 12px;
@@ -124,8 +125,8 @@ export const ButtonSeven = styled.button`
     color: ${colors.basic.white};
     cursor: pointer;
     margin-top: 1px;
-    width: 100px;
-    height: 45px;
+    width: 90px;
+    height: 40px;
     border: none;
     border-radius: 15px;
     font-size: 12px;
@@ -142,8 +143,8 @@ export const ButtonEigth = styled.button`
     color: ${colors.basic.white};
     cursor: pointer;
     margin-top: 1px;
-    width: 100px;
-    height: 45px;
+    width: 90px;
+    height: 40px;
     border: none;
     border-radius: 15px;
     font-size: 12px;
@@ -202,7 +203,7 @@ export const H3 = styled.h3`
 `;
 
 export const H6 = styled.h6`
-    color: ${colors.basic.white};
+    color: c;
     padding: 20px 400px 10px 400px;
     margin-top: 10px;
     align-items: center;
@@ -210,9 +211,11 @@ export const H6 = styled.h6`
 `;
 
 export const Hr = styled.div`
-    color: ${colors.basic.white};
+    background-color: ${colors.basic.white};
     width: 50px;
     height: 5px;
+    margin-left: 650px;
+    border-radius: 20px;
 `;
 
 export const Button = styled.button`
