@@ -56,8 +56,6 @@ export const ButtonTree = styled.button`
     border-radius: 20px;
     font-size: 12px;
     vertical-align: middle;
-    padding-left: 10px;
-    vertical-align: middle;
     text-align: center;
     align-items: center;
     justify-content: center;
@@ -203,7 +201,7 @@ export const H3 = styled.h3`
 `;
 
 export const H6 = styled.h6`
-    color: c;
+    color: ${colors.basic.white};
     padding: 20px 400px 10px 400px;
     margin-top: 10px;
     align-items: center;
