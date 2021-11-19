@@ -198,12 +198,14 @@ export const H3 = styled.h3`
     margin-top: 10px;
     align-items: center;
     text-align: center;
+    margin-bottom: 40px;
 `;
 
 export const H6 = styled.h6`
     color: ${colors.basic.white};
     padding: 20px 400px 10px 400px;
     margin-top: 10px;
+    margin-bottom: 40px;
     align-items: center;
     text-align: center;
 `;
