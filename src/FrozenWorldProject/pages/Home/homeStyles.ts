@@ -12,7 +12,6 @@ interface Container {
 
 export const Container = styled.div<Container>`
     background-image: ${(props) => (`url(${props.background})`)};
-    background: "linear-gradient(#6A5ACD, #6A5ACD)";
     background-size: cover;
     width: 100vw;
     height: 100vh;
