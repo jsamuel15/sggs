@@ -5,6 +5,7 @@ const colors = {
     },
     theme: {
         SlateBlue: '#6A5ACD',
+        deepskyblue: '#00bfff',
     },
 };
 

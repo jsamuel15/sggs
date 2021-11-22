@@ -12,7 +12,6 @@ interface Container {
 
 export const Container = styled.div<Container>`
     background-image: ${(props) => (`url(${props.background})`)};
-    background-color: ${colors.theme.SlateBlue};
     background-size: cover;
     width: 100vw;
     height: 100vh;
@@ -36,7 +35,7 @@ export const Header = styled.div`
 `;
 
 export const Text = styled.text`
-    color: ${colors.basic.black};
+    color: ${colors.basic.white};
     margin-right: 90px;
     margin-left: 70px;
     align-items: center;
@@ -48,15 +47,15 @@ export const Text = styled.text`
 export const ButtonTree = styled.button`
     background-color: transparent;
     display: flex;
-    color: ${colors.basic.black};
+    color: ${colors.basic.white};
     cursor: pointer;
     width: 90px;
     height: 40px;
-    border: solid 2px ${colors.basic.black};
+    border: solid 2px ${colors.theme.deepskyblue};
     border-radius: 20px;
     font-size: 12px;
     vertical-align: middle;
-    padding-left: 10px;
+    text-align: center;
     align-items: center;
     justify-content: center;
 `;
@@ -65,12 +64,12 @@ export const ButtonFour = styled.button`
     background-color: transparent;
     display: flex;
     flex-direction: column;
-    color: ${colors.basic.black};
+    color: ${colors.basic.white};
     cursor: pointer;
     margin-left: 400px;
     margin-top: 1px;
-    width: 100px;
-    height: 45px;
+    width: 90px;
+    height: 40px;
     border: none;
     border-radius: 15px;
     font-size: 12px;
@@ -84,11 +83,11 @@ export const ButtonFive = styled.button`
     background-color: transparent;
     display: flex;
     flex-direction: column;
-    color: ${colors.basic.black};
+    color: ${colors.basic.white};
     cursor: pointer;
     margin-top: 1px;
-    width: 100px;
-    height: 45px;
+    width: 90px;
+    height: 40px;
     border: none;
     border-radius: 15px;
     font-size: 12px;
@@ -102,11 +101,11 @@ export const ButtonSix = styled.button`
     background-color: transparent;
     display: flex;
     flex-direction: column;
-    color: ${colors.basic.black};
+    color: ${colors.basic.white};
     cursor: pointer;
     margin-top: 1px;
-    width: 100px;
-    height: 45px;
+    width: 90px;
+    height: 40px;
     border: none;
     border-radius: 15px;
     font-size: 12px;
@@ -120,11 +119,11 @@ export const ButtonSeven = styled.button`
     background-color: transparent;
     display: flex;
     flex-direction: column;
-    color: ${colors.basic.black};
+    color: ${colors.basic.white};
     cursor: pointer;
     margin-top: 1px;
-    width: 100px;
-    height: 45px;
+    width: 90px;
+    height: 40px;
     border: none;
     border-radius: 15px;
     font-size: 12px;
@@ -138,11 +137,11 @@ export const ButtonEigth = styled.button`
     background-color: transparent;
     display: flex;
     flex-direction: column;
-    color: ${colors.basic.black};
+    color: ${colors.basic.white};
     cursor: pointer;
     margin-top: 1px;
-    width: 100px;
-    height: 45px;
+    width: 90px;
+    height: 40px;
     border: none;
     border-radius: 15px;
     font-size: 12px;
@@ -175,7 +174,7 @@ export const SoonTree = styled.img`
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 300px;
+    margin-right: 200px;
 `;
 
 export const ContainerInner = styled.div`
@@ -184,24 +183,38 @@ export const ContainerInner = styled.div`
 `;
 
 export const H1 = styled.h1`
-    color: ${colors.basic.black};
-    padding: 90px 200px 10px 400px;
+    color: ${colors.basic.white};
+    padding: 90px 300px 10px 300px;
     align-items: center;
     font-size: 70px;
+    text-align: center;
 `;
 
 export const H3 = styled.h3`
-    color: ${colors.basic.black};
-    padding: 20px 300px 10px 470px;
+    color: ${colors.basic.white};
+    padding: 20px 300px 10px 250px;
+    font-size: 20px;
     margin-top: 10px;
     align-items: center;
+    text-align: center;
+    margin-bottom: 40px;
 `;
 
 export const H6 = styled.h6`
-    color: ${colors.basic.black};
-    padding: 20px 300px 60px 440px;
+    color: ${colors.basic.white};
+    padding: 20px 400px 10px 400px;
     margin-top: 10px;
+    margin-bottom: 40px;
     align-items: center;
+    text-align: center;
+`;
+
+export const Hr = styled.div`
+    background-color: ${colors.basic.white};
+    width: 50px;
+    height: 5px;
+    margin-left: 650px;
+    border-radius: 20px;
 `;
 
 export const Button = styled.button`
@@ -210,7 +223,7 @@ export const Button = styled.button`
     color: ${colors.basic.white};
     cursor: pointer;
     margin-left: 10px;
-    margin-right: 550px;
+    margin-right: 320px;
     width: 140px;
     height: 45px;
     border: solid 2px ${colors.basic.white};
@@ -253,15 +266,16 @@ export const Icon = styled.img`
     align-items: center;
     justify-content: center;
     text-align: center;
-    //margin-bottom: 20px;
+    margin-bottom: 20px;
 `;
 
 export const IconTwo = styled.img`
     width: 50px;
     height: 50px;
     display: flex;
-    margin-left: 12px;
-    //margin-bottom: 20px;
+    margin-left: 100px;
+    margin-right: 70px;
+    margin-bottom: 200px;
     float: right;
     vertical-align: middle;
     align-items: center;
