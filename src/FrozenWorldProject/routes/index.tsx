@@ -6,8 +6,8 @@ import { Switch, Route } from 'react-router-dom';
 import HomePage from '../pages/Home/HomePage';
 import Page from '../pages/Pags/Page';
 import About from '../pages/about/About';
-import Galeria from '../pages/galeria/Galeria';
-import Equipe from '../pages/nossa equipe/Equipe';
+import Galeria from '../pages/galery/Galeria';
+import Equipe from '../pages/our team/Equipe';
 
 const Routes: React.FC = () => (
     <Switch>

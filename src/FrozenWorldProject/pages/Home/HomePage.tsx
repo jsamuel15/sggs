@@ -40,11 +40,11 @@ const HomePage: React.FC = () => (
         <Header>
             <Text>ARCTIC AIR</Text>
             <ButtonTree>HOME</ButtonTree>
-            <ButtonFour>PAGES</ButtonFour>
-            <ButtonFive>ABOUT</ButtonFive>
-            <ButtonSix>GALERY</ButtonSix>
-            <ButtonSeven>CONTACTS</ButtonSeven>
-            <ButtonEigth>OUR TEAM</ButtonEigth>
+            <ButtonFour onClick={() => window.location.replace('/page')}>PAGES</ButtonFour>
+            <ButtonFive onClick={() => window.location.replace('/about')}>ABOUT</ButtonFive>
+            <ButtonSix onClick={() => window.location.replace('/galeria')}>GALERY</ButtonSix>
+            <ButtonSeven onClick={() => window.location.replace('/nossaEquipe')}>OUR TEAM</ButtonSeven>
+            <ButtonEigth>CONTACTS</ButtonEigth>
             <Soon src={logoG} />
             <SoonTwo src={logoM} />
             <SoonTree src={logoW} />

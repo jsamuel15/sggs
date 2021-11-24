@@ -4,12 +4,15 @@ import React from 'react';
 import {
     Container,
     Header,
+    Text,
 } from './aboutStyles';
 
 // renders
 const About: React.FC = () => (
     <Container>
-        <Header />
+        <Header>
+            <Text>Página About </Text>
+        </Header>
     </Container>
 );
 

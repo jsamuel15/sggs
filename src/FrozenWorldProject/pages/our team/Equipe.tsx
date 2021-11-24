@@ -4,12 +4,15 @@ import React from 'react';
 import {
     Container,
     Header,
+    Text,
 } from './equipeStyles';
 
 // renders
 const Equipe: React.FC = () => (
     <Container>
-        <Header />
+        <Header>
+            <Text>Página our team</Text>
+        </Header>
     </Container>
 );
 

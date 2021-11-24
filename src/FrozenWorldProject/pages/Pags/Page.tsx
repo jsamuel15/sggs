@@ -4,12 +4,15 @@ import React from 'react';
 import {
     Container,
     Header,
+    Text,
 } from './pageStyles';
 
 // renders
 const Page: React.FC = () => (
     <Container>
-        <Header />
+        <Header>
+            <Text> Página de Pages </Text>
+        </Header>
     </Container>
 );
 

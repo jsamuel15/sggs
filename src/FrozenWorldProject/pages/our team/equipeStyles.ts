@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 // libraries
 import styled from 'styled-components';
 
@@ -29,4 +30,12 @@ export const Header = styled.div`
     text-align: center;
     padding: 20px;
     flex-wrap: wrap;
+`;
+
+export const Text = styled.text`
+    color: ${colors.basic.black};
+    padding: 90px 300px 10px 300px;
+    align-items: center;
+    font-size: 70px;
+    text-align: center;
 `;
