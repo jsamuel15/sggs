@@ -38,3 +38,9 @@ export const Text = styled.text`
     font-size: 70px;
     text-align: center;
 `;
+
+export const Button = styled.button`
+    display: flex;
+    color: ${colors.basic.black}
+    background-color: ${colors.basic.white};
+`;
