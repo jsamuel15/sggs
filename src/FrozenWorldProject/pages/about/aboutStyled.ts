@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 // libraries
 import styled from 'styled-components';
 
@@ -76,6 +75,7 @@ export const ButtonTwo = styled.button`
     margin-left: 2px;
     align-items: center;
     justify-content: center;
+`;
 
 export const ButtonTree = styled.button`
     background-color: transparent;
