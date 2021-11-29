@@ -46,12 +46,12 @@ export const Text = styled.text`
 
 export const ButtonTree = styled.button`
     background-color: transparent;
-    display: flex;
     color: ${colors.basic.white};
+    border: solid 2px ${colors.theme.deepskyblue};
+    display: flex;
     cursor: pointer;
     width: 90px;
     height: 40px;
-    border: solid 2px ${colors.theme.deepskyblue};
     border-radius: 20px;
     font-size: 12px;
     vertical-align: middle;

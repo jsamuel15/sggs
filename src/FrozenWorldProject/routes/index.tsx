@@ -4,10 +4,11 @@ import { Switch, Route } from 'react-router-dom';
 
 // pages
 import HomePage from '../pages/Home/HomePage';
-import Page from '../pages/Pags/Page';
-import About from '../pages/about/About';
-import Galeria from '../pages/galery/Galeria';
-import Equipe from '../pages/our team/Equipe';
+import Page from '../pages/WebPages/WebPages';
+import About from '../pages/About/About';
+import Galeria from '../pages/Galery/Galeria';
+import Equipe from '../pages/OurTeam/Equipe';
+import Contato from '../pages/Contacts/Contact';
 
 const Routes: React.FC = () => (
     <Switch>
@@ -16,6 +17,7 @@ const Routes: React.FC = () => (
         <Route path="/about" exact component={About} />
         <Route path="/galeria" exact component={Galeria} />
         <Route path="/nossaEquipe" exact component={Equipe} />
+        <Route path="/contato" exact component={Contato} />
     </Switch>
 );
 

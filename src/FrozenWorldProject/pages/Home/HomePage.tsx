@@ -44,7 +44,7 @@ const HomePage: React.FC = () => (
             <ButtonFive onClick={() => window.location.replace('/about')}>ABOUT</ButtonFive>
             <ButtonSix onClick={() => window.location.replace('/galeria')}>GALERY</ButtonSix>
             <ButtonSeven onClick={() => window.location.replace('/nossaEquipe')}>OUR TEAM</ButtonSeven>
-            <ButtonEigth>CONTACTS</ButtonEigth>
+            <ButtonEigth onClick={() => window.location.replace('/contato')}>CONTACTS</ButtonEigth>
             <Soon src={logoG} />
             <SoonTwo src={logoM} />
             <SoonTree src={logoW} />

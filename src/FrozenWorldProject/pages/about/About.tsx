@@ -10,6 +10,7 @@ import {
     ButtonTree,
     ButtonFour,
     ButtonFive,
+    ButtonSix,
 } from './aboutStyled';
 
 // renders
@@ -21,6 +22,7 @@ const About: React.FC = () => (
             <ButtonTree onClick={() => window.location.replace('/about')}>ABOUT</ButtonTree>
             <ButtonFour onClick={() => window.location.replace('/galeria')}>GALERY</ButtonFour>
             <ButtonFive onClick={() => window.location.replace('/nossaEquipe')}>OUR TEAM</ButtonFive>
+            <ButtonSix onClick={() => window.location.replace('/contato')}>CONTACT</ButtonSix>
         </Header>
         <Text>Página About </Text>
     </Container>
