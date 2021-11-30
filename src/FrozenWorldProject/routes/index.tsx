@@ -8,7 +8,7 @@ import Page from '../pages/WebPages/WebPages';
 import About from '../pages/About/About';
 import Galeria from '../pages/Galery/Galery';
 import Equipe from '../pages/OurTeam/OurTeam';
-import Contato from '../pages/Contacts/Contact';
+import Contato from '../pages/Contacts/Contacts';
 
 const Routes: React.FC = () => (
     <Switch>
