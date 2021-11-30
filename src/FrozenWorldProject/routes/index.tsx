@@ -6,8 +6,8 @@ import { Switch, Route } from 'react-router-dom';
 import HomePage from '../pages/Home/HomePage';
 import Page from '../pages/WebPages/WebPages';
 import About from '../pages/About/About';
-import Galeria from '../pages/Galery/Galeria';
-import Equipe from '../pages/OurTeam/Equipe';
+import Galeria from '../pages/Galery/Galery';
+import Equipe from '../pages/OurTeam/OurTeam';
 import Contato from '../pages/Contacts/Contact';
 
 const Routes: React.FC = () => (

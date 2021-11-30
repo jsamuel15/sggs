@@ -11,10 +11,10 @@ import {
     ButtonFour,
     ButtonFive,
     ButtonSix,
-} from './equipeStyles';
+} from './galeryStyles';
 
 // renders
-const Equipe: React.FC = () => (
+const Galeria: React.FC = () => (
     <Container>
         <Header>
             <Button onClick={() => window.location.replace('/home')}>HOME</Button>
@@ -24,8 +24,8 @@ const Equipe: React.FC = () => (
             <ButtonFive onClick={() => window.location.replace('/nossaEquipe')}>OUR TEAM</ButtonFive>
             <ButtonSix onClick={() => window.location.replace('/contato')}>CONTACT</ButtonSix>
         </Header>
-        <Text>Página our team</Text>
+        <Text>Página Galeria</Text>
     </Container>
 );
 
-export default Equipe;
+export default Galeria;
