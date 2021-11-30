@@ -140,17 +140,13 @@ export const ButtonFive = styled.button`
 export const ButtonSix = styled.button`
     background-color: transparent;
     display: flex;
-    flex-direction: column;
     color: ${colors.basic.white};
     cursor: pointer;
-    margin-left: 400px;
-    margin-top: 1px;
     width: 90px;
     height: 40px;
     border: none;
-    border-radius: 15px;
+    border-radius: 20px;
     font-size: 12px;
-    padding-left: 10px;
     margin-right: 350px;
     vertical-align: middle;
     text-align: center;
