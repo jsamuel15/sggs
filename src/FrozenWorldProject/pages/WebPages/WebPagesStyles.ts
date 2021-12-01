@@ -11,7 +11,7 @@ interface Container {
 }
 
 export const Container = styled.div`
-    background-color: ${colors.basic.black};
+    background-color: ${colors.basic.blue};
     background-size: cover;
     width: 100vw;
     height: 100vh;
@@ -36,7 +36,7 @@ export const Header = styled.div`
 
 export const Text = styled.text`
     color: ${colors.basic.white};
-    padding: 90px 300px 10px 300px;
+    padding: 90px 800px 10px 0px;
     align-items: center;
     font-size: 70px;
     text-align: center;

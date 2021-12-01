@@ -156,6 +156,7 @@ export const Soon = styled.img`
     width: 25px;
     height: 25px;
     display: flex;
+    cursor: pointer;
     align-items: center;
     justify-content: center;
 `;
@@ -164,6 +165,7 @@ export const SoonTwo = styled.img`
     width: 25px;
     height: 25px;
     display: flex;
+    cursor: pointer;
     align-items: center;
     justify-content: center;
 `;
@@ -172,6 +174,7 @@ export const SoonTree = styled.img`
     width: 25px;
     height: 25px;
     display: flex;
+    cursor: pointer;
     align-items: center;
     justify-content: center;
     margin-right: 200px;

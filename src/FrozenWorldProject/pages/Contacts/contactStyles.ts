@@ -11,7 +11,7 @@ interface Container {
 }
 
 export const Container = styled.div`
-    background-color: ${colors.basic.black};
+    background-color: ${colors.basic.orange};
     background-size: cover;
     width: 100vw;
     height: 100vh;
