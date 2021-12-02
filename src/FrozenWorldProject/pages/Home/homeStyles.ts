@@ -263,6 +263,7 @@ export const Icon = styled.img`
     width: 50px;
     height: 50px;
     display: flex;
+    cursor: pointer;
     margin-right: 390px;
     float: right;
     vertical-align: middle;
@@ -280,6 +281,7 @@ export const IconTwo = styled.img`
     margin-right: 70px;
     margin-bottom: 200px;
     float: right;
+    cursor: pointer;
     vertical-align: middle;
     align-items: center;
     justify-content: center;
