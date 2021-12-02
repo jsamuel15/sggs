@@ -46,12 +46,12 @@ export const Text = styled.text`
 
 export const ButtonTree = styled.button`
     background-color: transparent;
-    display: flex;
     color: ${colors.basic.white};
+    border: solid 2px ${colors.theme.deepskyblue};
+    display: flex;
     cursor: pointer;
     width: 90px;
     height: 40px;
-    border: solid 2px ${colors.theme.deepskyblue};
     border-radius: 20px;
     font-size: 12px;
     vertical-align: middle;
@@ -156,6 +156,7 @@ export const Soon = styled.img`
     width: 25px;
     height: 25px;
     display: flex;
+    cursor: pointer;
     align-items: center;
     justify-content: center;
 `;
@@ -164,6 +165,7 @@ export const SoonTwo = styled.img`
     width: 25px;
     height: 25px;
     display: flex;
+    cursor: pointer;
     align-items: center;
     justify-content: center;
 `;
@@ -172,6 +174,7 @@ export const SoonTree = styled.img`
     width: 25px;
     height: 25px;
     display: flex;
+    cursor: pointer;
     align-items: center;
     justify-content: center;
     margin-right: 200px;
@@ -260,6 +263,7 @@ export const Icon = styled.img`
     width: 50px;
     height: 50px;
     display: flex;
+    cursor: pointer;
     margin-right: 390px;
     float: right;
     vertical-align: middle;
@@ -277,6 +281,7 @@ export const IconTwo = styled.img`
     margin-right: 70px;
     margin-bottom: 200px;
     float: right;
+    cursor: pointer;
     vertical-align: middle;
     align-items: center;
     justify-content: center;
