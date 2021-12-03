@@ -4,7 +4,11 @@ import React from 'react';
 import {
     Container,
     Header,
-    Text,
+    ContainerIce,
+    ContainerOpen,
+    ContainerBox,
+    ContainerSize,
+    ContainerInner,
     Button,
     ButtonTwo,
     ButtonTree,
@@ -24,7 +28,12 @@ const About: React.FC = () => (
             <ButtonFive onClick={() => window.location.replace('/nossaEquipe')}>OUR TEAM</ButtonFive>
             <ButtonSix onClick={() => window.location.replace('/contato')}>CONTACT</ButtonSix>
         </Header>
-        <Text>Página About </Text>
+        <ContainerOpen>
+            <ContainerIce />
+            <ContainerBox />
+            <ContainerSize />
+            <ContainerInner />
+        </ContainerOpen>
     </Container>
 );
 

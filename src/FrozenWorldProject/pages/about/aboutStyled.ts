@@ -11,7 +11,7 @@ interface Container {
 }
 
 export const Container = styled.div`
-    background-color: ${colors.basic.yellow};
+    background-color: ${colors.basic.purple};
     background-size: cover;
     width: 100vw;
     height: 100vh;
@@ -34,14 +34,44 @@ export const Header = styled.div`
     flex-wrap: wrap;
 `;
 
-export const Text = styled.text`
-    color: ${colors.basic.white};
-    padding: 90px 300px 10px 300px;
+export const ContainerOpen = styled.div`
+    background-color: ${colors.basic.black};
+    display: flex;
     align-items: center;
-    font-size: 70px;
+    height: 100%;
+    width: 100%;
+`;
+
+export const ContainerIce = styled.div`
+    background-color: ${colors.basic.white};
+    width: 150px;
+    height: 150px;
+`;
+
+export const ContainerBox = styled.div`
+    background-color: ${colors.basic.white};
+    width: 150px;
+    height: 150px;
+`;
+
+export const ContainerSize = styled.div`
+    background-color: ${colors.basic.white};
+    width: 150px;
+    height: 150px;
+`;
+
+export const ContainerInner = styled.div`
+    background-color: ${colors.basic.white};
+    width: 150px;
+    height: 150px;
+    align-items: center;
     text-align: center;
-    margin-top: 10px;
+    display: flex;
+    font-size: 70px;
+    margin-top: 40px;
     margin-bottom: 40px;
+    margin-left: 50%;
+    flex-wrap: wrap;
 `;
 
 export const Button = styled.button`
