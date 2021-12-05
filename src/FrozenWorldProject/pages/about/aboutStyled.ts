@@ -35,7 +35,7 @@ export const Header = styled.div`
 `;
 
 export const ContainerOpen = styled.div`
-    background-color: ${colors.basic.black};
+    background-color: transparent;
     display: flex;
     align-items: center;
     height: 100%;
@@ -43,7 +43,7 @@ export const ContainerOpen = styled.div`
 `;
 
 export const ContainerHard = styled.div`
-    background-color: ${colors.basic.blue};
+    background-color: transparent;
     display: flex;
     align-items: center;
     height: 100%;
@@ -61,7 +61,7 @@ export const ContainerIce = styled.div`
 `;
 
 export const TextIce = styled.text`
-    color: ${colors.basic.red};
+    color: ${colors.basic.black};
     display: flex;
     overflow: auto;
 `;
@@ -76,6 +76,12 @@ export const ContainerBox = styled.div`
     flex-direction: row;
 `;
 
+export const TextBox = styled.text`
+    color: ${colors.basic.black};
+    display: flex;
+    overflow: auto;
+`;
+
 export const ContainerSize = styled.div`
     background-color: ${colors.basic.white};
     width: 150px;
@@ -86,6 +92,12 @@ export const ContainerSize = styled.div`
     flex-direction: row;
 `;
 
+export const TextSize = styled.text`
+    color: ${colors.basic.black};
+    display: flex;
+    overflow: auto;
+`;
+
 export const ContainerInner = styled.div`
     background-color: ${colors.basic.white};
     width: 150px;
@@ -94,6 +106,12 @@ export const ContainerInner = styled.div`
     margin-top: 10px;
     margin-left: 50px;
     flex-direction: row;
+`;
+
+export const TextInner = styled.text`
+    color: ${colors.basic.black};
+    display: flex;
+    overflow: auto;
 `;
 
 export const Button = styled.button`
