@@ -42,36 +42,58 @@ export const ContainerOpen = styled.div`
     width: 100%;
 `;
 
+export const ContainerHard = styled.div`
+    background-color: ${colors.basic.blue};
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+`;
+
 export const ContainerIce = styled.div`
     background-color: ${colors.basic.white};
     width: 150px;
     height: 150px;
+    display: flex;
+    margin-top: 10px;
+    margin-left: 500px;
+    flex-direction: row;
+`;
+
+export const TextIce = styled.text`
+    color: ${colors.basic.red};
+    display: flex;
+    overflow: auto;
 `;
 
 export const ContainerBox = styled.div`
     background-color: ${colors.basic.white};
     width: 150px;
     height: 150px;
+    display: flex;
+    margin-top: 10px;
+    margin-left: 50px;
+    flex-direction: row;
 `;
 
 export const ContainerSize = styled.div`
     background-color: ${colors.basic.white};
     width: 150px;
     height: 150px;
+    display: flex;
+    margin-top: 10px;
+    margin-left: 500px;
+    flex-direction: row;
 `;
 
 export const ContainerInner = styled.div`
     background-color: ${colors.basic.white};
     width: 150px;
     height: 150px;
-    align-items: center;
-    text-align: center;
     display: flex;
-    font-size: 70px;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    margin-left: 50%;
-    flex-wrap: wrap;
+    margin-top: 10px;
+    margin-left: 50px;
+    flex-direction: row;
 `;
 
 export const Button = styled.button`
