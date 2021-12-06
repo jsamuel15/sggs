@@ -34,6 +34,206 @@ export const Header = styled.div`
     flex-wrap: wrap;
 `;
 
+export const ContainerOpen = styled.div`
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+`;
+
+export const ContainerHard = styled.div`
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+`;
+
+export const ContainerIce = styled.div`
+    background-color: ${colors.basic.white};
+    width: 150px;
+    height: 150px;
+    display: flex;
+    margin-top: 10px;
+    flex-direction: row;
+`;
+
+export const TextIce = styled.text`
+    color: ${colors.basic.black};
+    display: flex;
+    overflow: auto;
+`;
+
+export const ContainerBox = styled.div`
+    background-color: ${colors.basic.white};
+    width: 150px;
+    height: 150px;
+    display: flex;
+    margin-top: 10px;
+    margin-left: 50px;
+    flex-direction: row;
+`;
+
+export const TextBox = styled.text`
+    color: ${colors.basic.black};
+    display: flex;
+    overflow: auto;
+`;
+
+export const ContainerSize = styled.div`
+    background-color: ${colors.basic.white};
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+`;
+
+export const TextSize = styled.text`
+    color: ${colors.basic.black};
+    display: flex;
+    overflow: auto;
+`;
+
+export const ContainerCounter = styled.div`
+    background-color: ${colors.basic.white};
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 50px;
+`;
+
+export const TextCounter = styled.text`
+    color: ${colors.basic.black};
+    display: flex;
+    overflow: auto;
+`;
+
+export const ContainerIzi = styled.div`
+    background-color: ${colors.basic.white};
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 50px;
+`;
+
+export const TextIzi = styled.text`
+    color: ${colors.basic.black};
+    display: flex;
+    overflow: auto;
+`;
+
+export const ContainerInner = styled.div`
+    background-color: ${colors.basic.white};
+    width: 150px;
+    height: 150px;
+    display: flex;
+    margin-left: 50px;
+    flex-direction: row;
+`;
+
+export const TextInner = styled.text`
+    color: ${colors.basic.black};
+    display: flex;
+    overflow: auto;
+`;
+
+export const ContainerCall = styled.div`
+    background-color: ${colors.basic.white};
+    width: 150px;
+    height: 150px;
+    display: flex;
+    margin-top: 10px;
+    margin-left: 50px;
+    flex-direction: row;
+`;
+
+export const TextCall = styled.text`
+    color: ${colors.basic.black};
+    display: flex;
+    overflow: auto;
+`;
+
+export const ContainerEnd = styled.div`
+    background-color: ${colors.basic.white};
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 50px;
+`;
+
+export const TextEnd = styled.text`
+    color: ${colors.basic.black};
+    display: flex;
+    overflow: auto;
+`;
+
+export const ContainerStrike = styled.div`
+    background-color: ${colors.basic.white};
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 50px;
+`;
+
+export const TextStrike = styled.text`
+    color: ${colors.basic.black};
+    display: flex;
+    overflow: auto;
+`;
+
+export const ContainerEasy = styled.div`
+    background-color: ${colors.basic.white};
+    width: 150px;
+    height: 150px;
+    display: flex;
+    margin-top: 10px;
+    margin-left: 50px;
+    flex-direction: row;
+`;
+
+export const TextEasy = styled.text`
+    color: ${colors.basic.black};
+    display: flex;
+    overflow: auto;
+`;
+
+export const ContainerSkil = styled.div`
+    background-color: ${colors.basic.white};
+    width: 150px;
+    height: 150px;
+    display: flex;
+    margin-top: 10px;
+    margin-left: 50px;
+    flex-direction: row;
+`;
+
+export const TextSkil = styled.text`
+    color: ${colors.basic.black};
+    display: flex;
+    overflow: auto;
+`;
+
+export const ContainerLife = styled.div`
+    background-color: ${colors.basic.white};
+    width: 150px;
+    height: 150px;
+    display: flex;
+    margin-top: 10px;
+    margin-left: 50px;
+    flex-direction: row;
+`;
+
+export const TextLife = styled.text`
+    color: ${colors.basic.black};
+    display: flex;
+    overflow: auto;
+`;
+
 export const Button = styled.button`
     background-color: transparent;
     display: flex;
@@ -146,14 +346,4 @@ export const ButtonSix = styled.button`
     text-align: center;
     align-items: center;
     justify-content: center;
-`;
-
-export const Text = styled.text`
-    color: ${colors.basic.white};
-    padding: 90px 300px 10px 300px;
-    align-items: center;
-    font-size: 70px;
-    text-align: center;
-    margin-top: 10px;
-    margin-bottom: 40px;
 `;
