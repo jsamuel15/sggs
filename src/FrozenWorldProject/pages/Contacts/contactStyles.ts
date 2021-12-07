@@ -11,7 +11,7 @@ interface Container {
 }
 
 export const Container = styled.div`
-    background-color: ${colors.basic.orange};
+    background-color: ${colors.basic.white};
     background-size: cover;
     width: 100vw;
     height: 100vh;
@@ -22,8 +22,8 @@ export const Container = styled.div`
 `;
 
 export const Header = styled.div`
-    background-color: transparent;
-    color: ${colors.basic.black};
+    background-color: ${colors.basic.green};
+    color: ${colors.basic.maroon};
     height: 70px;
     border: none;
     display: flex;
@@ -37,17 +37,27 @@ export const Header = styled.div`
 export const ContainerOpen = styled.div`
     background-color: transparent;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     height: 100%;
     width: 100%;
 `;
 
 export const ContainerHard = styled.div`
-    background-color: transparent;
+    background-color: ${colors.basic.white};
+    width: 150px;
+    height: 150px;
     display: flex;
-    align-items: center;
-    height: 100%;
-    width: 100%;
+    margin-top: 20px;
+    margin-left: 65px;
+    box-shadow:  0 0 1em grey;
+    flex-direction: row;
+`;
+
+export const TextHard = styled.text`
+    color: ${colors.basic.black};
+    display: flex;
+    overflow: auto;
 `;
 
 export const ContainerIce = styled.div`
@@ -55,7 +65,9 @@ export const ContainerIce = styled.div`
     width: 150px;
     height: 150px;
     display: flex;
-    margin-top: 10px;
+    margin-top: 20px;
+    margin-left: 65px;
+    box-shadow:  0 0 1em grey;
     flex-direction: row;
 `;
 
@@ -70,8 +82,9 @@ export const ContainerBox = styled.div`
     width: 150px;
     height: 150px;
     display: flex;
-    margin-top: 10px;
-    margin-left: 50px;
+    margin-top: 20px;
+    margin-left: 65px;
+    box-shadow:  0 0 1em grey;
     flex-direction: row;
 `;
 
@@ -85,6 +98,9 @@ export const ContainerSize = styled.div`
     background-color: ${colors.basic.white};
     width: 150px;
     height: 150px;
+    margin-top: 20px;
+    margin-left: 65px;
+    box-shadow:  0 0 1em grey;
     display: flex;
     flex-direction: row;
 `;
@@ -101,7 +117,9 @@ export const ContainerCounter = styled.div`
     height: 150px;
     display: flex;
     flex-direction: row;
-    margin-left: 50px;
+    margin-top: 20px;
+    margin-left: 65px;
+    box-shadow:  0 0 1em grey;
 `;
 
 export const TextCounter = styled.text`
@@ -116,7 +134,9 @@ export const ContainerIzi = styled.div`
     height: 150px;
     display: flex;
     flex-direction: row;
-    margin-left: 50px;
+    margin-top: 20px;
+    margin-left: 65px;
+    box-shadow:  0 0 1em grey;
 `;
 
 export const TextIzi = styled.text`
@@ -130,7 +150,9 @@ export const ContainerInner = styled.div`
     width: 150px;
     height: 150px;
     display: flex;
-    margin-left: 50px;
+    margin-top: 20px;
+    margin-left: 65px;
+    box-shadow:  0 0 1em grey;
     flex-direction: row;
 `;
 
@@ -145,8 +167,9 @@ export const ContainerCall = styled.div`
     width: 150px;
     height: 150px;
     display: flex;
-    margin-top: 10px;
-    margin-left: 50px;
+    margin-top: 20px;
+    margin-left: 65px;
+    box-shadow:  0 0 1em grey;
     flex-direction: row;
 `;
 
@@ -161,8 +184,10 @@ export const ContainerEnd = styled.div`
     width: 150px;
     height: 150px;
     display: flex;
+    margin-top: 20px;
+    margin-left: 65px;
+    box-shadow:  0 0 1em grey;
     flex-direction: row;
-    margin-left: 50px;
 `;
 
 export const TextEnd = styled.text`
@@ -177,7 +202,9 @@ export const ContainerStrike = styled.div`
     height: 150px;
     display: flex;
     flex-direction: row;
-    margin-left: 50px;
+    margin-top: 20px;
+    margin-left: 65px;
+    box-shadow:  0 0 1em grey;
 `;
 
 export const TextStrike = styled.text`
@@ -191,8 +218,9 @@ export const ContainerEasy = styled.div`
     width: 150px;
     height: 150px;
     display: flex;
-    margin-top: 10px;
-    margin-left: 50px;
+    margin-top: 20px;
+    margin-left: 65px;
+    box-shadow:  0 0 1em grey;
     flex-direction: row;
 `;
 
@@ -207,8 +235,9 @@ export const ContainerSkil = styled.div`
     width: 150px;
     height: 150px;
     display: flex;
-    margin-top: 10px;
-    margin-left: 50px;
+    margin-top: 20px;
+    margin-left: 65px;
+    box-shadow:  0 0 1em grey;
     flex-direction: row;
 `;
 
@@ -223,12 +252,132 @@ export const ContainerLife = styled.div`
     width: 150px;
     height: 150px;
     display: flex;
-    margin-top: 10px;
-    margin-left: 50px;
+    margin-top: 20px;
+    margin-left: 65px;
+    box-shadow:  0 0 1em grey;
     flex-direction: row;
 `;
 
 export const TextLife = styled.text`
+    color: ${colors.basic.black};
+    display: flex;
+    overflow: auto;
+`;
+
+export const ContainerTime = styled.div`
+    background-color: ${colors.basic.white};
+    width: 150px;
+    height: 150px;
+    display: flex;
+    margin-top: 20px;
+    margin-left: 65px;
+    box-shadow:  0 0 1em grey;
+    flex-direction: row;
+`;
+
+export const TextTime = styled.text`
+    color: ${colors.basic.black};
+    display: flex;
+    overflow: auto;
+`;
+
+export const ContainerCamouflage = styled.div`
+    background-color: ${colors.basic.white};
+    width: 150px;
+    height: 150px;
+    display: flex;
+    margin-top: 20px;
+    margin-left: 65px;
+    box-shadow:  0 0 1em grey;
+    flex-direction: row;
+`;
+
+export const TextCamouflage = styled.text`
+    color: ${colors.basic.black};
+    display: flex;
+    overflow: auto;
+`;
+
+export const ContainerCel = styled.div`
+    background-color: ${colors.basic.white};
+    width: 150px;
+    height: 150px;
+    display: flex;
+    margin-top: 20px;
+    margin-left: 65px;
+    box-shadow:  0 0 1em grey;
+    flex-direction: row;
+`;
+
+export const TextCel = styled.text`
+    color: ${colors.basic.black};
+    display: flex;
+    overflow: auto;
+`;
+
+export const ContainerWon = styled.div`
+    background-color: ${colors.basic.white};
+    width: 150px;
+    height: 150px;
+    display: flex;
+    margin-top: 20px;
+    margin-left: 65px;
+    box-shadow:  0 0 1em grey;
+    flex-direction: row;
+`;
+
+export const TextWon = styled.text`
+    color: ${colors.basic.black};
+    display: flex;
+    overflow: auto;
+`;
+
+export const ContainerLocation = styled.div`
+    background-color: ${colors.basic.white};
+    width: 150px;
+    height: 150px;
+    display: flex;
+    margin-top: 20px;
+    margin-left: 65px;
+    box-shadow:  0 0 1em grey;
+    flex-direction: row;
+`;
+
+export const TextLocation = styled.text`
+    color: ${colors.basic.black};
+    display: flex;
+    overflow: auto;
+`;
+
+export const ContainerWin = styled.div`
+    background-color: ${colors.basic.white};
+    width: 150px;
+    height: 150px;
+    display: flex;
+    margin-top: 20px;
+    margin-left: 65px;
+    box-shadow:  0 0 1em grey;
+    flex-direction: row;
+`;
+
+export const TextWin = styled.text`
+    color: ${colors.basic.black};
+    display: flex;
+    overflow: auto;
+`;
+
+export const ContainerHero = styled.div`
+    background-color: ${colors.basic.white};
+    width: 150px;
+    height: 150px;
+    display: flex;
+    margin-top: 20px;
+    margin-left: 65px;
+    box-shadow:  0 0 1em grey;
+    flex-direction: row;
+`;
+
+export const TextHero = styled.text`
     color: ${colors.basic.black};
     display: flex;
     overflow: auto;

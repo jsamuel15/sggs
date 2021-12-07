@@ -14,17 +14,32 @@ import {
     TextEnd,
     TextSkil,
     TextLife,
+    TextTime,
+    TextHard,
     TextCounter,
     TextStrike,
+    TextCamouflage,
+    TextCel,
+    TextWon,
+    TextWin,
+    TextLocation,
+    TextHero,
+    ContainerHero,
+    ContainerCamouflage,
+    ContainerCel,
     ContainerIce,
+    ContainerWon,
+    ContainerWin,
     ContainerHard,
     ContainerOpen,
     ContainerBox,
     ContainerSize,
+    ContainerLocation,
     ContainerInner,
     ContainerEasy,
     ContainerCall,
     ContainerIzi,
+    ContainerTime,
     ContainerCounter,
     ContainerStrike,
     ContainerEnd,
@@ -80,8 +95,16 @@ const About: React.FC = () => (
                     (77) 94228-3289
                 </TextCounter>
             </ContainerCounter>
-        </ContainerOpen>
-        <ContainerHard>
+            <ContainerHard>
+                <TextHard>
+                    (49) 35299-4414
+                </TextHard>
+            </ContainerHard>
+            <ContainerTime>
+                <TextTime>
+                    (77) 94228-3445
+                </TextTime>
+            </ContainerTime>
             <ContainerSize>
                 <TextSize>
                     (84) 99745-5342
@@ -112,7 +135,37 @@ const About: React.FC = () => (
                     (91) 8335-4537
                 </TextLife>
             </ContainerLife>
-        </ContainerHard>
+            <ContainerCamouflage>
+                <TextCamouflage>
+                    (91) 8335-5555
+                </TextCamouflage>
+            </ContainerCamouflage>
+            <ContainerCel>
+                <TextCel>
+                    (91) 75433-5555
+                </TextCel>
+            </ContainerCel>
+            <ContainerWon>
+                <TextWon>
+                    (91) 75433-7777
+                </TextWon>
+            </ContainerWon>
+            <ContainerLocation>
+                <TextLocation>
+                    (91) 75433-3434
+                </TextLocation>
+            </ContainerLocation>
+            <ContainerWin>
+                <TextWin>
+                    (91) 76993-7777
+                </TextWin>
+            </ContainerWin>
+            <ContainerHero>
+                <TextHero>
+                    (91) 79347-7685
+                </TextHero>
+            </ContainerHero>
+        </ContainerOpen>
     </Container>
 );
 
