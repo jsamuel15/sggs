@@ -4,14 +4,8 @@ import styled from 'styled-components';
 // js
 import colors from '../../styles/colors';
 
-// interfaces
-
-interface Container {
-    background: string,
-}
-
 export const Container = styled.div`
-    background-color: ${colors.basic.orange};
+    background-color: ${colors.basic.blue};
     background-size: cover;
     width: 100vw;
     height: 100vh;
@@ -32,6 +26,16 @@ export const Header = styled.div`
     text-align: center;
     padding: 20px;
     flex-wrap: wrap;
+`;
+
+export const Text = styled.text`
+    color: ${colors.basic.white};
+    padding: 90px 800px 10px 0px;
+    align-items: center;
+    font-size: 70px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 40px;
 `;
 
 export const Button = styled.button`
@@ -57,18 +61,15 @@ export const Button = styled.button`
 export const ButtonTwo = styled.button`
     background-color: transparent;
     display: flex;
-    flex-direction: column;
     color: ${colors.basic.white};
     cursor: pointer;
-    margin-left: 400px;
-    margin-top: 1px;
     width: 90px;
     height: 40px;
-    border: none;
-    border-radius: 15px;
+    border: solid 2px ${colors.theme.deepskyblue};
+    border-radius: 20px;
     font-size: 12px;
-    padding-left: 10px;
-    margin-left: 2px;
+    vertical-align: middle;
+    text-align: center;
     align-items: center;
     justify-content: center;
 `;
@@ -137,23 +138,12 @@ export const ButtonSix = styled.button`
     cursor: pointer;
     width: 90px;
     height: 40px;
-    border: solid 2px ${colors.theme.deepskyblue};
+    border: none;
     border-radius: 20px;
     font-size: 12px;
-    //padding-left: 5px;
     margin-right: 350px;
     vertical-align: middle;
     text-align: center;
     align-items: center;
     justify-content: center;
-`;
-
-export const Text = styled.text`
-    color: ${colors.basic.white};
-    padding: 90px 300px 10px 300px;
-    align-items: center;
-    font-size: 70px;
-    text-align: center;
-    margin-top: 10px;
-    margin-bottom: 40px;
 `;
