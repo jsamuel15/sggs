@@ -4,12 +4,6 @@ import styled from 'styled-components';
 // js
 import colors from '../../styles/colors';
 
-// interfaces
-
-interface Container {
-    background: string,
-}
-
 export const Container = styled.div`
     background-color: ${colors.basic.blue};
     background-size: cover;

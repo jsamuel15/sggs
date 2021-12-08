@@ -1,9 +1,9 @@
+// libraries
 import React from 'react';
 
 // js
 import {
     Container,
-    Header,
     TextIce,
     TextBox,
     TextSize,
@@ -14,25 +14,15 @@ import {
     ContainerBox,
     ContainerSize,
     ContainerInner,
-    Button,
-    ButtonTwo,
-    ButtonTree,
-    ButtonFour,
-    ButtonFive,
-    ButtonSix,
-} from './aboutStyled';
+} from './aboutStyles';
 
-// renders
+// components
+import HeaderComponent from '../../components/Header/HeaderComponent';
+
+// main
 const About: React.FC = () => (
     <Container>
-        <Header>
-            <Button onClick={() => window.location.replace('/home')}>HOME</Button>
-            <ButtonTwo onClick={() => window.location.replace('/page')}>PAGES</ButtonTwo>
-            <ButtonTree onClick={() => window.location.replace('/about')}>ABOUT</ButtonTree>
-            <ButtonFour onClick={() => window.location.replace('/galeria')}>GALERY</ButtonFour>
-            <ButtonFive onClick={() => window.location.replace('/nossaEquipe')}>OUR TEAM</ButtonFive>
-            <ButtonSix onClick={() => window.location.replace('/contato')}>CONTACT</ButtonSix>
-        </Header>
+        <HeaderComponent />
         <ContainerOpen>
             <ContainerIce>
                 <TextIce>

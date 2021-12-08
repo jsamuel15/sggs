@@ -4,12 +4,6 @@ import styled from 'styled-components';
 // js
 import colors from '../../styles/colors';
 
-// interfaces
-
-interface Container {
-    background: string,
-}
-
 export const Container = styled.div`
     background-color: ${colors.basic.white};
     background-size: cover;
@@ -34,7 +28,7 @@ export const Header = styled.div`
     flex-wrap: wrap;
 `;
 
-export const ContainerOpen = styled.div`
+export const AdjustBox = styled.div`
     background-color: transparent;
     display: flex;
     flex-wrap: wrap;

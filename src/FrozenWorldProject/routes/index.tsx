@@ -4,20 +4,20 @@ import { Switch, Route } from 'react-router-dom';
 
 // pages
 import HomePage from '../pages/Home/HomePage';
-import Page from '../pages/WebPages/WebPages';
-import About from '../pages/about/About';
-import Galeria from '../pages/Galery/Galery';
-import Equipe from '../pages/OurTeam/OurTeam';
-import Contato from '../pages/Contacts/Contacts';
+import WebScreenPage from '../pages/WebPages/WebScreenPage';
+import AboutPage from '../pages/About/AboutPage';
+import GaleryPage from '../pages/Galery/GaleryPage';
+import OurTeamPage from '../pages/OurTeam/OurTeamPage';
+import ContactsPage from '../pages/Contacts/ContactsPage';
 
 const Routes: React.FC = () => (
     <Switch>
         <Route path="/home" exact component={HomePage} />
-        <Route path="/page" exact component={Page} />
-        <Route path="/about" exact component={About} />
-        <Route path="/galeria" exact component={Galeria} />
-        <Route path="/nossaEquipe" exact component={Equipe} />
-        <Route path="/contato" exact component={Contato} />
+        <Route path="/webScreen" exact component={WebScreenPage} />
+        <Route path="/about" exact component={AboutPage} />
+        <Route path="/galery" exact component={GaleryPage} />
+        <Route path="/ourTeam" exact component={OurTeamPage} />
+        <Route path="/contacts" exact component={ContactsPage} />
     </Switch>
 );
 
