@@ -22,7 +22,7 @@ export const Container = styled.div`
 `;
 
 export const Header = styled.div`
-    background-color: ${colors.basic.green};
+    background-color: ${colors.basic.black};
     color: ${colors.basic.maroon};
     height: 70px;
     border: none;
@@ -50,7 +50,7 @@ export const ContainerHard = styled.div`
     display: flex;
     margin-top: 20px;
     margin-left: 65px;
-    box-shadow:  0 0 1em grey;
+    box-shadow: 1px 1px 1px grey;
     flex-direction: row;
 `;
 
@@ -67,7 +67,7 @@ export const ContainerIce = styled.div`
     display: flex;
     margin-top: 20px;
     margin-left: 65px;
-    box-shadow:  0 0 1em grey;
+    box-shadow: 1px 1px 1px grey;
     flex-direction: row;
 `;
 
@@ -84,7 +84,7 @@ export const ContainerBox = styled.div`
     display: flex;
     margin-top: 20px;
     margin-left: 65px;
-    box-shadow:  0 0 1em grey;
+    box-shadow: 1px 1px 1px grey;
     flex-direction: row;
 `;
 
@@ -100,7 +100,7 @@ export const ContainerSize = styled.div`
     height: 150px;
     margin-top: 20px;
     margin-left: 65px;
-    box-shadow:  0 0 1em grey;
+    box-shadow: 1px 1px 1px grey;
     display: flex;
     flex-direction: row;
 `;
@@ -119,7 +119,7 @@ export const ContainerCounter = styled.div`
     flex-direction: row;
     margin-top: 20px;
     margin-left: 65px;
-    box-shadow:  0 0 1em grey;
+    box-shadow: 1px 1px 1px grey;
 `;
 
 export const TextCounter = styled.text`
@@ -136,7 +136,7 @@ export const ContainerIzi = styled.div`
     flex-direction: row;
     margin-top: 20px;
     margin-left: 65px;
-    box-shadow:  0 0 1em grey;
+    box-shadow: 1px 1px 1px grey;
 `;
 
 export const TextIzi = styled.text`
@@ -152,7 +152,7 @@ export const ContainerInner = styled.div`
     display: flex;
     margin-top: 20px;
     margin-left: 65px;
-    box-shadow:  0 0 1em grey;
+    box-shadow: 1px 1px 1px grey;
     flex-direction: row;
 `;
 
@@ -169,7 +169,7 @@ export const ContainerCall = styled.div`
     display: flex;
     margin-top: 20px;
     margin-left: 65px;
-    box-shadow:  0 0 1em grey;
+    box-shadow: 1px 1px 1px grey;
     flex-direction: row;
 `;
 
@@ -186,7 +186,7 @@ export const ContainerEnd = styled.div`
     display: flex;
     margin-top: 20px;
     margin-left: 65px;
-    box-shadow:  0 0 1em grey;
+    box-shadow: 1px 1px 1px grey;
     flex-direction: row;
 `;
 
@@ -204,7 +204,7 @@ export const ContainerStrike = styled.div`
     flex-direction: row;
     margin-top: 20px;
     margin-left: 65px;
-    box-shadow:  0 0 1em grey;
+    box-shadow: 1px 1px 1px grey;
 `;
 
 export const TextStrike = styled.text`
@@ -220,7 +220,7 @@ export const ContainerEasy = styled.div`
     display: flex;
     margin-top: 20px;
     margin-left: 65px;
-    box-shadow:  0 0 1em grey;
+    box-shadow: 1px 1px 1px grey;
     flex-direction: row;
 `;
 
@@ -237,7 +237,7 @@ export const ContainerSkil = styled.div`
     display: flex;
     margin-top: 20px;
     margin-left: 65px;
-    box-shadow:  0 0 1em grey;
+    box-shadow: 1px 1px 1px grey;
     flex-direction: row;
 `;
 
@@ -254,7 +254,7 @@ export const ContainerLife = styled.div`
     display: flex;
     margin-top: 20px;
     margin-left: 65px;
-    box-shadow:  0 0 1em grey;
+    box-shadow: 1px 1px 1px grey;
     flex-direction: row;
 `;
 
@@ -271,7 +271,7 @@ export const ContainerTime = styled.div`
     display: flex;
     margin-top: 20px;
     margin-left: 65px;
-    box-shadow:  0 0 1em grey;
+    box-shadow: 1px 1px 1px grey;
     flex-direction: row;
 `;
 
@@ -288,7 +288,7 @@ export const ContainerCamouflage = styled.div`
     display: flex;
     margin-top: 20px;
     margin-left: 65px;
-    box-shadow:  0 0 1em grey;
+    box-shadow: 1px 1px 1px grey;
     flex-direction: row;
 `;
 
@@ -305,7 +305,7 @@ export const ContainerCel = styled.div`
     display: flex;
     margin-top: 20px;
     margin-left: 65px;
-    box-shadow:  0 0 1em grey;
+    box-shadow: 1px 1px 1px grey;
     flex-direction: row;
 `;
 
@@ -322,7 +322,7 @@ export const ContainerWon = styled.div`
     display: flex;
     margin-top: 20px;
     margin-left: 65px;
-    box-shadow:  0 0 1em grey;
+    box-shadow: 1px 1px 1px grey;
     flex-direction: row;
 `;
 
@@ -339,7 +339,7 @@ export const ContainerLocation = styled.div`
     display: flex;
     margin-top: 20px;
     margin-left: 65px;
-    box-shadow:  0 0 1em grey;
+    box-shadow: 1px 1px 1px grey;
     flex-direction: row;
 `;
 
@@ -356,7 +356,7 @@ export const ContainerWin = styled.div`
     display: flex;
     margin-top: 20px;
     margin-left: 65px;
-    box-shadow:  0 0 1em grey;
+    box-shadow: 1px 1px 1px 1px grey;
     flex-direction: row;
 `;
 
@@ -373,7 +373,7 @@ export const ContainerHero = styled.div`
     display: flex;
     margin-top: 20px;
     margin-left: 65px;
-    box-shadow:  0 0 1em grey;
+    box-shadow: 1px 1px 1px 1px grey;
     flex-direction: row;
 `;
 
