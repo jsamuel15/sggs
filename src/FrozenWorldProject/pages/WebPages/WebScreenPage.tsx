@@ -9,12 +9,19 @@ import {
 // components
 import HeaderComponent from '../../components/Header/HeaderComponent';
 
-// renders
-const Page: React.FC = () => (
-    <Container>
-        <HeaderComponent />
-        <Text> Página de Pages </Text>
-    </Container>
-);
+// methods
+const About: React.FC = () => {
+    const phrase = 'Eu quero ser programador';
+    const phraseImportant = 'programador';
+    const deltetPhrase = phrase.split(' ');
+    const phraseName = deltetPhrase.filter((v) => v === phraseImportant);
+    // main
+    return (
+        <Container>
+            <HeaderComponent />
+            <Text>{phraseName[0]}</Text>
+        </Container>
+    );
+};
 
-export default Page;
+export default About;
