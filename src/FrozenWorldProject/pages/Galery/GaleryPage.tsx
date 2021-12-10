@@ -9,12 +9,29 @@ import {
 // components
 import HeaderComponent from '../../components/Header/HeaderComponent';
 
-// renders
-const Galeria: React.FC = () => (
-    <Container>
-        <HeaderComponent />
-        <Text>Página Galeria</Text>
-    </Container>
-);
+// methods
+const About: React.FC = () => {
+    const allUsers = [
+        {
+            id: 1,
+            name: 'Pedro',
+        },
+        {
+            id: 2,
+            name: 'Samuel',
+        },
+    ];
+    const callUsers = allUsers.find((p) => p.name === 'Pedro' && p.id === 1);
 
-export default Galeria;
+    // main
+    return (
+        <Container>
+            <HeaderComponent />
+            <Text>
+                {callUsers?.name}
+            </Text>
+        </Container>
+    );
+};
+
+export default About;

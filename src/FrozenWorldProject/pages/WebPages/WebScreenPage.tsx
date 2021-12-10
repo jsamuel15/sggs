@@ -12,14 +12,20 @@ import HeaderComponent from '../../components/Header/HeaderComponent';
 // methods
 const About: React.FC = () => {
     const phrase = 'Eu quero ser programador';
-    const phraseImportant = 'programador';
-    const deltetPhrase = phrase.split(' ');
-    const phraseName = deltetPhrase.filter((v) => v === phraseImportant);
+    // const phrase = 'Eu quero ser programador';.split(', ');
+    // const phraseImportant = 'programador';
+    // const deltetPhrase = phrase.split(' ');
+    // const phraseName = deltetPhrase.filter((v) => v === phraseImportant);
     // main
     return (
         <Container>
             <HeaderComponent />
-            <Text>{phraseName[0]}</Text>
+            <Text>
+                {/* {phrase.substring(0, 5)} */}
+                {/* {phraseName[0]} */}
+                {/* {phrase.split(' ')} */}
+                { JSON.stringify(phrase)}
+            </Text>
         </Container>
     );
 };
