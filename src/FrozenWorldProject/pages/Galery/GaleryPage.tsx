@@ -21,7 +21,7 @@ const About: React.FC = () => {
             name: 'Samuel',
         },
     ];
-    const callUsers = allUsers.find((p) => p.name === 'Pedro' && p.id === 1);
+    const callUsers = allUsers.find((p) => p.name === 'Samuel' && p.id === 2);
 
     // main
     return (
