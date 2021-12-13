@@ -33,16 +33,19 @@ const About: React.FC = () => {
             name: 'Diego',
         },
     ];
-    const callUsers = allUsers.find((p) => p.name === 'Samuel' && p.id === 2);
+    // const callUsers = allUsers.find((p) => p.name === 'Samuel' && p.id === 2);
     // const lastArray = allUsers[allUsers.length - 1];
-    // const allArray = allUsers.map((item) => item.id);
+    const resulted = allUsers.find((v) => v.name.includes('d'));
+    // const ids = allUsers.map((p) => p.id);
 
     // main
     return (
         <Container>
             <HeaderComponent />
             <Text>
-                {callUsers?.name}
+                {/* { JSON.stringify(ids)} */}
+                {resulted?.name}
+                {/* {callUsers?.name} */}
                 {/* {lastArray?.name} */}
             </Text>
         </Container>
