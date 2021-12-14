@@ -9,12 +9,25 @@ import {
 // components
 import HeaderComponent from '../../components/Header/HeaderComponent';
 
-// renders
-const Page: React.FC = () => (
-    <Container>
-        <HeaderComponent />
-        <Text> Página de Pages </Text>
-    </Container>
-);
+// methods
+const About: React.FC = () => {
+    const phrase = 'Eu quero ser programador';
+    // const phrase = 'Eu quero ser programador';.split(', ');
+    // const phraseImportant = 'programador';
+    // const deltetPhrase = phrase.split(' ');
+    // const phraseName = deltetPhrase.filter((v) => v === phraseImportant);
+    // main
+    return (
+        <Container>
+            <HeaderComponent />
+            <Text>
+                {/* {phrase.substring(0, 5)} */}
+                {/* {phraseName[0]} */}
+                {/* {phrase.split(' ')} */}
+                { JSON.stringify(phrase)}
+            </Text>
+        </Container>
+    );
+};
 
-export default Page;
+export default About;

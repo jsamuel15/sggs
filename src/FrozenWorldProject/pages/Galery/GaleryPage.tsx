@@ -9,12 +9,48 @@ import {
 // components
 import HeaderComponent from '../../components/Header/HeaderComponent';
 
-// renders
-const Galeria: React.FC = () => (
-    <Container>
-        <HeaderComponent />
-        <Text>Página Galeria</Text>
-    </Container>
-);
+// methods
+const About: React.FC = () => {
+    const allUsers = [
+        {
+            id: 1,
+            name: 'Pedro',
+        },
+        {
+            id: 2,
+            name: 'Samuel',
+        },
+        {
+            id: 3,
+            name: 'Saulo',
+        },
+        {
+            id: 4,
+            name: 'Adler',
+        },
+        {
+            id: 5,
+            name: 'Diego',
+        },
+    ];
+    // const callUsers = allUsers.find((p) => p.name === 'Samuel' && p.id === 2);
+    // const lastArray = allUsers[allUsers.length - 1];
+    // const resulted = allUsers.find((v) => v.name.includes('d'));
+    // const ids = allUsers.map((p) => p.id);
+    const lastArray = allUsers.find((v) => v.name.length <= 5);
 
-export default Galeria;
+    // main
+    return (
+        <Container>
+            <HeaderComponent />
+            <Text>
+                {/* { JSON.stringify(ids)} */}
+                {/* {resulted?.name} */}
+                {/* {callUsers?.name} */}
+                {lastArray?.name}
+            </Text>
+        </Container>
+    );
+};
+
+export default About;
