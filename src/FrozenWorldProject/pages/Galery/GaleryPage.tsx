@@ -35,8 +35,9 @@ const About: React.FC = () => {
     ];
     // const callUsers = allUsers.find((p) => p.name === 'Samuel' && p.id === 2);
     // const lastArray = allUsers[allUsers.length - 1];
-    const resulted = allUsers.find((v) => v.name.includes('d'));
+    // const resulted = allUsers.find((v) => v.name.includes('d'));
     // const ids = allUsers.map((p) => p.id);
+    const lastArray = allUsers.find((v) => v.name.length <= 5);
 
     // main
     return (
@@ -44,9 +45,9 @@ const About: React.FC = () => {
             <HeaderComponent />
             <Text>
                 {/* { JSON.stringify(ids)} */}
-                {resulted?.name}
+                {/* {resulted?.name} */}
                 {/* {callUsers?.name} */}
-                {/* {lastArray?.name} */}
+                {lastArray?.name}
             </Text>
         </Container>
     );
