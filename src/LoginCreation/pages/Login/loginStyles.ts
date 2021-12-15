@@ -53,11 +53,11 @@ export const ParagraphIzi = styled.p`
 `;
 
 export const InputIzi = styled.input`
-    background-color: ${colors.basic.gray};
+    background-color: ${colors.theme.slateGrey};
 `;
 
 export const InputHard = styled.input`
-    background-color: ${colors.basic.gray};
+    background-color: ${colors.theme.slateGrey};
 `;
 
 export const ButtonIzi = styled.button`
