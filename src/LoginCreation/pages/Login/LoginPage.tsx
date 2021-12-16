@@ -5,7 +5,6 @@ import React from 'react';
 import {
     Container,
     ContainerOver,
-    ContainerInner,
     Containerfirst,
     ContainerSecond,
     TextHard,
@@ -26,17 +25,16 @@ const LoginPage: React.FC = () => (
                 <TextHard>Welcome Back!</TextHard>
                 <Paragraph>To keep connected with us</Paragraph>
                 <ParagraphHard>please login with your personal info</ParagraphHard>
-                <Button>sing in</Button>
+                <Button>sing up</Button>
             </Containerfirst>
             <ContainerSecond>
                 <TextIzi>Create Account</TextIzi>
                 <ParagraphIzi>or use your email for regitration:</ParagraphIzi>
                 <InputIzi type="text" placeholder="Email" />
-                <InputHard type="passwolrd" placeholder="Senha" />
-                <ButtonIzi>sing up</ButtonIzi>
+                <InputHard type="password" placeholder="Senha" />
+                <ButtonIzi>sing in</ButtonIzi>
             </ContainerSecond>
         </ContainerOver>
-        <ContainerInner>jj</ContainerInner>
     </Container>
 );
 

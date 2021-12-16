@@ -17,53 +17,108 @@ export const Container = styled.div`
 `;
 
 export const ContainerOver = styled.div`
+    display: flex;
+    font-family: 'Open Sans'. sans-serif;
     background-color: ${colors.basic.white};
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 15px;
+    width: 960px;
+    height: 50%;
+    margin-left: 180px;
+    margin-top: 150px;
 `;
 
 export const Containerfirst = styled.div`
-    background-color: ${colors.basic.aqua};
+    background-color: ${colors.theme.hex};
+    display: flex;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    flex-direction: column;
+    text-align: center;
+    flex: 1 0 auto;
+    padding: 110px 100px;
 `;
 
 export const TextHard = styled.h2`
     color: ${colors.basic.white};
+    font-size: 20px;
+    font-weight: bold;
+    text-tranform: captalize;
 `;
 
 export const Paragraph = styled.p`
     color: ${colors.basic.white};
+    font-size: 14px;
+    font-weight: 300;
+    margin: 8px;
 `;
 
 export const ParagraphHard = styled.p`
     color: ${colors.basic.white};
+    margin: 8px;
 `;
 
 export const Button = styled.button`
+    background-color: transparent;
     color: ${colors.basic.white};
+    border-radius: 15px;
+    text-transform: uppercase;
+    font-size: 10px;
+    padding: 10px 50px;
+    cursor: pointer;
+    border: 1px solid ${colors.basic.white};
+    width: 150px;
+    align-self: center;
+    text-transform: uppercase;
 `;
 
 export const ContainerSecond = styled.div`
     background-color: ${colors.basic.white};
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex: 2 0 auto;
+    padding: 70px 50px;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
 `;
 
 export const TextIzi = styled.h2`
-    color: ${colors.basic.aqua};
+    color: ${colors.theme.hex};
 `;
 
 export const ParagraphIzi = styled.p`
-    color: ${colors.basic.white};
+    color: ${colors.theme.greySlate};
 `;
 
 export const InputIzi = styled.input`
-    background-color: ${colors.theme.slateGrey};
+    background-color: ${colors.theme.silver};
+    display: flex;
+    border: none;
+    height: 45px;
+    width: 55%;
+    margin: 8px;
 `;
 
 export const InputHard = styled.input`
-    background-color: ${colors.theme.slateGrey};
+    background-color: ${colors.theme.silver};
+    display: flex;
+    border: none;
+    height: 45px;
+    width: 55%;
+    margin: 8px;
 `;
 
 export const ButtonIzi = styled.button`
+    background-color: ${colors.theme.hex};
     color: ${colors.basic.white};
-`;
-
-export const ContainerInner = styled.div`
-    background-color: ${colors.basic.black};
+    border-radius: 15px;
+    text-transform: uppercase;
+    font-size: 10px;
+    padding: 10px 50px;
+    cursor: pointer;
+    border: 1px solid;
+    width: 150px;
+    align-self: center;
 `;
