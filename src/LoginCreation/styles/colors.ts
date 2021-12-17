@@ -11,7 +11,7 @@ const colors = {
         greySlate: '#7f8c8d',
         silver: '#c0c0c0',
         darkGray: '#a9a9a9',
-        lightGray: '#d3d3d3',
+        lightGray: '#E2E3E4',
         slateGrey: '#708090',
     },
 };

@@ -13,23 +13,23 @@ import {
     InputIzi,
     InputHard,
     ButtonIzi,
-} from './loginStyles';
+} from './recoverPsswordStyles';
 
-const LoginPage: React.FC = () => (
+const RecoverPasswordPage: React.FC = () => (
     <Container>
         <ContainerOver>
             <Containerfirst>
                 <TextHard>Welcome Back!</TextHard>
-                <Button>Acesse sua conta</Button>
+                <Button>sing up</Button>
             </Containerfirst>
             <ContainerSecond>
-                <TextIzi>Entrar</TextIzi>
+                <TextIzi>Create Account</TextIzi>
                 <InputIzi type="text" placeholder="Email" />
                 <InputHard type="password" placeholder="Senha" />
-                <ButtonIzi>Entrar</ButtonIzi>
+                <ButtonIzi>sing in</ButtonIzi>
             </ContainerSecond>
         </ContainerOver>
     </Container>
 );
 
-export default LoginPage;
+export default RecoverPasswordPage;

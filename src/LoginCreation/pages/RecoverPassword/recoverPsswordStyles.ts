@@ -6,7 +6,7 @@ import colors from '../../styles/colors';
 
 // styles
 export const Container = styled.div`
-    background-color: ${colors.theme.lightGray};
+    background-color: ${colors.basic.black};
     background-size: cover;
     width: 100vw;
     height: 100vh;
@@ -37,12 +37,12 @@ export const Containerfirst = styled.div`
     flex-direction: column;
     text-align: center;
     flex: 1 0 auto;
-    padding: 134px 90px;
+    padding: 126px 100px;
 `;
 
 export const TextHard = styled.h2`
     color: ${colors.basic.white};
-    font-size: 30px;
+    font-size: 20px;
     font-weight: bold;
     text-tranform: captalize;
 `;
@@ -53,12 +53,11 @@ export const Button = styled.button`
     border-radius: 15px;
     text-transform: uppercase;
     font-size: 10px;
-    padding: 10px 10px;
+    padding: 10px 50px;
     cursor: pointer;
     margin: 8px;
     border: 1px solid ${colors.basic.white};
     width: 150px;
-    text-align: center;
     align-self: center;
     text-transform: uppercase;
 `;
@@ -69,37 +68,31 @@ export const ContainerSecond = styled.div`
     align-items: center;
     flex-direction: column;
     flex: 2 0 auto;
-    padding: 70px 100px;
+    padding: 70px 50px;
     border-bottom-right-radius: 15px;
     border-top-right-radius: 15px;
 `;
 
 export const TextIzi = styled.h2`
     color: ${colors.theme.hex};
-    margin: 8px;
-    font-size: 35px;
 `;
 
 export const InputIzi = styled.input`
-    background-color: ${colors.theme.lightGray};
+    background-color: ${colors.theme.silver};
     display: flex;
-    border-radius: 5px;
     border: none;
     height: 45px;
-    width: 90%;
+    width: 55%;
     margin: 8px;
-    padding-left: 10px;
 `;
 
 export const InputHard = styled.input`
-    background-color: ${colors.theme.lightGray};
+    background-color: ${colors.theme.silver};
     display: flex;
-    border-radius: 5px;
     border: none;
     height: 45px;
-    width: 90%;
+    width: 55%;
     margin: 8px;
-    padding-left: 10px;
 `;
 
 export const ButtonIzi = styled.button`
