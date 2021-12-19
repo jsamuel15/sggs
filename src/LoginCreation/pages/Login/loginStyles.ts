@@ -37,7 +37,7 @@ export const Containerfirst = styled.div`
     flex-direction: column;
     text-align: center;
     flex: 1 0 auto;
-    padding: 134px 90px;
+    padding: 15% 90px;
 `;
 
 export const TextHard = styled.h2`
@@ -69,15 +69,25 @@ export const ContainerSecond = styled.div`
     align-items: center;
     flex-direction: column;
     flex: 2 0 auto;
-    padding: 70px 100px;
+    padding: 9% 20%;
     border-bottom-right-radius: 15px;
     border-top-right-radius: 15px;
 `;
 
 export const TextIzi = styled.h2`
     color: ${colors.theme.hex};
-    margin: 8px;
-    font-size: 35px;
+    margin: 20px;
+    max-height: 10px;
+    max-width: 10px;
+    align-self: center;
+`;
+
+export const TextClone = styled.h6`
+    color: ${colors.theme.hex};
+    margin: 20px;
+    max-height: 10px;
+    max-width: 10px;
+    align-self: center;
 `;
 
 export const InputIzi = styled.input`
@@ -85,8 +95,8 @@ export const InputIzi = styled.input`
     display: flex;
     border-radius: 5px;
     border: none;
-    height: 45px;
-    width: 90%;
+    max-height: 45px;
+    max-width: 90%;
     margin: 8px;
     padding-left: 10px;
 `;
@@ -96,8 +106,8 @@ export const InputHard = styled.input`
     display: flex;
     border-radius: 5px;
     border: none;
-    height: 45px;
-    width: 90%;
+    max-height: 45px;
+    max-width: 90%;
     margin: 8px;
     padding-left: 10px;
 `;

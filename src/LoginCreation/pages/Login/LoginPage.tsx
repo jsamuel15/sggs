@@ -10,6 +10,7 @@ import {
     TextHard,
     Button,
     TextIzi,
+    TextClone,
     InputIzi,
     InputHard,
     ButtonIzi,
@@ -45,7 +46,7 @@ const LoginPage: React.FC = () => {
                         <TextIzi>Entrar</TextIzi>
                         <InputIzi type="text" placeholder="Email" />
                         <InputHard type="password" placeholder="Senha" />
-                        <TextIzi onClick={GoToRecoverPassword}>Esqueci a senha</TextIzi>
+                        <TextClone onClick={GoToRecoverPassword}> Esqueci senha </TextClone>
                         <ButtonIzi>Entrar</ButtonIzi>
                     </ContainerSecond>
                 </>
