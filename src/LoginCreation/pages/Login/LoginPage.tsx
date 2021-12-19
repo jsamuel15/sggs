@@ -1,5 +1,5 @@
 // libraries
-import React from 'react';
+import React, { useState } from 'react';
 
 // JS
 import {
@@ -15,21 +15,27 @@ import {
     ButtonIzi,
 } from './loginStyles';
 
-const LoginPage: React.FC = () => (
-    <Container>
-        <ContainerOver>
-            <Containerfirst>
-                <TextHard>Welcome Back!</TextHard>
-                <Button>Acesse sua conta</Button>
-            </Containerfirst>
-            <ContainerSecond>
-                <TextIzi>Entrar</TextIzi>
-                <InputIzi type="text" placeholder="Email" />
-                <InputHard type="password" placeholder="Senha" />
-                <ButtonIzi>Entrar</ButtonIzi>
-            </ContainerSecond>
-        </ContainerOver>
-    </Container>
-);
+const LoginPage: React.FC = () => {
+    function funcAumentar() {
+        alert('está funcionando');
+    }
+
+    return (
+        <Container>
+            <ContainerOver>
+                <Containerfirst>
+                    <TextHard>Welcome Back!</TextHard>
+                    <Button>Acesse sua conta</Button>
+                </Containerfirst>
+                <ContainerSecond>
+                    <TextIzi>Entrar</TextIzi>
+                    <InputIzi type="text" placeholder="Email" />
+                    <InputHard type="password" placeholder="Senha" />
+                    <ButtonIzi onClick={funcAumentar}>Entrar</ButtonIzi>
+                </ContainerSecond>
+            </ContainerOver>
+        </Container>
+    );
+};
 
 export default LoginPage;
