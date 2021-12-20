@@ -23,8 +23,8 @@ export const ContainerOver = styled.div`
     justify-content: space-between;
     align-items: center;
     border-radius: 15px;
-    width: 960px;
-    height: 50%;
+    width: 1000px;
+    height: 62%;
     margin-left: 180px;
     margin-top: 150px;
 `;
@@ -51,7 +51,6 @@ export const Button = styled.button`
     background-color: transparent;
     color: ${colors.basic.white};
     border-radius: 15px;
-    text-transform: uppercase;
     font-size: 10px;
     padding: 10px 10px;
     cursor: pointer;
@@ -69,7 +68,9 @@ export const ContainerSecond = styled.div`
     align-items: center;
     flex-direction: column;
     flex: 2 0 auto;
-    padding: 9% 20%;
+    max-height: 500%;
+    max-width: 700%;
+    /* padding: 9% 20%; */
     border-bottom-right-radius: 15px;
     border-top-right-radius: 15px;
 `;
@@ -80,6 +81,8 @@ export const TextIzi = styled.h2`
     max-height: 10px;
     max-width: 10px;
     align-self: center;
+    font-weight: bold;
+    text-tranform: captalize;
 `;
 
 export const TextClone = styled.h6`
@@ -88,6 +91,10 @@ export const TextClone = styled.h6`
     max-height: 10px;
     max-width: 10px;
     align-self: center;
+    cursor: pointer;
+    align-items: center;
+    font-weight: bold;
+    text-transform: uppercase;
 `;
 
 export const InputIzi = styled.input`
@@ -95,8 +102,8 @@ export const InputIzi = styled.input`
     display: flex;
     border-radius: 5px;
     border: none;
-    max-height: 45px;
-    max-width: 90%;
+    min-height: 40px;
+    min-width: 55%;
     margin: 8px;
     padding-left: 10px;
 `;
@@ -106,8 +113,8 @@ export const InputHard = styled.input`
     display: flex;
     border-radius: 5px;
     border: none;
-    max-height: 45px;
-    max-width: 90%;
+    min-height: 40px;
+    min-width: 55%;
     margin: 8px;
     padding-left: 10px;
 `;
@@ -118,9 +125,11 @@ export const ButtonIzi = styled.button`
     border-radius: 15px;
     text-transform: uppercase;
     font-size: 10px;
-    padding: 10px 50px;
+    padding: 10px 10px;
     cursor: pointer;
     border: 1px solid;
     width: 150px;
     align-self: center;
+    margin: 8px;
+    text-align: center;
 `;
