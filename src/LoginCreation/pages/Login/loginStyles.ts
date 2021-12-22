@@ -27,6 +27,15 @@ export const ContainerOver = styled.div`
     height: 62%;
     margin-left: 180px;
     margin-top: 150px;
+    @media (max-width: 1200px) {
+        width: 770px;
+    }
+    @media (max-width: 960px) {
+        width: 690px;
+    }
+    @media (max-width: 880px) {
+        width: 370px;
+    }
 `;
 
 export const Containerfirst = styled.div`
@@ -38,6 +47,12 @@ export const Containerfirst = styled.div`
     text-align: center;
     flex: 1 0 auto;
     padding: 15% 90px;
+    @media (max-width: 1300px) {
+        width: 150px;
+    }
+    @media (max-width: 500px) {
+        width: 100px;
+    }
 `;
 
 export const TextHard = styled.h2`
@@ -60,6 +75,12 @@ export const Button = styled.button`
     text-align: center;
     align-self: center;
     text-transform: uppercase;
+    @media (max-width: 1300px) {
+        width: 150px;
+    }
+    @media (max-width: 500px) {
+        width: 100px;
+    }
 `;
 
 export const ContainerSecond = styled.div`
@@ -73,6 +94,12 @@ export const ContainerSecond = styled.div`
     /* padding: 9% 20%; */
     border-bottom-right-radius: 15px;
     border-top-right-radius: 15px;
+    @media (max-width: 1300px) {
+        width: 200px;
+    }
+    @media (max-width: 600px) {
+        width: 200px;
+    }
 `;
 
 export const TextIzi = styled.h2`
@@ -95,6 +122,7 @@ export const TextClone = styled.h6`
     align-items: center;
     font-weight: bold;
     text-transform: uppercase;
+    padding: 10px;
 `;
 
 export const InputIzi = styled.input`
@@ -106,6 +134,13 @@ export const InputIzi = styled.input`
     min-width: 55%;
     margin: 8px;
     padding-left: 10px;
+    align-self: center;
+    @media (max-width: 1300px) {
+        width: 150px;
+    }
+    @media (max-width: 500px) {
+        width: 100px;
+    }
 `;
 
 export const InputHard = styled.input`
@@ -117,6 +152,13 @@ export const InputHard = styled.input`
     min-width: 55%;
     margin: 8px;
     padding-left: 10px;
+    align-self: center;
+    @media (max-width: 1300px) {
+        width: 150px;
+    }
+    @media (max-width: 500px) {
+        width: 100px;
+    }
 `;
 
 export const ButtonIzi = styled.button`
@@ -132,4 +174,10 @@ export const ButtonIzi = styled.button`
     align-self: center;
     margin: 8px;
     text-align: center;
+    @media (max-width: 1300px) {
+        width: 150px;
+    }
+    @media (max-width: 500px) {
+        width: 100px;
+    }
 `;
