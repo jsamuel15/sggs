@@ -66,7 +66,8 @@ export const Button = styled.button`
         width: 90%;
     }
     @media (max-width: 600px) {
-        background-color: ${colors.theme.hex};
+        background-color: transparent;
+        color: ${colors.basic.black};
         width: 60%;
     }
 `;
