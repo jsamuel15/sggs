@@ -1,24 +1,33 @@
 // libraries
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 // js
 import {
     Container,
     ContainerOver,
-    Containerfirst,
+    ContainerFirst,
     ContainerSecond,
     TextHard,
     Button,
     TextIzi,
     TextClone,
     InputIzi,
-    InputHard,
     ButtonIzi,
 } from './loginStyles';
 
 const LoginPage: React.FC = () => {
     // useState
     const [idScreen, setIdScreen] = useState('Login');
+    const [widthActual, setWidthActual] = useState(window.innerWidth);
+
+    // useEffect
+    useEffect(() => {
+        const AdjustSize = window.addEventListener('resize', () => {
+            setWidthActual(window.innerWidth);
+        });
+
+        return AdjustSize;
+    }, []);
 
     // methods
     const GoToRegister = () => {
@@ -38,16 +47,19 @@ const LoginPage: React.FC = () => {
         if (idScreen === 'Login') {
             return (
                 <>
-                    <Containerfirst>
+                    <ContainerFirst>
                         <TextHard>Welcome Back!</TextHard>
                         <Button onClick={GoToRegister}>Crie sua conta</Button>
-                    </Containerfirst>
+                    </ContainerFirst>
                     <ContainerSecond>
                         <TextIzi>Entrar</TextIzi>
                         <InputIzi type="text" placeholder="Email" />
-                        <InputHard type="password" placeholder="Senha" />
-                        <TextClone onClick={GoToRecoverPassword}> Esqueci senha </TextClone>
+                        <InputIzi type="password" placeholder="Senha" />
+                        <TextClone onClick={GoToRecoverPassword}>Esqueci senha</TextClone>
                         <ButtonIzi>Entrar</ButtonIzi>
+                        {widthActual <= 600 ? (
+                            <Button onClick={GoToRegister}>Crie sua conta</Button>
+                        ) : null}
                     </ContainerSecond>
                 </>
             );
@@ -56,17 +68,20 @@ const LoginPage: React.FC = () => {
         if (idScreen === 'Register') {
             return (
                 <>
-                    <Containerfirst>
+                    <ContainerFirst>
                         <TextHard>Welcome Back!</TextHard>
                         <Button onClick={GoToLogin}>Acesse sua conta</Button>
-                    </Containerfirst>
+                    </ContainerFirst>
                     <ContainerSecond>
                         <TextIzi>Crie sua conta</TextIzi>
                         <InputIzi type="text" placeholder="Nome" />
                         <InputIzi type="text" placeholder="Email" />
-                        <InputHard type="password" placeholder="Senha" />
-                        <InputHard type="password" placeholder="Confirma senha" />
+                        <InputIzi type="password" placeholder="Senha" />
+                        <InputIzi type="password" placeholder="Confirma senha" />
                         <ButtonIzi>Cadastra-se</ButtonIzi>
+                        {widthActual <= 600 ? (
+                            <Button onClick={GoToLogin}>Acesse sua conta</Button>
+                        ) : null}
                     </ContainerSecond>
                 </>
             );
@@ -75,14 +90,17 @@ const LoginPage: React.FC = () => {
         if (idScreen === 'RecoverPassword') {
             return (
                 <>
-                    <Containerfirst>
+                    <ContainerFirst>
                         <TextHard>Welcome Back!</TextHard>
                         <Button onClick={GoToLogin}>Acesse sua conta</Button>
-                    </Containerfirst>
+                    </ContainerFirst>
                     <ContainerSecond>
                         <TextIzi>Esqueci a senha</TextIzi>
                         <InputIzi type="text" placeholder="Email" />
                         <ButtonIzi>Recuperar senha</ButtonIzi>
+                        {widthActual <= 600 ? (
+                            <Button onClick={GoToLogin}>Acesse sua conta</Button>
+                        ) : null}
                     </ContainerSecond>
                 </>
             );
