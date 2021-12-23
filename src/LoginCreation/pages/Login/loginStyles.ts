@@ -5,9 +5,9 @@ import styled from 'styled-components';
 import colors from '../../styles/colors';
 
 // interfaces
-// interface ButtonInterfaces {
-//     activeCursor?: boolean,
-// }
+interface ButtonInterfaces {
+    activeCursor: boolean,
+}
 
 // styles
 export const Container = styled.div`
@@ -146,20 +146,20 @@ export const InputIzi = styled.input`
     }
 `;
 
-export const ButtonIzi = styled.button`
-    /* background-color: ${(props) => (props.activeCursor ? colors.basic.gray : colors.theme.hex)}; */
-    color: ${colors.basic.white};
-    /* cursor: ${(props) => (props.activeCursor ? 'default' : 'pointer')}; */
+export const ButtonIzi = styled.button<ButtonInterfaces>`
+    background-color: ${(props) => (props.activeCursor ? colors.basic.gray : colors.theme.hex)};
     border-radius: 15px;
+    color: ${colors.basic.white};
     text-transform: uppercase;
     font-size: 10px;
     padding: 10px;
-    border: 1px solid;
+    border: none;
+    cursor: ${(props) => (props.activeCursor ? 'default' : 'pointer')};
     width: 60%;
     margin: 10px;
-    /* :hover {
-        background-color: ${(props) => (props.activeCursor ? colors.basic.gray : colors.theme.hex)};
-    } */
+    :hover {
+        background-color: ${(props) => (props.activeCursor ? colors.basic.gray : colors.theme.aquaMarine)};
+    }
     @media (max-height: 450px) {
         margin-top: 10px;
         padding: 5px;
