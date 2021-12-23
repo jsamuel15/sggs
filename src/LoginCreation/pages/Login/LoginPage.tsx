@@ -19,6 +19,8 @@ const LoginPage: React.FC = () => {
     // useState
     const [idScreen, setIdScreen] = useState('Login');
     const [widthActual, setWidthActual] = useState(window.innerWidth);
+    const [email] = useState('');
+    const [password] = useState('');
 
     // useEffect
     useEffect(() => {
@@ -42,6 +44,13 @@ const LoginPage: React.FC = () => {
         setIdScreen('Login');
     };
 
+    const ValidationDisabled = () => {
+        if (email.length >= 1 && password.length >= 1) {
+            return false;
+        }
+        return true;
+    };
+
     // renders
     const RenderComponents = () => {
         if (idScreen === 'Login') {
@@ -53,10 +62,18 @@ const LoginPage: React.FC = () => {
                     </ContainerFirst>
                     <ContainerSecond>
                         <TextIzi>Entrar</TextIzi>
-                        <InputIzi type="text" placeholder="Email" />
-                        <InputIzi type="password" placeholder="Senha" />
+                        <InputIzi type="text" placeholder="Email" value={email} />
+                        <InputIzi type="password" placeholder="Senha" value={password} />
                         <TextClone onClick={GoToRecoverPassword}>Esqueci senha</TextClone>
-                        <ButtonIzi>Entrar</ButtonIzi>
+                        <ButtonIzi
+                            disabled={ValidationDisabled()}
+                            // onclick="alert('Carregando...');"
+                            // onClick={Signin}
+                            // activeCursor={ValidationDisabled()}
+                        >
+                            Entrar
+
+                        </ButtonIzi>
                         {widthActual <= 600 ? (
                             <Button onClick={GoToRegister}>Crie sua conta</Button>
                         ) : null}

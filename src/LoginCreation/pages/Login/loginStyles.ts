@@ -4,6 +4,11 @@ import styled from 'styled-components';
 // JS
 import colors from '../../styles/colors';
 
+// interfaces
+// interface ButtonInterfaces {
+//     activeCursor?: boolean,
+// }
+
 // styles
 export const Container = styled.div`
     background-color: ${colors.theme.lightGray};
@@ -142,16 +147,19 @@ export const InputIzi = styled.input`
 `;
 
 export const ButtonIzi = styled.button`
-    background-color: ${colors.theme.hex};
+    /* background-color: ${(props) => (props.activeCursor ? colors.basic.gray : colors.theme.hex)}; */
     color: ${colors.basic.white};
+    /* cursor: ${(props) => (props.activeCursor ? 'default' : 'pointer')}; */
     border-radius: 15px;
     text-transform: uppercase;
     font-size: 10px;
     padding: 10px;
-    cursor: pointer;
     border: 1px solid;
     width: 60%;
     margin: 10px;
+    /* :hover {
+        background-color: ${(props) => (props.activeCursor ? colors.basic.gray : colors.theme.hex)};
+    } */
     @media (max-height: 450px) {
         margin-top: 10px;
         padding: 5px;
