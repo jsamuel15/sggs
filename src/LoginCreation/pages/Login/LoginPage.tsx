@@ -40,18 +40,19 @@ const LoginPage: React.FC = () => {
     }, []);
 
     // methods
+    // caminho para tela de registro
     const GoToRegister = () => {
         setIdScreen('Register');
     };
-
+    // caminho para tela de esqueci senha
     const GoToRecoverPassword = () => {
         setIdScreen('RecoverPassword');
     };
-
+    //  caminho para tela de login
     const GoToLogin = () => {
         setIdScreen('Login');
     };
-
+    // validação dos campos de inputs
     const ValidationDisabled = (label: string) => {
         if (label === 'Entrar') {
             if (email.length >= 1 && password.length >= 1) {
@@ -79,36 +80,36 @@ const LoginPage: React.FC = () => {
 
         return true;
     };
-
+    // cominho para alert do botão
     const Signin = () => {
         // eslint-disable-next-line no-alert
         alert('Logou!');
     };
-
+    // evento de email principal
     const onChangeEmail = (txt: React.ChangeEvent<HTMLInputElement>) => {
         setEmail(txt.target.value);
     };
-
+    // evento de senha principal
     const onChangePassword = (txt: React.ChangeEvent<HTMLInputElement>) => {
         setPassword(txt.target.value);
     };
-
+    // evento de email para tela de esqueci senha
     const onChangeEmailRecover = (txt: React.ChangeEvent<HTMLInputElement>) => {
         setEmailRecover(txt.target.value);
     };
-
+    // evento de nome para tela de registro
     const onChangeNameRegister = (txt: React.ChangeEvent<HTMLInputElement>) => {
         setNameRegister(txt.target.value);
     };
-
+    // evento de email para tela de registro
     const onChangeEmailRegister = (txt: React.ChangeEvent<HTMLInputElement>) => {
         setEmailRegister(txt.target.value);
     };
-
+    // evento de senha para tela de registro
     const onChangePasswordRegister = (txt: React.ChangeEvent<HTMLInputElement>) => {
         setPasswordRegister(txt.target.value);
     };
-
+    // evento de confirmar senha para tela de registro
     const onChangeConfirmPasswordRegister = (txt: React.ChangeEvent<HTMLInputElement>) => {
         setConfirmPasswordRegister(txt.target.value);
     };
