@@ -8,10 +8,12 @@ const colors = {
     },
     theme: {
         dodgerblue: '#1e90ff',
+        darkblue: '#293c6e',
         indigo: '#4b0082',
         lightslategray: '#778899',
         dimgray: '#696969',
-        darkslategray: '#2f4f4f',
+        darkslategray: '#7b7d7d',
+        darkslateblack: '#2f2a3b',
     },
 };
 

@@ -12,34 +12,39 @@ export const Container = styled.div`
     flex: 1;
     flex-direction: column;
     overflow-x: auto;
+    align-items: center;
 `;
 
-export const Text = styled.text`
+export const Text = styled.h6`
     display: flex;
     color: ${colors.basic.white};
     font-size: 50px;
+    margin-top: 200px;
+    margin-bottom: 15px;
 `;
 
 export const Input = styled.input`
     color: ${colors.theme.darkslategray};
     border-radius: 5px;
-    border: 2px solid ${colors.basic.black};
-    background-color: ${colors.basic.gray};
-    width: 60%;
+    border: 1px solid ${colors.basic.black};
+    background-color: ${colors.theme.darkslateblack};
+    width: 30%;
     height: 40px;
     margin-bottom: 15px;
     padding: 8px;
     display: flex;
+    ::placeholder{
+        color: ${colors.basic.gray};
+    }
 `;
 
 export const Button = styled.button`
-    border-radius: 3px;
-    border: none;
+    border-radius: 5px;
+    border: 1px solid ${colors.theme.darkblue};
     background-color: ${colors.theme.dodgerblue};
-    width: 200px;
-    cursor: pointer;
+    width: 30%;
     height: 40px;
-    border-radius: 20px;
+    cursor: pointer;
     color: ${colors.basic.white};
     margin-bottom: 15px;
     margin-top: 5px;
@@ -52,4 +57,5 @@ export const TextAction = styled.text`
     cursor: pointer;
     font-size: 16px;
     display: flex;
+    margin-bottom: 15px;
 `;
