@@ -1,11 +1,12 @@
 // libraries
 import styled from 'styled-components';
 
-// JS
+// js
 import colors from '../../styles/colors';
 
+// styles
 export const Container = styled.div`
-    background: ${colors.basic.purple};
+    background-image: ${colors.theme.backgroundAuth};
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -15,11 +16,12 @@ export const Container = styled.div`
     align-items: center;
 `;
 
-export const Text = styled.h6`
+export const Text = styled.text`
     display: flex;
     color: ${colors.basic.white};
     font-size: 50px;
     margin-top: 180px;
+    font-weight: bold;
     margin-bottom: 15px;
 `;
 
@@ -43,7 +45,7 @@ export const Button = styled.button`
     border: 1px solid ${colors.theme.darkblue};
     background-color: ${colors.theme.dodgerblue};
     width: 30%;
-    height: 40px;
+    min-height: 40px;
     cursor: pointer;
     color: ${colors.basic.white};
     margin-bottom: 15px;

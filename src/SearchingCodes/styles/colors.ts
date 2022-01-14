@@ -8,6 +8,7 @@ const colors = {
     },
     theme: {
         dodgerblue: '#1e90ff',
+        backgroundAuth: 'linear-gradient(135deg, #800080, #800080, #293c6e, #293c6e)',
         darkblue: '#293c6e',
         indigo: '#4b0082',
         lightslategray: '#778899',
