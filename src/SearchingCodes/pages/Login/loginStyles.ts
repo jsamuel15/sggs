@@ -19,7 +19,7 @@ export const Text = styled.h6`
     display: flex;
     color: ${colors.basic.white};
     font-size: 50px;
-    margin-top: 200px;
+    margin-top: 180px;
     margin-bottom: 15px;
 `;
 
