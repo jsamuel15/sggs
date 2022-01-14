@@ -28,7 +28,7 @@ export const Text = styled.text`
 export const Input = styled.input`
     color: ${colors.theme.darkslategray};
     border-radius: 5px;
-    border: 1px solid ${colors.basic.black};
+    border: 1px solid ${colors.theme.dimblack};
     background-color: ${colors.theme.darkslateblack};
     width: 30%;
     height: 40px;
