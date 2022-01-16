@@ -1,5 +1,5 @@
 // libraries
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 // js
 import {
@@ -20,6 +20,12 @@ const LoginPage: React.FC = () => {
     const [confirmPasswordRegister, setConfirmPasswordRegister] = useState('');
     const [passwordRegister, setPasswordRegister] = useState('');
     const [emailRecover, setEmailRecover] = useState('');
+
+    useEffect(() => {
+        // eslint-disable-next-line no-console
+        // setTimeout(() => { console.log('Pegou'); }, 5000);
+        localStorage.setItem('Email', 'Pedro@viels.com');
+    }, []);
 
     // methods
     const GoToLogin = () => {
