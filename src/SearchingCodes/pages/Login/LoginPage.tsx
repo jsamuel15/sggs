@@ -25,6 +25,10 @@ const LoginPage: React.FC = () => {
         // eslint-disable-next-line no-console
         // setTimeout(() => { console.log('Pegou'); }, 5000);
         localStorage.setItem('Email', 'Pedro@viels.com');
+        const Email = localStorage.getItem('Email');
+        localStorage.removeItem('Email');
+        // eslint-disable-next-line no-console
+        console.log(Email);
     }, []);
 
     // methods
