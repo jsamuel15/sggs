@@ -1,5 +1,5 @@
 // libraries
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 // js
 import {
@@ -20,6 +20,16 @@ const LoginPage: React.FC = () => {
     const [confirmPasswordRegister, setConfirmPasswordRegister] = useState('');
     const [passwordRegister, setPasswordRegister] = useState('');
     const [emailRecover, setEmailRecover] = useState('');
+
+    useEffect(() => {
+        // eslint-disable-next-line no-console
+        // setTimeout(() => { console.log('Pegou'); }, 5000);
+        localStorage.setItem('Email', 'Pedro@viels.com');
+        const Email = localStorage.getItem('Email');
+        localStorage.removeItem('Email');
+        // eslint-disable-next-line no-console
+        console.log(Email);
+    }, []);
 
     // methods
     const GoToLogin = () => {
@@ -85,6 +95,8 @@ const LoginPage: React.FC = () => {
                 <Text>Cadastro</Text>
                 <Input type="text" placeholder="Nome" value={nameRegister} onChange={onChangeNameRegister} />
                 <Input type="text" placeholder="Email" value={emailRegister} onChange={onChangeEmailRegister} />
+                <Input type="text" placeholder="Telefone" />
+                <Input type="text" placeholder="CPF" />
                 <Input type="password" placeholder="Senha" value={passwordRegister} onChange={onChangePasswordRegister} />
                 <Input type="password" placeholder="Confirma senha" value={confirmPasswordRegister} onChange={onChangeConfirmPasswordRegister} />
                 <Button onClick={Signin}>CADASTRE-SE</Button>

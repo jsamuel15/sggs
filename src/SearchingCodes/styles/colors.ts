@@ -7,14 +7,15 @@ const colors = {
         blue: '#0000ff',
     },
     theme: {
-        dodgerblue: '#1e90ff',
-        backgroundAuth: 'linear-gradient(135deg, #800080, #800080, #293c6e, #293c6e)',
-        darkblue: '#293c6e',
+        dodgerblue: '#5991d8',
+        backgroundAuth: 'linear-gradient(135deg, #4e3245, #4e3245, #1f3156, #1f3156)',
+        darkblue: '#3357a4',
         indigo: '#4b0082',
-        lightslategray: '#778899',
+        lightslategray: '#5d5b61',
         dimgray: '#696969',
         darkslategray: '#7b7d7d',
         darkslateblack: '#2f2a3b',
+        dimblack: '#1d1c2c',
     },
 };
 
