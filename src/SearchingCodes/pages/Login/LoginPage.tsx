@@ -95,6 +95,8 @@ const LoginPage: React.FC = () => {
                 <Text>Cadastro</Text>
                 <Input type="text" placeholder="Nome" value={nameRegister} onChange={onChangeNameRegister} />
                 <Input type="text" placeholder="Email" value={emailRegister} onChange={onChangeEmailRegister} />
+                <Input type="text" placeholder="Telefone" />
+                <Input type="text" placeholder="CPF" />
                 <Input type="password" placeholder="Senha" value={passwordRegister} onChange={onChangePasswordRegister} />
                 <Input type="password" placeholder="Confirma senha" value={confirmPasswordRegister} onChange={onChangeConfirmPasswordRegister} />
                 <Button onClick={Signin}>CADASTRE-SE</Button>
