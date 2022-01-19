@@ -4,6 +4,11 @@ import styled from 'styled-components';
 // js
 import colors from '../../styles/colors';
 
+// interfaces
+interface ButtonInterfaces {
+    activeCursor: boolean,
+}
+
 // styles
 export const Container = styled.div`
     background-image: ${colors.theme.backgroundAuth};
@@ -40,10 +45,10 @@ export const Input = styled.input`
     }
 `;
 
-export const Button = styled.button`
+export const Button = styled.button<ButtonInterfaces>`
     border-radius: 5px;
     border: 1px solid ${colors.theme.darkblue};
-    background-color: ${colors.theme.dodgerblue};
+    background-color: ${(props) => (props.activeCursor ? colors.basic.gray : colors.theme.dodgerblue)};
     width: 30%;
     min-height: 40px;
     cursor: pointer;

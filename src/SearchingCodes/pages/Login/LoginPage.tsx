@@ -10,6 +10,9 @@ import {
     TextAction,
 } from './loginStyles';
 
+// navigation
+import functions from '../../utils/functions';
+
 const LoginPage: React.FC = () => {
     // states
     const [idScreen, setIdScreen] = useState('Login');
@@ -17,6 +20,8 @@ const LoginPage: React.FC = () => {
     const [password, setPassword] = useState('');
     const [emailRegister, setEmailRegister] = useState('');
     const [nameRegister, setNameRegister] = useState('');
+    const [telephoneRegister, setTelephoneRegister] = useState('');
+    const [CPFRegister, setCPFRegister] = useState('');
     const [confirmPasswordRegister, setConfirmPasswordRegister] = useState('');
     const [passwordRegister, setPasswordRegister] = useState('');
     const [emailRecover, setEmailRecover] = useState('');
@@ -44,6 +49,17 @@ const LoginPage: React.FC = () => {
         setIdScreen('Register');
     };
 
+    const ValidationDisabled = (label: string) => {
+        if (label === 'Register') {
+            if (passwordRegister.length >= 3 && confirmPasswordRegister.length >= 3) {
+                return false;
+            }
+            return true;
+        }
+
+        return true;
+    };
+
     const Signin = () => {
         // eslint-disable-next-line no-alert
         alert('Entrou!');
@@ -69,6 +85,16 @@ const LoginPage: React.FC = () => {
         setEmailRegister(txt.target.value);
     };
 
+    const onChangeTelephoneRegister = (txt: React.ChangeEvent<HTMLInputElement>) => {
+        const Format = functions.MaskPhone(txt.target.value);
+        setTelephoneRegister(Format);
+    };
+
+    const onChangeCPFRegister = (txt: React.ChangeEvent<HTMLInputElement>) => {
+        const Format = functions.MaskIdentifier(txt.target.value);
+        setCPFRegister(Format);
+    };
+
     const onChangePasswordRegister = (txt: React.ChangeEvent<HTMLInputElement>) => {
         setPasswordRegister(txt.target.value);
     };
@@ -78,12 +104,22 @@ const LoginPage: React.FC = () => {
     };
 
     // renders
+    const RenderButtons = (label: string) => (
+        <Button
+            disabled={ValidationDisabled(label)}
+            onClick={Signin}
+            activeCursor={ValidationDisabled(label)}
+        >
+            {label}
+        </Button>
+    );
+
     if (idScreen === 'RecoverPassword') {
         return (
             <Container>
                 <Text>Esqueci a Senha</Text>
                 <Input type="text" placeholder="Email" value={emailRecover} onChange={onChangeEmailRecover} />
-                <Button onClick={Signin}>ENVIAR</Button>
+                {RenderButtons('ENVIAR')}
                 <TextAction onClick={GoToLogin}>Já tem uma conta? Acesse</TextAction>
             </Container>
         );
@@ -95,11 +131,11 @@ const LoginPage: React.FC = () => {
                 <Text>Cadastro</Text>
                 <Input type="text" placeholder="Nome" value={nameRegister} onChange={onChangeNameRegister} />
                 <Input type="text" placeholder="Email" value={emailRegister} onChange={onChangeEmailRegister} />
-                <Input type="text" placeholder="Telefone" />
-                <Input type="text" placeholder="CPF" />
+                <Input type="text" placeholder="Telefone" value={telephoneRegister} onChange={onChangeTelephoneRegister} />
+                <Input type="text" placeholder="CPF" value={CPFRegister} onChange={onChangeCPFRegister} />
                 <Input type="password" placeholder="Senha" value={passwordRegister} onChange={onChangePasswordRegister} />
                 <Input type="password" placeholder="Confirma senha" value={confirmPasswordRegister} onChange={onChangeConfirmPasswordRegister} />
-                <Button onClick={Signin}>CADASTRE-SE</Button>
+                {RenderButtons('CADASTRE-SE')}
                 <TextAction onClick={GoToLogin}>Já tem uma conta? Acesse</TextAction>
             </Container>
         );
@@ -112,7 +148,7 @@ const LoginPage: React.FC = () => {
             <Input type="text" placeholder="E-mail" value={email} onChange={onChangeEmail} />
             <Input type="password" placeholder="Senha" value={password} onChange={onChangePassword} />
             <TextAction onClick={GoToRecoverPassword}>Esqueci senha</TextAction>
-            <Button onClick={Signin}>ENTRAR</Button>
+            {RenderButtons('ENVIAR')}
             <TextAction onClick={GoToRegister}>Não tem uma conta? Clique aqui</TextAction>
         </Container>
     );
