@@ -147,7 +147,7 @@ const LoginPage: React.FC = () => {
 
     // renders
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const RenderButtons = (label: string, id: string, onClick?: any) => (
+    const RenderButtons = (label: string, id: 'Recover' | 'Register' | 'Login', onClick?: any) => (
         <Button
             disabled={ValidationDisabled(id)}
             onClick={onClick}
