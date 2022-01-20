@@ -51,7 +51,16 @@ const LoginPage: React.FC = () => {
 
     const ValidationDisabled = (label: string) => {
         if (label === 'Register') {
-            if (passwordRegister.length >= 3 && confirmPasswordRegister.length >= 3) {
+            if (
+                email.length >= 3
+                && password.length >= 3
+                // && emailRegister.length >= 3
+                // && nameRegister.length >= 3
+                // && telephoneRegister.length >= 3
+                // && CPFRegister.length >= 3
+                // && passwordRegister.length >= 3
+                // && confirmPasswordRegister.length >= 3
+            ) {
                 return false;
             }
             return true;
@@ -145,6 +154,7 @@ const LoginPage: React.FC = () => {
     return (
         <Container>
             <Text>Login</Text>
+            <Input type="checkbox" id="scales" name="scales">Lembrar-me</Input>
             <Input type="text" placeholder="E-mail" value={email} onChange={onChangeEmail} />
             <Input type="password" placeholder="Senha" value={password} onChange={onChangePassword} />
             <TextAction onClick={GoToRecoverPassword}>Esqueci senha</TextAction>

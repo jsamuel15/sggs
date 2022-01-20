@@ -56,6 +56,9 @@ export const Button = styled.button<ButtonInterfaces>`
     margin-bottom: 15px;
     margin-top: 5px;
     transition-duration: 400ms;
+    :hover {
+        background-color: ${(props) => (props.activeCursor ? colors.basic.gray : colors.theme.dodgerblue)};
+    }
 `;
 
 export const TextAction = styled.text`
