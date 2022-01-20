@@ -1,5 +1,6 @@
 // libraries
 import React, { useEffect, useState } from 'react';
+import { Checkbox } from '@material-ui/core';
 
 // js
 import {
@@ -15,9 +16,12 @@ import {
 import functions from '../../utils/functions';
 
 const LoginPage: React.FC = () => {
+    // constants
+    const GetEmail = localStorage.getItem('Email') || '';
+
     // states
     const [idScreen, setIdScreen] = useState('Login');
-    const [email, setEmail] = useState('');
+    const [email, setEmail] = useState(GetEmail);
     const [password, setPassword] = useState('');
     const [emailRegister, setEmailRegister] = useState('');
     const [nameRegister, setNameRegister] = useState('');
@@ -26,15 +30,16 @@ const LoginPage: React.FC = () => {
     const [confirmPasswordRegister, setConfirmPasswordRegister] = useState('');
     const [passwordRegister, setPasswordRegister] = useState('');
     const [emailRecover, setEmailRecover] = useState('');
+    const [checked, setChecked] = useState(GetEmail?.length > 0);
 
     useEffect(() => {
         // eslint-disable-next-line no-console
         // setTimeout(() => { console.log('Pegou'); }, 5000);
-        localStorage.setItem('Email', 'Pedro@viels.com');
-        const Email = localStorage.getItem('Email');
-        localStorage.removeItem('Email');
+        // localStorage.setItem('Email', 'Pedro@viels.com');
+        // const Email = localStorage.getItem('Email');
+        // localStorage.removeItem('Email');
         // eslint-disable-next-line no-console
-        console.log(Email);
+        // console.log(Email);
     }, []);
 
     // methods
@@ -50,17 +55,37 @@ const LoginPage: React.FC = () => {
         setIdScreen('Register');
     };
 
-    const ValidationDisabled = (label: string) => {
-        if (label === 'Register') {
+    const onChangeChecked = () => {
+        setChecked(!checked);
+    };
+
+    const ValidationDisabled = (id: string) => {
+        if (id === 'Register') {
             if (
-                email.length >= 3
-                && password.length >= 3
-                // && emailRegister.length >= 3
-                // && nameRegister.length >= 3
-                // && telephoneRegister.length >= 3
-                // && CPFRegister.length >= 3
-                // && passwordRegister.length >= 3
-                // && confirmPasswordRegister.length >= 3
+                emailRegister.length >= 6
+                && nameRegister.length >= 6
+                && telephoneRegister.length === 15
+                && CPFRegister.length >= 14
+                && passwordRegister.length >= 6
+                && confirmPasswordRegister.length >= 6
+                && passwordRegister === confirmPasswordRegister
+            ) {
+                return false;
+            }
+            return true;
+        }
+        if (id === 'Login') {
+            if (
+                email.length >= 6
+                && password.length >= 6
+            ) {
+                return false;
+            }
+            return true;
+        }
+        if (id === 'Recover') {
+            if (
+                emailRecover.length >= 6
             ) {
                 return false;
             }
@@ -71,8 +96,13 @@ const LoginPage: React.FC = () => {
     };
 
     const Signin = () => {
-        // eslint-disable-next-line no-alert
-        alert('Entrou!');
+        if (checked) {
+            localStorage.setItem('Email', email);
+        }
+        if (!checked && GetEmail?.length > 0) {
+            localStorage.removeItem('Email');
+        }
+        window.location.replace('/home');
     };
 
     const onChangeEmail = (txt: React.ChangeEvent<HTMLInputElement>) => {
@@ -102,7 +132,9 @@ const LoginPage: React.FC = () => {
 
     const onChangeCPFRegister = (txt: React.ChangeEvent<HTMLInputElement>) => {
         const Format = functions.MaskIdentifier(txt.target.value);
-        setCPFRegister(Format);
+        if (Format.length <= 14) {
+            setCPFRegister(Format);
+        }
     };
 
     const onChangePasswordRegister = (txt: React.ChangeEvent<HTMLInputElement>) => {
@@ -114,11 +146,12 @@ const LoginPage: React.FC = () => {
     };
 
     // renders
-    const RenderButtons = (label: string) => (
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const RenderButtons = (label: string, id: string, onClick?: any) => (
         <Button
-            disabled={ValidationDisabled(label)}
-            onClick={Signin}
-            activeCursor={ValidationDisabled(label)}
+            disabled={ValidationDisabled(id)}
+            onClick={onClick}
+            activeCursor={ValidationDisabled(id)}
         >
             {label}
         </Button>
@@ -129,7 +162,7 @@ const LoginPage: React.FC = () => {
             <Container>
                 <Text>Esqueci a Senha</Text>
                 <Input type="text" placeholder="Email" value={emailRecover} onChange={onChangeEmailRecover} />
-                {RenderButtons('ENVIAR')}
+                {RenderButtons('ENVIAR', 'Recover')}
                 <TextAction onClick={GoToLogin}>Já tem uma conta? Acesse</TextAction>
             </Container>
         );
@@ -145,7 +178,7 @@ const LoginPage: React.FC = () => {
                 <Input type="text" placeholder="CPF" value={CPFRegister} onChange={onChangeCPFRegister} />
                 <Input type="password" placeholder="Senha" value={passwordRegister} onChange={onChangePasswordRegister} />
                 <Input type="password" placeholder="Confirma senha" value={confirmPasswordRegister} onChange={onChangeConfirmPasswordRegister} />
-                {RenderButtons('CADASTRE-SE')}
+                {RenderButtons('CADASTRE-SE', 'Register')}
                 <TextAction onClick={GoToLogin}>Já tem uma conta? Acesse</TextAction>
             </Container>
         );
@@ -158,10 +191,12 @@ const LoginPage: React.FC = () => {
             {/* <InputFree type="checkbox" name="scales" /> */}
             <Input type="text" placeholder="E-mail" value={email} onChange={onChangeEmail} />
             <Input type="password" placeholder="Senha" value={password} onChange={onChangePassword} />
+            <Checkbox checked={checked} onChange={onChangeChecked} />
             <TextAction onClick={GoToRecoverPassword}>Esqueci senha</TextAction>
-            {RenderButtons('ENVIAR')}
+            {RenderButtons('ENVIAR', 'Login', Signin)}
             <TextAction onClick={GoToRegister}>Não tem uma conta? Clique aqui</TextAction>
         </Container>
     );
 };
+
 export default LoginPage;

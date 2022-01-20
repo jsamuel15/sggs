@@ -58,7 +58,7 @@ export const Button = styled.button<ButtonInterfaces>`
     background-color: ${(props) => (props.activeCursor ? colors.basic.gray : colors.theme.dodgerblue)};
     width: 30%;
     min-height: 40px;
-    cursor: pointer;
+    cursor: ${(props) => (props.activeCursor ? 'default' : 'pointer')};
     color: ${colors.basic.white};
     margin-bottom: 15px;
     margin-top: 5px;

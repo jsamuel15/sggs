@@ -6,7 +6,7 @@ import colors from '../../styles/colors';
 
 // styles
 export const Container = styled.div`
-    background-image: ${colors.basic.white};
+    background-color: ${colors.basic.black};
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -14,4 +14,9 @@ export const Container = styled.div`
     flex-direction: column;
     overflow-x: auto;
     align-items: center;
+`;
+
+export const HeaderHome = styled.text`
+    color: ${colors.basic.white};
+    cursor: pointer;
 `;
