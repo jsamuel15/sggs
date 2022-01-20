@@ -45,6 +45,13 @@ export const Input = styled.input`
     }
 `;
 
+// export const InputFree = styled.input`
+//     font-family: sem serifa;
+//     width: 600px;
+//     margin: 0 auto;
+//     border: 5px azul sólido;
+// `;
+
 export const Button = styled.button<ButtonInterfaces>`
     border-radius: 5px;
     border: 1px solid ${colors.theme.darkblue};

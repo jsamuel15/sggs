@@ -6,6 +6,7 @@ import {
     Container,
     Text,
     Input,
+    // InputFree,
     Button,
     TextAction,
 } from './loginStyles';
@@ -154,7 +155,7 @@ const LoginPage: React.FC = () => {
     return (
         <Container>
             <Text>Login</Text>
-            <Input type="checkbox" id="scales" name="scales">Lembrar-me</Input>
+            {/* <InputFree type="checkbox" name="scales" /> */}
             <Input type="text" placeholder="E-mail" value={email} onChange={onChangeEmail} />
             <Input type="password" placeholder="Senha" value={password} onChange={onChangePassword} />
             <TextAction onClick={GoToRecoverPassword}>Esqueci senha</TextAction>
