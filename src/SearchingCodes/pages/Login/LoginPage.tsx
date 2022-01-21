@@ -102,7 +102,24 @@ const LoginPage: React.FC = () => {
         if (!checked && GetEmail?.length > 0) {
             localStorage.removeItem('Email');
         }
+        // if (email.length > 0) {
+        //     localStorage.setItem('Email', email);
+        // }
         window.location.replace('/home');
+    };
+
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const Signup = () => {
+        const infoUser = {
+            email: emailRegister,
+            name: nameRegister,
+            telephone: telephoneRegister,
+            CPF: CPFRegister,
+        };
+        // const infoUserString = JSON.stringify(infoUser);
+        // const infoUserObject = JSON.parse(infoUserString);
+        localStorage.setItem('infoUser', JSON.stringify(infoUser));
+        // JSON.parse()
     };
 
     const onChangeEmail = (txt: React.ChangeEvent<HTMLInputElement>) => {
@@ -191,7 +208,7 @@ const LoginPage: React.FC = () => {
             {/* <InputFree type="checkbox" name="scales" /> */}
             <Input type="text" placeholder="E-mail" value={email} onChange={onChangeEmail} />
             <Input type="password" placeholder="Senha" value={password} onChange={onChangePassword} />
-            <Checkbox checked={checked} onChange={onChangeChecked} />
+            <Checkbox checked={checked} onChange={onChangeChecked} placeholder="Lembrar-me" />
             <TextAction onClick={GoToRecoverPassword}>Esqueci senha</TextAction>
             {RenderButtons('ENVIAR', 'Login', Signin)}
             <TextAction onClick={GoToRegister}>Não tem uma conta? Clique aqui</TextAction>
