@@ -82,11 +82,12 @@ export const Compact = styled.div`
     /* justify-content: space-between; */
     flex-wrap: wrap;
     align-items: center;
-    padding: 10px;
+    padding: 3px;
     width: 30%;
 `;
 
 export const TexteStart = styled.text`
+    ${colors.theme.darkslateblack};
     color: ${colors.basic.white};
     align-items: center;
 `;

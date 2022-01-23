@@ -107,6 +107,30 @@ const LoginPage: React.FC = () => {
         // if (email.length > 0) {
         //     localStorage.setItem('Email', email);
         // }
+        // if (checked) {
+        //     localStorage.setItem('Nome', nomeRegister);
+        // }
+        // if (!checked && GetNome?.length > 0) {
+        //     localStorage.removeItem('Nome');
+        // }
+        // if (checked) {
+        //     localStorage.setItem('Telephone', telephoneRegister);
+        // }
+        // if (!checked && GetNome?.length > 0) {
+        //     localStorage.removeItem('Telephone');
+        // }
+        // if (checked) {
+        //     localStorage.setItem('CPF', CPFRegister);
+        // }
+        // if (!checked && GetNome?.length > 0) {
+        //     localStorage.removeItem('CPF');
+        // }
+        // if (checked) {
+        //     localStorage.setItem('Password', passwordRegister);
+        // }
+        // if (!checked && GetNome?.length > 0) {
+        //     localStorage.removeItem('Password');
+        // }
         window.location.replace('/home');
     };
 
