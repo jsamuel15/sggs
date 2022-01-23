@@ -5,7 +5,9 @@ import { Checkbox } from '@material-ui/core';
 // js
 import {
     Container,
+    Compact,
     Text,
+    TexteStart,
     Input,
     // InputFree,
     Button,
@@ -208,7 +210,10 @@ const LoginPage: React.FC = () => {
             {/* <InputFree type="checkbox" name="scales" /> */}
             <Input type="text" placeholder="E-mail" value={email} onChange={onChangeEmail} />
             <Input type="password" placeholder="Senha" value={password} onChange={onChangePassword} />
-            <Checkbox checked={checked} onChange={onChangeChecked} placeholder="Lembrar-me" />
+            <Compact>
+                <Checkbox checked={checked} onChange={onChangeChecked} />
+                <TexteStart>Lembrar-me</TexteStart>
+            </Compact>
             <TextAction onClick={GoToRecoverPassword}>Esqueci senha</TextAction>
             {RenderButtons('ENVIAR', 'Login', Signin)}
             <TextAction onClick={GoToRegister}>Não tem uma conta? Clique aqui</TextAction>

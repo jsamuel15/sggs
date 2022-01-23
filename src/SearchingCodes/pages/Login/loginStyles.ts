@@ -76,3 +76,17 @@ export const TextAction = styled.text`
     display: flex;
     margin-bottom: 15px;
 `;
+
+export const Compact = styled.div`
+    display: flex;
+    /* justify-content: space-between; */
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 10px;
+    width: 30%;
+`;
+
+export const TexteStart = styled.text`
+    color: ${colors.basic.white};
+    align-items: center;
+`;
