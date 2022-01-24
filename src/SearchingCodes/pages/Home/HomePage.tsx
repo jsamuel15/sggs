@@ -7,6 +7,7 @@ import { Container, HeaderHome } from './homeStyles';
 const HomePage: React.FC = () => {
     const Signout = () => {
         window.location.replace('/');
+        localStorage.removeItem('EmailUser');
     };
 
     return (

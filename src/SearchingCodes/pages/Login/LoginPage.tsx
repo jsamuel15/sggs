@@ -104,33 +104,9 @@ const LoginPage: React.FC = () => {
         if (!checked && GetEmail?.length > 0) {
             localStorage.removeItem('Email');
         }
-        // if (email.length > 0) {
-        //     localStorage.setItem('Email', email);
-        // }
-        // if (checked) {
-        //     localStorage.setItem('Nome', nomeRegister);
-        // }
-        // if (!checked && GetNome?.length > 0) {
-        //     localStorage.removeItem('Nome');
-        // }
-        // if (checked) {
-        //     localStorage.setItem('Telephone', telephoneRegister);
-        // }
-        // if (!checked && GetNome?.length > 0) {
-        //     localStorage.removeItem('Telephone');
-        // }
-        // if (checked) {
-        //     localStorage.setItem('CPF', CPFRegister);
-        // }
-        // if (!checked && GetNome?.length > 0) {
-        //     localStorage.removeItem('CPF');
-        // }
-        // if (checked) {
-        //     localStorage.setItem('Password', passwordRegister);
-        // }
-        // if (!checked && GetNome?.length > 0) {
-        //     localStorage.removeItem('Password');
-        // }
+        if (email.length > 6) {
+            localStorage.setItem('EmailUser', email);
+        }
         window.location.replace('/home');
     };
 
