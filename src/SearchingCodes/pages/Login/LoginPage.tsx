@@ -121,6 +121,7 @@ const LoginPage: React.FC = () => {
         // const infoUserString = JSON.stringify(infoUser);
         // const infoUserObject = JSON.parse(infoUserString);
         localStorage.setItem('infoUser', JSON.stringify(infoUser));
+        window.location.replace('/home');
         // JSON.parse()
     };
 
@@ -197,7 +198,7 @@ const LoginPage: React.FC = () => {
                 <Input type="text" placeholder="CPF" value={CPFRegister} onChange={onChangeCPFRegister} />
                 <Input type="password" placeholder="Senha" value={passwordRegister} onChange={onChangePasswordRegister} />
                 <Input type="password" placeholder="Confirma senha" value={confirmPasswordRegister} onChange={onChangeConfirmPasswordRegister} />
-                {RenderButtons('CADASTRE-SE', 'Register')}
+                {RenderButtons('CADASTRE-SE', 'Register', Signup)}
                 <TextAction onClick={GoToLogin}>Já tem uma conta? Acesse</TextAction>
             </Container>
         );
