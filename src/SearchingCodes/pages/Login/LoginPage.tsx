@@ -19,7 +19,7 @@ import functions from '../../utils/functions';
 
 const LoginPage: React.FC = () => {
     // constants
-    const GetEmail = localStorage.getItem('Email') || '';
+    const GetEmail = localStorage.getItem('SaveEmail') || '';
 
     // states
     const [idScreen, setIdScreen] = useState('Login');
@@ -98,16 +98,16 @@ const LoginPage: React.FC = () => {
     };
 
     const Signin = () => {
-        if (checked) {
-            localStorage.setItem('Email', email);
-        }
-        if (!checked && GetEmail?.length > 0) {
-            localStorage.removeItem('Email');
-        }
-        if (email.length > 6) {
+        if (email.length >= 6 && password.length >= 6) {
+            if (checked) {
+                localStorage.setItem('SaveEmail', email);
+            }
+            if (!checked && GetEmail?.length > 0) {
+                localStorage.removeItem('SaveEmail');
+            }
             localStorage.setItem('EmailUser', email);
+            window.location.replace('/home');
         }
-        window.location.replace('/home');
     };
 
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
