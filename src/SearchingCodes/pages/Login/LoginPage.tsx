@@ -121,7 +121,19 @@ const LoginPage: React.FC = () => {
         // const infoUserString = JSON.stringify(infoUser);
         // const infoUserObject = JSON.parse(infoUserString);
         localStorage.setItem('infoUser', JSON.stringify(infoUser));
+        // if (emailRegister
+        //     && nameRegister
+        //     && telephoneRegister
+        //     && CPFRegister
+        //     && passwordRegister
+        //     && confirmPasswordRegister) {
+        //             if (GetEmail?.length > 0) {
+        //                 localStorage.removeItem('register');
+        //             }
+        //             localStorage.setItem('EmailUser', emailRegister);
         window.location.replace('/home');
+        //         }
+        //     }
         // JSON.parse()
     };
 
