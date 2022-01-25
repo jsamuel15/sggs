@@ -4,6 +4,11 @@ import styled from 'styled-components';
 // js
 import colors from '../../styles/colors';
 
+// interfaces
+interface ButtonInterfaces {
+    activeCursor: boolean,
+}
+
 // styles
 export const Container = styled.div`
     background-image: ${colors.theme.backgroundAuth};
@@ -40,17 +45,27 @@ export const Input = styled.input`
     }
 `;
 
-export const Button = styled.button`
+// export const InputFree = styled.input`
+//     font-family: sem serifa;
+//     width: 600px;
+//     margin: 0 auto;
+//     border: 5px azul sólido;
+// `;
+
+export const Button = styled.button<ButtonInterfaces>`
     border-radius: 5px;
     border: 1px solid ${colors.theme.darkblue};
-    background-color: ${colors.theme.dodgerblue};
+    background-color: ${(props) => (props.activeCursor ? colors.basic.gray : colors.theme.dodgerblue)};
     width: 30%;
     min-height: 40px;
-    cursor: pointer;
+    cursor: ${(props) => (props.activeCursor ? 'default' : 'pointer')};
     color: ${colors.basic.white};
     margin-bottom: 15px;
     margin-top: 5px;
     transition-duration: 400ms;
+    :hover {
+        background-color: ${(props) => (props.activeCursor ? colors.basic.gray : colors.theme.dodgerblue)};
+    }
 `;
 
 export const TextAction = styled.text`
@@ -60,4 +75,19 @@ export const TextAction = styled.text`
     font-size: 16px;
     display: flex;
     margin-bottom: 15px;
+`;
+
+export const Compact = styled.div`
+    display: flex;
+    /* justify-content: space-between; */
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 3px;
+    width: 30%;
+`;
+
+export const TexteStart = styled.text`
+    ${colors.theme.darkslateblack};
+    color: ${colors.basic.white};
+    align-items: center;
 `;

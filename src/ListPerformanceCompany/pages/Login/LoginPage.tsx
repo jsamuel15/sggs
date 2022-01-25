@@ -14,11 +14,12 @@ import {
     ContainerInner,
     TextAction,
 } from './loginStyles';
-// import functions from '../../utils/functions';
+
 import { updateUser } from '../../store/modules/user/actions';
 
 // navigation
 import Navigation from '../../routes/navigation';
+// import functions from '../../utils/functions';
 
 const LoginPage: React.FC = () => {
     // useDispatch
@@ -105,8 +106,8 @@ const LoginPage: React.FC = () => {
                     <Input placeholder="Nome" value={name} onChange={onChangeNome} />
                     <Input placeholder="Profissão" value={profession} onChange={onChangeProfissão} />
                     <Input type="email" placeholder="E-mail" value={email} onChange={onChangeEmail} />
-                    {/* <Input placeholder="Telefone" value={telefone} onChange={onChangeTelefone} /> */}
-                    {/* <Input placeholder="CPF" value={cpf} onChange={onChangeCPF} /> */}
+                    {/* <Input placeholder="Telefone" value={telefone} onChange={onChangeTelefone} />
+                    <Input placeholder="CPF" value={cpf} onChange={onChangeCPF} /> */}
                     <Input type="password" placeholder="Senha" value={password} onChange={onChangeSenha} />
                     <Button
                         disabled={ValidationDisabled()}
