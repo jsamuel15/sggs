@@ -35,13 +35,11 @@ const LoginPage: React.FC = () => {
     const [checked, setChecked] = useState(GetEmail?.length > 0);
 
     useEffect(() => {
-        // eslint-disable-next-line no-console
-        // setTimeout(() => { console.log('Pegou'); }, 5000);
-        // localStorage.setItem('Email', 'Pedro@viels.com');
-        // const Email = localStorage.getItem('Email');
-        // localStorage.removeItem('Email');
-        // eslint-disable-next-line no-console
-        // console.log(Email);
+        const SetUser = localStorage.getItem('infoUser') || '';
+        const GetUser = localStorage.getItem('EmailUser') || '';
+        if (GetUser.length > 0 || SetUser.length > 0) {
+            window.location.replace('/home');
+        }
     }, []);
 
     // methods
@@ -213,7 +211,7 @@ const LoginPage: React.FC = () => {
                 <TexteStart>Lembrar-me</TexteStart>
             </Compact>
             <TextAction onClick={GoToRecoverPassword}>Esqueci senha</TextAction>
-            {RenderButtons('ENVIAR', 'Login', Signin)}
+            {RenderButtons('ENTRAR', 'Login', Signin)}
             <TextAction onClick={GoToRegister}>Não tem uma conta? Clique aqui</TextAction>
         </Container>
     );

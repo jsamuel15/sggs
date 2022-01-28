@@ -1,18 +1,27 @@
 // libraries
-import React from 'react';
+import React, { useEffect } from 'react';
 
 // js
 import { Container, HeaderHome } from './homeStyles';
 
 const HomePage: React.FC = () => {
+    // constants
     const DefaultInfoUser = {
         email: '',
         name: '',
         telephone: '',
         CPF: '',
     };
-    const GetInfoUser = localStorage.getItem('infoUser') || '';
-    const FormatGetInfoUser = GetInfoUser?.length > 6 ? JSON.parse(GetInfoUser) : DefaultInfoUser;
+    const SetUser = localStorage.getItem('infoUser') || '';
+    const GetUser = localStorage.getItem('EmailUser') || '';
+    const FormatGetInfoUser = SetUser?.length > 6 ? JSON.parse(SetUser) : DefaultInfoUser;
+
+    // useEffect
+    useEffect(() => {
+        if (!GetUser && !SetUser) {
+            window.location.replace('/');
+        }
+    }, []);
 
     const Signout = () => {
         window.location.replace('/');
