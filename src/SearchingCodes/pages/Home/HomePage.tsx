@@ -5,6 +5,12 @@ import React from 'react';
 import { Container, HeaderHome } from './homeStyles';
 
 const HomePage: React.FC = () => {
+    // useEffect(() => {
+    //     if () {
+    //         window.location.replace('/home');
+    //     }
+    // }, []);
+
     const DefaultInfoUser = {
         email: '',
         name: '',
