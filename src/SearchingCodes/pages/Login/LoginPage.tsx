@@ -42,6 +42,11 @@ const LoginPage: React.FC = () => {
         // localStorage.removeItem('Email');
         // eslint-disable-next-line no-console
         // console.log(Email);
+        const SetUser = localStorage.getItem('infoUser') || '';
+        const GetUser = localStorage.getItem('EmailUser') || '';
+        if (GetUser.length > 0 && SetUser.length > 0) {
+            window.location.replace('/home');
+        }
     }, []);
 
     // methods
