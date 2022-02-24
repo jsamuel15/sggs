@@ -5,20 +5,25 @@ import React from 'react';
 import { Container, Test } from './homeStyles';
 
 const HomePage: React.FC = () => {
-    const n1 = 10;
-    const n2 = 3;
+    const name = 'Pedro';
+    // const n1 = 10;
+    // const n2 = 3;
 
-    // eslint-disable-next-line no-shadow
-    function somar(n1: number, n2: number): number {
-        return n1 + n2;
-    }
+    // // eslint-disable-next-line no-shadow
+    // function somar(n1: number, n2: number): number {
+    //     return n1 + n2;
+    // }
     return (
         <Container>
             <Test>
-                Soma:
+                Olá
+                {' '}
+                {name}
+                , tudo certo,
+                {/* Soma:
                 {' '}
                 {somar(n1, n2) + n2}
-                clique-me
+                clique-me */}
             </Test>
         </Container>
     );
