@@ -1,32 +1,19 @@
 // libraries
 import React from 'react';
+// import {} from '..';
 
 // JS
-import { Container, Test } from './homeStyles';
+import {
+    Container,
+    Test,
+} from './homeStyles';
 
-const HomePage: React.FC = () => {
-    const name = 'Pedro';
-    // const n1 = 10;
-    // const n2 = 3;
-
-    // // eslint-disable-next-line no-shadow
-    // function somar(n1: number, n2: number): number {
-    //     return n1 + n2;
-    // }
-    return (
-        <Container>
-            <Test>
-                Olá
-                {' '}
-                {name}
-                , tudo certo,
-                {/* Soma:
-                {' '}
-                {somar(n1, n2) + n2}
-                clique-me */}
-            </Test>
-        </Container>
-    );
-};
+const HomePage: React.FC = () => (
+    <Container>
+        <Test>
+            Olá pessoal.
+        </Test>
+    </Container>
+);
 
 export default HomePage;
