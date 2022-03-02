@@ -1,12 +1,14 @@
 // libraries
 import React from 'react';
-// import {} from '..';
 
 // JS
 import {
     Container,
     Test,
 } from './homeStyles';
+
+// components
+import HeaderComponent from '../../components/Header/HeaderComponent';
 
 const HomePage: React.FC = () => (
     <Container>

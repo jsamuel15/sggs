@@ -7,10 +7,10 @@ import {
     H1,
 } from './headerStyles';
 
-const Heder = () => (
+const HeaderComponents = () => (
     <Header>
         <H1>Título da página!</H1>
     </Header>
 );
 
-export default Heder;
+export default HeaderComponents;
