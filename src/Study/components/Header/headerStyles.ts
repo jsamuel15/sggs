@@ -10,5 +10,5 @@ export const Header = styled.div`
 `;
 
 export const H1 = styled.text`
-    color: ${colors.basic.black};
+    color: ${colors.basic.white};
 `;

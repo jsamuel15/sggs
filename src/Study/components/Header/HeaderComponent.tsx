@@ -8,9 +8,14 @@ import {
     H1,
 } from './headerStyles';
 
-const HeaderComponents = () => (
+type Props = {
+    // eslint-disable-next-line react/require-default-props
+    title?: string;
+}
+
+const HeaderComponents = ({ title }: Props) => (
     <Header>
-        <H1>Título da página!</H1>
+        <H1>{title}</H1>
     </Header>
 );
 

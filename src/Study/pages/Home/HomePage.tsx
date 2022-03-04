@@ -12,7 +12,7 @@ import HeaderComponent from '../../components/Header/HeaderComponent';
 
 const HomePage: React.FC = () => (
     <Container>
-        <HeaderComponent />
+        <HeaderComponent title="Qual quer nome" />
         <Test>
             Olá pessoal.
         </Test>
