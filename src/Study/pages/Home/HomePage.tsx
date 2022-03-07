@@ -9,6 +9,7 @@ import {
 
 // components
 import HeaderComponent from '../../components/Header/HeaderComponent';
+import PhotoComponents from '../../components/Photo/PhotoComponents';
 
 const HomePage: React.FC = () => (
     <Container>
@@ -16,6 +17,7 @@ const HomePage: React.FC = () => (
         <Test>
             Olá pessoal.
         </Test>
+        <PhotoComponents url="http://www.google.com.br/google.jpg" legend="Google" />
     </Container>
 );
 

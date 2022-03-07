@@ -16,6 +16,9 @@ export const Container = styled.div`
     align-items: center;
 `;
 
-export const Test = styled.text`
+export const Img = styled.img`
+`;
+
+export const P = styled.text`
     color: ${colors.basic.black};
 `;
