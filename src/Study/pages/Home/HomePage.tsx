@@ -5,6 +5,7 @@ import React from 'react';
 import {
     Container,
     Test,
+    Img,
 } from './homeStyles';
 
 // components
@@ -17,7 +18,9 @@ const HomePage: React.FC = () => (
         <Test>
             Olá pessoal.
         </Test>
-        <PhotoComponents url="http://www.google.com.br/google.jpg" legend="Google" />
+        <PhotoComponents legend="Google">
+            <Img src="http://www.google.com.br/google.jpg" alt="" />
+        </PhotoComponents>
     </Container>
 );
 

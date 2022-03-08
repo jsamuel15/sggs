@@ -1,23 +1,24 @@
+/* eslint-disable react/react-in-jsx-scope */
 // libraries
-import React from 'react';
+import { ReactNode } from 'react';
 
 // JS
 import {
-    Img,
+    // Img,
     P,
-    Container,
+    // Container,
 } from './photoStyles';
 
 type Props = {
-    url: string;
     legend: string;
+    children: ReactNode;
 }
 
-export const PhotoComponents = ({ url, legend }: Props) => (
-    <Container>
-        <Img src={url} />
+export const PhotoComponents = ({ legend, children }: Props) => (
+    <>
+        {children}
         <P>{legend}</P>
-    </Container>
+    </>
 );
 
 export default PhotoComponents;

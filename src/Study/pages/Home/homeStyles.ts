@@ -19,3 +19,6 @@ export const Container = styled.div`
 export const Test = styled.text`
     color: ${colors.basic.black};
 `;
+
+export const Img = styled.img`
+`;
