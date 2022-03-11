@@ -16,9 +16,7 @@ export const Container = styled.div`
     align-items: center;
 `;
 
-export const Button = styled.button`
+export const Input = styled.input`
     background-color: ${colors.basic.gray};
     color: ${colors.basic.black};
-    width: 80px;
-    height: 80px;
 `;
