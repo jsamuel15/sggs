@@ -16,7 +16,6 @@ export const Container = styled.div`
     align-items: center;
 `;
 
-export const Input = styled.input`
-    background-color: ${colors.basic.gray};
-    color: ${colors.basic.black};
+export const H2 = styled.h2`
+color: ${colors.basic.black};
 `;
