@@ -14,6 +14,7 @@ import {
 // import HeaderComponent from '../../components/Header/HeaderComponent';
 // import PhotoComponents from '../../components/Photo/PhotoComponents';
 // import BotaoComponents from '../../components/Botao/BotaoComponents';
+import PessoaComponents from '../../components/Pessoa/PessoaComponents';
 
 const HomePage: React.FC = () => {
     const list = [
@@ -28,17 +29,9 @@ const HomePage: React.FC = () => {
         <Container>
             <H2>Lista de Presença</H2>
             <ul>
-                {list.map((item, index) => (
+                {list.map((item) => (
                     // eslint-disable-next-line react/no-array-index-key
-                    <li key={index}>
-                        {item.name}
-                        {' '}
-                        -
-                        {' '}
-                        {item.age}
-                        {' '}
-                        anos
-                    </li>
+                    <PessoaComponents data={item} />
                 ))}
             </ul>
         </Container>
