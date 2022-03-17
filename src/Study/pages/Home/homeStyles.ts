@@ -16,6 +16,8 @@ export const Container = styled.div`
     align-items: center;
 `;
 
-export const H2 = styled.h2`
-color: ${colors.basic.black};
+export const Compat = styled.div`
+`;
+
+export const Button = styled.button`
 `;
