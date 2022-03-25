@@ -4,9 +4,18 @@ import React from 'react';
 
 // JS
 import {
+    ContainerMain,
+    Header,
+    Box,
+    Img,
     Container,
-    Button,
+    LeftSide,
+    RigthSide,
+    // Button,
 } from './homeStyles';
+import {
+    powered,
+} from '../../assets/index';
 
 // components
 // import HeaderComponent from '../../components/Header/HeaderComponent';
@@ -15,10 +24,17 @@ import {
 // import PessoaComponents from '../../components/Pessoa/PessoaComponents';
 
 const HomePage: React.FC = () => (
-    <Container>
-        Texto Qualquer Aqui
-        <Button>Clique aqui</Button>
-    </Container>
+    <ContainerMain>
+        <Header>
+            <Box>
+                <Img src={powered} />
+            </Box>
+        </Header>
+        <Container>
+            <LeftSide>Lado esquerdo</LeftSide>
+            <RigthSide>Lado direito</RigthSide>
+        </Container>
+    </ContainerMain>
 );
 
 export default HomePage;
