@@ -72,6 +72,11 @@ export const Button = styled.button`
 
 export const RigthSide = styled.div`
     background-color: ${colors.basic.blue};
-    margin-left: 40px;
     flex: 1;
+    displey: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+`;
+
+export const RigthInner = styled.div`
 `;

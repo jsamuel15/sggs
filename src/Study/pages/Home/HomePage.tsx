@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 /* eslint-disable no-alert */
 /* eslint-disable no-empty */
 /* eslint-disable react/react-in-jsx-scope */
@@ -17,6 +18,7 @@ import {
     PhraseOne,
     Button,
     RigthSide,
+    RigthInner,
 } from './homeStyles';
 import {
     powered,
@@ -27,6 +29,8 @@ import {
 // import PhotoComponents from '../../components/Photo/PhotoComponents';
 // import BotaoComponents from '../../components/Botao/BotaoComponents';
 // import PessoaComponents from '../../components/Pessoa/PessoaComponents';
+import { levels, calculateImc } from '../../helpers/imc';
+import GridItem from '../../components/GridItem/GridItem';
 
 const HomePage: React.FC = () => {
     const [heightField, setHeightField] = useState<number>(0);
@@ -67,7 +71,13 @@ const HomePage: React.FC = () => {
                     />
                     <Button onClick={handleCalculateButton}>Calcular</Button>
                 </LeftSide>
-                <RigthSide>Lado direito</RigthSide>
+                <RigthSide>
+                    <RigthInner>
+                        {levels.map((item, key) => (
+                            <GridItem key={key} item={item} />
+                        ))}
+                    </RigthInner>
+                </RigthSide>
             </Container>
         </ContainerMain>
     );
