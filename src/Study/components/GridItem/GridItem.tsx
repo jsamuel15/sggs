@@ -8,12 +8,13 @@ import {
     Inside,
     Img,
     DivIcon,
+    YourImc,
     DivTitle,
     DivInfo,
 } from './gridItemStyles';
 import {
-    up,
-    down,
+    upImage,
+    downImage,
 } from '../../assets/index';
 
 const GridItem: React.FC = () => {
@@ -24,9 +25,19 @@ const GridItem: React.FC = () => {
     return (
         <Inside>
             <DivIcon>
-                <Img src={item.icon === 'up' ? up : down} alt="" />
+                <Img src={item.icon === 'up' ? upImage : downImage} alt="" />
             </DivIcon>
             <DivTitle>{item.title}</DivTitle>
+            {item.yourImc
+            && (
+                <YourImc>
+                    Seu IMC é de
+                    {' '}
+                    {item.yourImc}
+                    {' '}
+                    kg/m
+                </YourImc>
+            )}
             <DivInfo>
                 <>
                     IMC está entre

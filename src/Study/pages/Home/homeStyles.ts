@@ -73,9 +73,32 @@ export const Button = styled.button`
 export const RigthSide = styled.div`
     background-color: ${colors.basic.blue};
     flex: 1;
-    displey: grid;
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+`;
+
+export const RigthBig = styled.div`
+    display: flex;
+    flex: 1;
+`;
+
+export const RigthArrow = styled.div`
+    background-color: ${colors.theme.blueSlate};
+    position: absolute;
+    display: flex;
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-left: -35px;
+    margin-top: 145px;
+`;
+
+export const ImgTwo = styled.img`
+    width: 25;
 `;
 
 export const RigthInner = styled.div`

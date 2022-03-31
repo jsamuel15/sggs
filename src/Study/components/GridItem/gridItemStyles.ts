@@ -30,6 +30,11 @@ export const Img = styled.img`
     width: 30;
 `;
 
+export const YourImc = styled.div`
+    font-size: 17px;
+    margin: 10px 0 50px 0;
+`;
+
 export const DivTitle = styled.div`
     font-size: 23px;
     font-weight: bold;

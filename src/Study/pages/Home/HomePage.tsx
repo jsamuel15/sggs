@@ -17,11 +17,15 @@ import {
     InputLeft,
     PhraseOne,
     Button,
+    RigthBig,
+    RigthArrow,
+    ImgTwo,
     RigthSide,
     RigthInner,
 } from './homeStyles';
 import {
-    powered,
+    poweredImage,
+    leftarrowImage,
 } from '../../assets/index';
 
 // components
@@ -29,25 +33,33 @@ import {
 // import PhotoComponents from '../../components/Photo/PhotoComponents';
 // import BotaoComponents from '../../components/Botao/BotaoComponents';
 // import PessoaComponents from '../../components/Pessoa/PessoaComponents';
-import { levels, calculateImc } from '../../helpers/imc';
+import { levels, calculateImc, Level } from '../../helpers/imc';
 import GridItem from '../../components/GridItem/GridItem';
 
 const HomePage: React.FC = () => {
     const [heightField, setHeightField] = useState<number>(0);
     const [weightField, setWeightField] = useState<number>(0);
+    const [toShow, setToShow] = useState<Level | null>(null);
 
     const handleCalculateButton = () => {
         if (heightField && weightField) {
+            setToShow(calculateImc(heightField, weightField));
         } else {
             alert('Digite todos os Campos');
         }
+    };
+
+    const handleBackButton = () => {
+        setToShow(null);
+        setHeightField(0);
+        setWeightField(0);
     };
 
     return (
         <ContainerMain>
             <Header>
                 <Box>
-                    <Img src={powered} />
+                    <Img src={poweredImage} />
                 </Box>
             </Header>
             <Container>
@@ -62,21 +74,35 @@ const HomePage: React.FC = () => {
                         placeholder="Digite a sua Altura em metros. EX: 1.6"
                         value={heightField > 0 ? heightField : ''}
                         onChange={(e) => setHeightField(parseFloat(e.target.value))}
+                        disabled={!!toShow}
                     />
                     <InputLeft
                         type="number"
                         placeholder="Digite o seu peso. EX: 60.6"
                         value={weightField > 0 ? weightField : ''}
                         onChange={(e) => setWeightField(parseFloat(e.target.value))}
+                        disabled={!!toShow}
                     />
-                    <Button onClick={handleCalculateButton}>Calcular</Button>
+                    <Button onClick={handleCalculateButton} disabled={!!toShow}>Calcular</Button>
                 </LeftSide>
                 <RigthSide>
-                    <RigthInner>
-                        {levels.map((item, key) => (
-                            <GridItem key={key} item={item} />
-                        ))}
-                    </RigthInner>
+                    {!toShow
+                    && (
+                        <RigthInner>
+                            {levels.map((item, key) => (
+                                <GridItem key={key} item={item} />
+                            ))}
+                        </RigthInner>
+                    )}
+                    {toShow
+                    && (
+                        <RigthBig>
+                            <RigthArrow onClick={handleBackButton}>
+                                <ImgTwo src={leftarrowImage} />
+                            </RigthArrow>
+                            <GridItem item={toShow} />
+                        </RigthBig>
+                    )}
                 </RigthSide>
             </Container>
         </ContainerMain>
