@@ -6,11 +6,17 @@ import colors from '../../styles/colors';
 
 // styles
 export const ContainerMain = styled.div`
-    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 50px;
+    @media (max-width: 770px) {
+        padding-bottom: 50px;
+    }
 `;
 
 export const Header = styled.header`
     background-color: ${colors.basic.white};
+    @media (max-width: 770px) {
+        padding: 0 20px;
+    }
 `;
 
 export const Img = styled.img`
@@ -27,12 +33,19 @@ export const Container = styled.div`
     display: flex;
     max-width: 900px;
     margin: auto;
+    @media (max-width: 770px) {
+        padding: 0 20px;
+        flex-direction: column;
+    }
 `;
 
 export const LeftSide = styled.div`
     background-color: ${colors.basic.white};
     margin-right: 40px;
     flex: 1;
+    @media (max-width: 770px) {
+        margin-right: 0;
+    }
 `;
 
 export const H1 = styled.h1`
@@ -76,6 +89,10 @@ export const RigthSide = styled.div`
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+    @media (max-width: 770px) {
+        margin-left: 0;
+        margin-top: 50px;
+    }
 `;
 
 export const RigthBig = styled.div`
@@ -95,6 +112,11 @@ export const RigthArrow = styled.div`
     cursor: pointer;
     margin-left: -35px;
     margin-top: 145px;
+    @media (max-width: 770px) {
+        margin-left: 0;
+        margin-top: 0;
+        border-radius: 10px;
+    }
 `;
 
 export const ImgTwo = styled.img`

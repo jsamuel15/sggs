@@ -14,6 +14,9 @@ export const Inside = styled.div`
     align-items: center;
     flex-direction: column;
     padding: 20px;
+    @media (max-width: 430px) {
+        grid-template-columns: 1fr;
+    }
 `;
 
 export const DivIcon = styled.div`
