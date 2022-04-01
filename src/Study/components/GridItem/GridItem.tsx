@@ -17,18 +17,17 @@ import {
     downImage,
 } from '../../assets/index';
 
-const GridItem: React.FC = () => {
-    type Props = {
-        item: Level
-    };
+type Props = {
+    item: Level
+};
 
-    return (
-        <Inside>
-            <DivIcon>
-                <Img src={item.icon === 'up' ? upImage : downImage} alt="" />
-            </DivIcon>
-            <DivTitle>{item.title}</DivTitle>
-            {item.yourImc
+const GridItem: React.FC = ({ item }: Props) => (
+    <Inside>
+        <DivIcon>
+            <Img src={item.icon === 'up' ? upImage : downImage} alt="" />
+        </DivIcon>
+        <DivTitle>{item.title}</DivTitle>
+        {item.yourImc
             && (
                 <YourImc>
                     Seu IMC é de
@@ -38,20 +37,19 @@ const GridItem: React.FC = () => {
                     kg/m
                 </YourImc>
             )}
-            <DivInfo>
-                <>
-                    IMC está entre
-                    {' '}
-                    <strong>{item.imc[0]}</strong>
-                    {' '}
-                    e
-                    {' '}
-                    <strong>{item.imc[1]}</strong>
-                </>
+        <DivInfo>
+            <>
+                IMC está entre
+                {' '}
+                <strong>{item.imc[0]}</strong>
+                {' '}
+                e
+                {' '}
+                <strong>{item.imc[1]}</strong>
+            </>
 
-            </DivInfo>
-        </Inside>
-    );
-};
+        </DivInfo>
+    </Inside>
+);
 
 export default GridItem;
