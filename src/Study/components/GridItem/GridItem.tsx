@@ -21,7 +21,7 @@ type Props = {
     item: Level
 };
 
-const GridItem: React.FC = ({ item }: Props) => (
+const GridItem: React.FC <Props> = ({ item }: Props) => (
     <Inside>
         <DivIcon>
             <Img src={item.icon === 'up' ? upImage : downImage} alt="" />
