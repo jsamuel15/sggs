@@ -104,14 +104,14 @@ export const RigthArrow = styled.div`
     background-color: ${colors.theme.blueSlate};
     position: absolute;
     display: flex;
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
     border-radius: 50px;
     justify-content: center;
     align-items: center;
     cursor: pointer;
     margin-left: -35px;
-    margin-top: 145px;
+    margin-top: 115px;
     @media (max-width: 770px) {
         margin-left: 0;
         margin-top: 0;
@@ -120,7 +120,7 @@ export const RigthArrow = styled.div`
 `;
 
 export const ImgTwo = styled.img`
-    width: 25;
+    width: 30px;
 `;
 
 export const RigthInner = styled.div`

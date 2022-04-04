@@ -11,6 +11,10 @@ const colors = {
         graySlate: '#6a7d8b',
         blueSlate: '#227c9d',
         grayState: '#96a3ab',
+        grayIce: '#96a3ab',
+        greenIce: '#0ead69',
+        orangeIce: '#e2b039',
+        redIce: '#c3423f',
     },
 };
 
