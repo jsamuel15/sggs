@@ -12,8 +12,5 @@ export const ContainerMain = styled.div`
 export const Button = styled.button`
 `;
 
-export const Input = styled.input`
-`;
-
-export const Text = styled.text`
+export const Container = styled.div`
 `;

@@ -5,8 +5,7 @@ import React, { ChangeEvent, useEffect, useState } from 'react';
 import {
     ContainerMain,
     Button,
-    Input,
-    Text,
+    Container,
 } from './homeStyles';
 import {
 } from '../../assets/index';
@@ -20,32 +19,39 @@ import {
 // import GridItem from '../../components/GridItem/GridItem';
 
 const HomePage: React.FC = () => {
-    const [name, setName] = useState('Pedro');
-    const [lastName, setLastName] = useState('');
-    const [fullName, setFullName] = useState('');
+    const [movies, setMovies] = useState([]);
 
-    useEffect(() => {
-        setFullName(`${name} ${lastName}`);
-    }, [name, lastName]);
+    const loadMovies = () => {
+        fetch('https://api.b7web.com.br/cinema/')
+            .then((response)=>{
+                return response.json();
+            });
+            .then((json)=>{
+                setMovies(json);
+            });
+        }
 
-    const handleNameChange = (e: ChangeEvent<HTMLInputElement>) => {
-        setName(e.target.value);
-    };
-    const handleLastNameChange = (e: ChangeEvent<HTMLInputElement>) => {
-        setLastName(e.target.value);
-    };
     return (
         <ContainerMain>
-            <Input type="text" placeholder="Digite seu nome" value={name} onChange={handleNameChange} />
-            <Input type="text" placeholder="Digite seu Sobrenome" value={lastName} onChange={handleLastNameChange} />
-            <Text>
-                Nome Completo:
-                {' '}
-                {fullName}
-            </Text>
-            <Button>Clique aqui</Button>
+            <Button onClick={loadMovies}>Carregar Filmes</Button>
+
+            Total de filmes:
+            {' '}
+            {movies.length}
+            <Container>
+                ...
+            </Container>
         </ContainerMain>
     );
+
+function then(arg0: (json: any) => void) {
+    throw new Error('Function not implemented.');
+}
+
+function setMovies(json: any) {
+    throw new Error('Function not implemented.');
+}
+
 };
 
 export default HomePage;
