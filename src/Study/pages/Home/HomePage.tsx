@@ -17,9 +17,10 @@ import {
 // import PessoaComponents from '../../components/Pessoa/PessoaComponents';
 // import { levels, calculateImc, Level } from '../../helpers/imc';
 // import GridItem from '../../components/GridItem/GridItem';
+import Types from '../../pages/types/Movie';
 
 const HomePage: React.FC = () => {
-    const [movies, setMovies] = useState([]);
+    const [movies, setMovies] = useState<Movie[]>([]);
 
     const loadMovies = () => {
         fetch('https://api.b7web.com.br/cinema/')
@@ -39,7 +40,9 @@ const HomePage: React.FC = () => {
             {' '}
             {movies.length}
             <Container>
-                ...
+                {Movies.map((item, index) => (
+
+                ))}
             </Container>
         </ContainerMain>
     );
