@@ -14,3 +14,10 @@ export const Button = styled.button`
 
 export const Container = styled.div`
 `;
+
+export const ContainerInner = styled.div`
+`;
+
+export const Img = styled.img`
+    
+`;
