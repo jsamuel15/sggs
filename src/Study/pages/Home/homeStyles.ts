@@ -9,10 +9,13 @@ export const ContainerMain = styled.div`
     background-color: ${colors.basic.white};
 `;
 
-export const Button = styled.button`
+export const Container = styled.div`
 `;
 
-export const Container = styled.div`
+export const ContainerAce = styled.div`
+`;
+
+export const ContainerSelect = styled.div`
 `;
 
 export const ContainerInner = styled.div`

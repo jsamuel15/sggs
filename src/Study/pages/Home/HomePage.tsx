@@ -1,12 +1,14 @@
+/* eslint-disable @typescript-eslint/no-use-before-define */
 // libraries
 import React, { useState, useEffect } from 'react';
 
 // JS
 import {
     ContainerMain,
-    Button,
     Container,
+    ContainerAce,
     ContainerInner,
+    ContainerSelect,
     Img,
 } from './homeStyles';
 
@@ -24,6 +26,7 @@ import { Movie } from '../types/Movie';
 
 const HomePage: React.FC = () => {
     const [movies, setMovies] = useState<Movie[]>([]);
+    const [loading, setLoading] = useState(false);
 
     useEffect(() => {
         loadMovies();
@@ -34,24 +37,51 @@ const HomePage: React.FC = () => {
             .then((response) => response.json())
             .then((json) => {
                 setMovies(json);
+            })
+            .catch((e) => {
+                setLoading(false);
+                setMovies([]);
+                console.error(e);
             });
     };
 
+    // const loadMovies = async () => {
+    //     try {
+    //         setLoading(true);
+    //         const response = await fetch('https://api.b7web.com.br/cinema/');
+    //         const json = await response.json();
+    //         setLoading(false);
+    //         setMovies(json);
+    //     } catch (e) {
+    //         setLoading(false);
+    //         setMovies([]);
+    //         console.error(e);
+    //     }
+    // };
+
     return (
         <ContainerMain>
-            <Button className="block bg-blue-400 p-2 rounded" onClick={loadMovies}>Carregar Filmes</Button>
+            {loading
+            && <ContainerAce>Carregando...</ContainerAce>}
+            {!loading
+                    && (
+                        <>
 
-            Total de filmes:
-            {' '}
-            {movies.length}
-            <Container className="grid grid-colus-6">
-                {Movies.map((item, index) => (
-                    <ContainerInner>
-                        <Img className="cw-32 block" src={item.avatar} />
-                        {item.titulo}
-                    </ContainerInner>
-                ))}
-            </Container>
+                            <ContainerSelect>
+                                Total de filmes:
+                                {' '}
+                                {movies.length}
+                            </ContainerSelect>
+                            <Container className="grid grid-colus-6">
+                                {movies.map((item, index) => (
+                                    <ContainerInner>
+                                        <Img className="cw-32 block" src={item.avatar} />
+                                        {item.titulo}
+                                    </ContainerInner>
+                                ))}
+                            </Container>
+                        </>
+                    )}
         </ContainerMain>
     );
 
