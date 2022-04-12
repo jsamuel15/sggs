@@ -22,42 +22,24 @@ import {
 // import PessoaComponents from '../../components/Pessoa/PessoaComponents';
 // import { levels, calculateImc, Level } from '../../helpers/imc';
 // import GridItem from '../../components/GridItem/GridItem';
-import { Movie } from '../types/Movie';
+
+// Types
+// import { Movie } from '../types/Movie';
+import { Posts } from '../types/Posts';
 
 const HomePage: React.FC = () => {
-    const [movies, setMovies] = useState<Movie[]>([]);
+    const [posts, setPosts] = useState<Posts[]>([]);
     const [loading, setLoading] = useState(false);
 
     useEffect(() => {
-        loadMovies();
+        loadPosts();
     }, []);
 
-    const loadMovies = () => {
-        fetch('https://api.b7web.com.br/cinema/')
-            .then((response) => response.json())
-            .then((json) => {
-                setMovies(json);
-            })
-            .catch((e) => {
-                setLoading(false);
-                setMovies([]);
-                console.error(e);
-            });
+    const loadPosts = async () => {
+        const response = await fetch('https://jsonplaceholder.typicode.com/posts');
+        const json = await response.json();
+        setPosts(json);
     };
-
-    // const loadMovies = async () => {
-    //     try {
-    //         setLoading(true);
-    //         const response = await fetch('https://api.b7web.com.br/cinema/');
-    //         const json = await response.json();
-    //         setLoading(false);
-    //         setMovies(json);
-    //     } catch (e) {
-    //         setLoading(false);
-    //         setMovies([]);
-    //         console.error(e);
-    //     }
-    // };
 
     return (
         <ContainerMain>
@@ -84,14 +66,6 @@ const HomePage: React.FC = () => {
                     )}
         </ContainerMain>
     );
-
-    // function then(arg0: (json: any) => void) {
-    //     throw new Error('Function not implemented.');
-    // }
-
-    // function setMovies(json: any) {
-    //     throw new Error('Function not implemented.');
-    // }
 };
 
 export default HomePage;

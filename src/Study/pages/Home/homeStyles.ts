@@ -19,8 +19,9 @@ export const ContainerSelect = styled.div`
 `;
 
 export const ContainerInner = styled.div`
+    width: 35;
 `;
 
 export const Img = styled.img`
-    
+    width: 35;
 `;
