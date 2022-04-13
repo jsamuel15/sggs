@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-use-before-define */
 // libraries
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, ChangeEvent } from 'react';
 
 // JS
 import {
@@ -31,6 +31,9 @@ const HomePage: React.FC = () => {
     const [posts, setPosts] = useState<Posts[]>([]);
     const [loading, setLoading] = useState(false);
 
+    const [addTitleText, setAddTitleText] = useState('');
+    const [addBodyText, setAddBodyText] = useState('');
+
     useEffect(() => {
         loadPosts();
     }, []);
@@ -38,8 +41,13 @@ const HomePage: React.FC = () => {
     const loadPosts = async () => {
         const response = await fetch('https://jsonplaceholder.typicode.com/posts');
         const json = await response.json();
+        setLoading(false)
         setPosts(json);
     };
+
+    const handleAddTitleChange = (e: ChangeEvent<HTMLInputElement>) => {
+        setAddTitleText(e.target.value);
+    }
 
     return (
         <ContainerMain>
