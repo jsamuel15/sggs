@@ -19,9 +19,16 @@ export const ContainerSelect = styled.div`
 `;
 
 export const ContainerInner = styled.div`
-    width: 35;
 `;
 
-export const Img = styled.img`
-    width: 35;
+export const Input = styled.input`
+`;
+
+export const Button = styled.button`
+`;
+
+export const H4 = styled.h4`
+`;
+
+export const Text = styled.text`
 `;

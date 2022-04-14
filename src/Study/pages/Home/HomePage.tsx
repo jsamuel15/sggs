@@ -1,3 +1,5 @@
+/* eslint-disable no-alert */
+/* eslint-disable react/no-array-index-key */
 /* eslint-disable @typescript-eslint/no-use-before-define */
 // libraries
 import React, { useState, useEffect, ChangeEvent } from 'react';
@@ -9,7 +11,10 @@ import {
     ContainerAce,
     ContainerInner,
     ContainerSelect,
-    Img,
+    Input,
+    Button,
+    H4,
+    Text,
 } from './homeStyles';
 
 import {
@@ -39,39 +44,74 @@ const HomePage: React.FC = () => {
     }, []);
 
     const loadPosts = async () => {
+        setLoading(true);
         const response = await fetch('https://jsonplaceholder.typicode.com/posts');
         const json = await response.json();
-        setLoading(false)
+        setLoading(false);
         setPosts(json);
     };
 
     const handleAddTitleChange = (e: ChangeEvent<HTMLInputElement>) => {
         setAddTitleText(e.target.value);
-    }
+    };
+    const handleBodyChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
+        setAddBodyText(e.target.value);
+    };
+    const handleAddClick = () => {
+        alert(`${addTitleText} - ${addBodyText}`);
+    };
 
     return (
         <ContainerMain>
             {loading
             && <ContainerAce>Carregando...</ContainerAce>}
-            {!loading
-                    && (
-                        <>
-
-                            <ContainerSelect>
-                                Total de filmes:
-                                {' '}
-                                {movies.length}
-                            </ContainerSelect>
-                            <Container className="grid grid-colus-6">
-                                {movies.map((item, index) => (
-                                    <ContainerInner>
-                                        <Img className="cw-32 block" src={item.avatar} />
-                                        {item.titulo}
-                                    </ContainerInner>
-                                ))}
-                            </Container>
-                        </>
-                    )}
+            <fieldset className="border-2 mb-3 p-3">
+                <legend>Adicionar um novo post</legend>
+                <Input
+                    value={addTitleText}
+                    onChange={handleAddTitleChange}
+                    className="block border"
+                    type="text"
+                    placeholder="digite um titulo"
+                />
+                <textarea
+                    className="block border"
+                    value={addBodyText}
+                    onChange={handleBodyChange}
+                />
+                <Button
+                    className="block border"
+                    onClick={handleAddClick}
+                >
+                    Adicionar
+                </Button>
+            </fieldset>
+            {!loading && posts.length > 0
+                        && (
+                            <>
+                                <ContainerSelect>
+                                    Total de filmes:
+                                    {' '}
+                                    {posts.length}
+                                </ContainerSelect>
+                                <Container>
+                                    {posts.map((item, index) => (
+                                        <ContainerInner key={index} className="my-4">
+                                            <H4 className="font-bold">{item.title}</H4>
+                                            <small>
+                                                #
+                                                {item.id}
+                                                {' '}
+                                                - Usuário:
+                                                {' '}
+                                                {item.userId}
+                                            </small>
+                                            <Text>{item.body}</Text>
+                                        </ContainerInner>
+                                    ))}
+                                </Container>
+                            </>
+                        )}
         </ContainerMain>
     );
 };
