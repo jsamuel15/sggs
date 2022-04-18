@@ -25,20 +25,15 @@ import {
 // import { Posts } from '../types/Posts';
 
 // Reducers
-import { useContagem } from '../Hooks/Contagem';
+// import { useContagem } from '../Hooks/Contagem';
 
 const HomePage: React.FC = () => {
-    const [state, dispatch] = useContagem();
+    const
 
     return (
-        <Container className="p-5">
-            Contagem:
-            {' '}
-            {state.count}
-            <hr />
-            <Button className="p-3" onClick={() => dispatch({ type: 'ADD' })}>Adicionar</Button>
-            <Button className="p-3" onClick={() => dispatch({ type: 'DEL' })}>Remover</Button>
-            <Button className="p-3" onClick={() => dispatch({ type: 'RESET' })}>Resetar</Button>
+        <Container>
+            <Info></Info>
+            <GridArea></GridArea>
         </Container>
     );
 };
