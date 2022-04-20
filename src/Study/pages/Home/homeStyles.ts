@@ -48,9 +48,6 @@ export const InfoArea = styled.div`
     }
 `;
 
-export const Button = styled.button`
-`;
-
 export const GridArea = styled.div`
     display: flex;
     flex: 1;

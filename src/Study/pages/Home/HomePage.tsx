@@ -9,13 +9,15 @@ import {
     LogoLink,
     Img,
     InfoArea,
-    Button,
     GridArea,
 } from './homeStyles';
 
 import {
     MemoryLogo,
 } from '../../assets/index';
+import {
+    restart,
+} from '../../svgs/svgsIndex';
 
 // components
 // import HeaderComponent from '../../components/Header/HeaderComponent';
@@ -25,6 +27,7 @@ import {
 // import { levels, calculateImc, Level } from '../../helpers/imc';
 // import GridItem from '../../components/GridItem/GridItem';
 import InfoItem from '../../components/InfoItem/InfoItem';
+import Button from '../../components/Button/Button';
 
 // Types
 // import { Movie } from '../types/Movie';
@@ -33,24 +36,29 @@ import InfoItem from '../../components/InfoItem/InfoItem';
 // Reducers
 // import { useContagem } from '../Hooks/Contagem';
 
-const HomePage: React.FC = () => (
-    <Container>
-        <Info>
-            <LogoLink>
-                <Img src={MemoryLogo} />
-            </LogoLink>
+const HomePage: React.FC = () => {
+    const resetAndCreateGrid = () => {
 
-            <InfoArea>
-                <InfoItem label="Tempo" value="00:00" />
-                <InfoItem label="Movimentos" value="0" />
-            </InfoArea>
+    };
+    return (
+        <Container>
+            <Info>
+                <LogoLink>
+                    <Img src={MemoryLogo} />
+                </LogoLink>
 
-            <Button>Reiniciar</Button>
-        </Info>
-        <GridArea>
-            ...
-        </GridArea>
-    </Container>
-);
+                <InfoArea>
+                    <InfoItem label="Tempo" value="00:00" />
+                    <InfoItem label="Movimentos" value="0" />
+                </InfoArea>
+
+                <Button label="Reiniciar" icon={restart} onClick={resetAndCreateGrid} />
+            </Info>
+            <GridArea>
+                ...
+            </GridArea>
+        </Container>
+    );
+};
 
 export default HomePage;
