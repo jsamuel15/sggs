@@ -17,9 +17,12 @@ type Props = {
 
 const Button: React.FC <Props> = ({ label, icon, onClick }: Props) => (
     <Container onClick={onClick}>
-        <IconArea>
-            <Icon src={icon} />
-        </IconArea>
+        {icon
+            && (
+                <IconArea>
+                    <Icon src={icon} />
+                </IconArea>
+            )}
         <Label>{label}</Label>
     </Container>
 );
