@@ -29,6 +29,7 @@ import {
 // import GridItem from '../../components/GridItem/GridItem';
 import InfoItem from '../../components/InfoItem/InfoItem';
 import Button from '../../components/Button/Button';
+import GridItem from '../../components/GridItemTwo/GridItem';
 
 // Types
 // import { Movie } from '../types/Movie';
@@ -68,12 +69,12 @@ const HomePage: React.FC = () => {
         }
         // 2.2 - preencher o grid
         for (let w = 0; w < 2; w++) {
-            for (let i =0; i < items.length; i++) {
+            for (let i = 0; i < items.length; i++) {
                 let pos = -1;
-                while(pos < 0 || tmGrid[pos].item !== null) {
+                while (pos < 0 || tmGrid[pos].item !== null) {
                     pos = Math.flor(Math.random() * (items.length * 2));
                 }
-                tmGrid[pos].pitem = i;
+                tmGrid[pos].item = i;
             }
         }
         // 2.3 - jogar no state
@@ -81,7 +82,12 @@ const HomePage: React.FC = () => {
 
         // passo 3 - começar o jogo
         setPlaying(true);
-    };
+    }
+
+const handleItemClick = (index: number) => {
+
+}
+
     return (
         <Container>
             <Info>
@@ -98,7 +104,13 @@ const HomePage: React.FC = () => {
             </Info>
             <GridArea>
                 <Grid>
-                    ...
+                    {gridItem.map((item, index)=>(
+                        <GridItem
+                            key={index}
+                            item={item}
+                            onClick={() => handleItemClick(item)}
+                        />
+                    ))}
                 </Grid>
             </GridArea>
         </Container>
