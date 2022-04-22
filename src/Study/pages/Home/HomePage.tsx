@@ -1,3 +1,6 @@
+/* eslint-disable import/extensions */
+/* eslint-disable import/no-unresolved */
+/* eslint-disable no-plusplus */
 /* eslint-disable default-case */
 // libraries
 import React, { useEffect, useState } from 'react';
@@ -37,7 +40,10 @@ import GridItem from '../../components/GridItemTwo/GridItem';
 import { GridItemType } from '../types/GridItemType';
 
 // Datas
-import { items } from '../data/items';
+import { items } from '../../data/items';
+
+// Helpers
+import { formatTimeElapsed } from '../../helpers/formatTimeElapsed';
 
 // Reducers
 // import { useContagem } from '../Hooks/Contagem';
@@ -51,6 +57,15 @@ const HomePage: React.FC = () => {
 
     useEffect(() => resetAndCreateGrid(), []);
 
+    useEffect(() => {
+        const timer = setInterval(() => {
+            if (playing) {
+                setTimeElapsed(timeElapsed + 1);
+            }
+        }, 1000);
+        return () => clearInterval(timer);
+    }, [playing, timeElapsed]);
+
     const resetAndCreateGrid = () => {
         // passo 1 - resetar o jogo
         setTimeElapsed(0);
@@ -63,7 +78,7 @@ const HomePage: React.FC = () => {
         for (let i = 0; i < (items.length * 2); i++) {
             tmGrid.push({
                 item: null,
-                shwon: false,
+                shown: false,
                 permanentShown: false,
             });
         }
@@ -82,11 +97,10 @@ const HomePage: React.FC = () => {
 
         // passo 3 - começar o jogo
         setPlaying(true);
-    }
+    };
 
-const handleItemClick = (index: number) => {
-
-}
+    const handleItemClick = (_index: number) => {
+};
 
     return (
         <Container>
@@ -96,7 +110,7 @@ const handleItemClick = (index: number) => {
                 </LogoLink>
 
                 <InfoArea>
-                    <InfoItem label="Tempo" value="00:00" />
+                    <InfoItem label="Tempo" value={formatTimeElapsed(timeElapsed)} />
                     <InfoItem label="Movimentos" value="0" />
                 </InfoArea>
 
