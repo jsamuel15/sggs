@@ -66,6 +66,46 @@ const HomePage: React.FC = () => {
         return () => clearInterval(timer);
     }, [playing, timeElapsed]);
 
+// verificar se os abertos são iguais
+    useEffect(() => {
+        if (showCount === 2) {
+            let opened = gridItems.filter(item => item.shown === true);
+            if (opened.length === 2) {
+
+                // v1 - se eles são iguais fazer os que tem "shown" permanente
+                if (opened[0].item === opened[1].item) {
+                    let tmpGrid = [...tmpGrid] {
+                    for(let i in tmpGrid) {
+                        if (tmpGrid[i].shown) {
+                            tmpGrid[i].permanentShown = true;
+                            tmpGrid[i].shown = false;
+                        }
+                    }
+                    setGridItems(tmpGrid);
+                    setShowCount(0);
+                    } else {
+                        // v2 - se não forem iguais, feche todos os "shown"
+                        setTimeout(() => {
+                            for(lety i in tmpGrid) {
+                                tmpGrid[i].shown = false;
+                            }
+                            setGridItems(tmpGrid);
+                            setShowCount(0);
+                        };
+                        }, 1000);
+
+                    setMovieCount(movieCount => moveCount + 1);
+                };
+            };
+        };
+    }, [showCount, gridItems]);
+
+    useEffect(() => {
+        if ( moveCount > 0 && gridItems.every(item => item.permanentShown === true)) {
+            setPlaying(false);
+        }
+    }, [moveCount, gridItems]);
+
     const resetAndCreateGrid = () => {
         // passo 1 - resetar o jogo
         setTimeElapsed(0);
@@ -99,8 +139,16 @@ const HomePage: React.FC = () => {
         setPlaying(true);
     };
 
-    const handleItemClick = (_index: number) => {
-};
+    const handleItemClick = (index: number) => {
+        if (onplaying && index !== null && showCount < 2) {
+            const tmpGrid = [...gridItems];
+
+            if (tmpGrid[index].permanentShown === false && tmpGrid[index].shown === false);
+            tmpGrid[index].show = true;
+            setShowCount(showCount + 1);
+            setGridItems(tmpGrid);
+        }
+    };
 
     return (
         <Container>
@@ -111,14 +159,14 @@ const HomePage: React.FC = () => {
 
                 <InfoArea>
                     <InfoItem label="Tempo" value={formatTimeElapsed(timeElapsed)} />
-                    <InfoItem label="Movimentos" value="0" />
+                    <InfoItem label="Movimentos" value={moveCount.toString()} />
                 </InfoArea>
 
                 <Button label="Reiniciar" icon={restart} onClick={resetAndCreateGrid} />
             </Info>
             <GridArea>
                 <Grid>
-                    {gridItem.map((item, index)=>(
+                    {gridItem.map((item, index) => (
                         <GridItem
                             key={index}
                             item={item}
@@ -132,3 +180,31 @@ const HomePage: React.FC = () => {
 };
 
 export default HomePage;
+function tmpGrid(tmpGrid: any) {
+    throw new Error('Function not implemented.');
+}
+
+function setGridItems(tmpGrid: any) {
+    throw new Error('Function not implemented.');
+}
+
+function setShowCount(arg0: number) {
+    throw new Error('Function not implemented.');
+}
+
+function setMovieCount(arg0: (movieCount: any) => any) {
+    throw new Error('Function not implemented.');
+}
+
+function setTimeElapsed(arg0: number) {
+    throw new Error('Function not implemented.');
+}
+
+function setMoveCount(arg0: number) {
+    throw new Error('Function not implemented.');
+}
+
+function setPlaying(arg0: boolean) {
+    throw new Error('Function not implemented.');
+}
+
