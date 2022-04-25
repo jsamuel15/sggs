@@ -53,7 +53,7 @@ const HomePage: React.FC = () => {
     const [timeElapsed, setTimeElapsed] = useState<number>(0);
     const [moveCount, setMoveCount] = useState<number>(0);
     const [showCount, setShowCount] = useState<number>(0);
-    const [gridItems, setGridItems] = useState<GridItemType>([]);
+    const [gridItems, setGridItems] = useState<GridItemType>();
 
     useEffect(() => resetAndCreateGrid(), []);
 
@@ -69,24 +69,23 @@ const HomePage: React.FC = () => {
 // verificar se os abertos são iguais
     useEffect(() => {
         if (showCount === 2) {
-            let opened = gridItems.filter(item => item.shown === true);
+            let opened = gridItems.filter((item: { shown: boolean; }) => item.shown === true);
             if (opened.length === 2) {
 
                 // v1 - se eles são iguais fazer os que tem "shown" permanente
                 if (opened[0].item === opened[1].item) {
-                    let tmpGrid = [...tmpGrid] {
-                    for(let i in tmpGrid) {
+                    let tmpGrid = [...tmpGrid]
+                    for (let i in tmpGrid) {
                         if (tmpGrid[i].shown) {
                             tmpGrid[i].permanentShown = true;
                             tmpGrid[i].shown = false;
-                        }
                     }
                     setGridItems(tmpGrid);
                     setShowCount(0);
                     } else {
                         // v2 - se não forem iguais, feche todos os "shown"
                         setTimeout(() => {
-                            for(lety i in tmpGrid) {
+                            for(let i in tmpGrid) {
                                 tmpGrid[i].shown = false;
                             }
                             setGridItems(tmpGrid);
@@ -101,7 +100,7 @@ const HomePage: React.FC = () => {
     }, [showCount, gridItems]);
 
     useEffect(() => {
-        if ( moveCount > 0 && gridItems.every(item => item.permanentShown === true)) {
+        if ( moveCount > 0 && gridItems.every((item: { permanentShown: boolean; }) => item.permanentShown === true)) {
             setPlaying(false);
         }
     }, [moveCount, gridItems]);
@@ -127,7 +126,7 @@ const HomePage: React.FC = () => {
             for (let i = 0; i < items.length; i++) {
                 let pos = -1;
                 while (pos < 0 || tmGrid[pos].item !== null) {
-                    pos = Math.flor(Math.random() * (items.length * 2));
+                    pos = Math.floor(Math.random() * (items.length * 2));
                 }
                 tmGrid[pos].item = i;
             }
@@ -143,10 +142,11 @@ const HomePage: React.FC = () => {
         if (onplaying && index !== null && showCount < 2) {
             const tmpGrid = [...gridItems];
 
-            if (tmpGrid[index].permanentShown === false && tmpGrid[index].shown === false);
+            if (tmpGrid[index].permanentShown === false && tmpGrid[index].shown === false) {
             tmpGrid[index].show = true;
             setShowCount(showCount + 1);
             setGridItems(tmpGrid);
+            }
         }
     };
 
