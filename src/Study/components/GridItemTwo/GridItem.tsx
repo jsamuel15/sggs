@@ -12,7 +12,8 @@ import {
     b7,
 } from '../../svgs/svgsIndex';
 
-import GridItemType from '../../types/GridItemType';
+// imports
+import { GridItemType } from '../../pages/types/GridItemType';
 import { items } from '../../data/items';
 
 type Props = {
@@ -25,11 +26,10 @@ const GridItem: React.FC <Props> = ({ item, onClick }: Props) => (
         showBackground={item.permanentShown || item.shown}
         onClick={onClick}
     >
-        {item.permanentShown === false && item.show === false
-            && <Icon src={b7} opacity={.1} />}
-        {item.permanentShown || item.shown && item.item !== null &&
-            <Icon src={items.[item.item].icon} />
-         }
+        {item.permanentShown === false && item.shown === false
+            && <Icon src={b7} opacity={0.1} />}
+        {(item.permanentShown || item.shown) && item.item !== null
+            && <Icon src={items[item.item].icon} />}
     </Container>
 );
 

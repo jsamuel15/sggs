@@ -53,7 +53,7 @@ const HomePage: React.FC = () => {
     const [timeElapsed, setTimeElapsed] = useState<number>(0);
     const [moveCount, setMoveCount] = useState<number>(0);
     const [showCount, setShowCount] = useState<number>(0);
-    const [gridItems, setGridItems] = useState<GridItemType>();
+    const [gridItems, setGridItems] = useState<GridItemType[]>([]);
 
     useEffect(() => resetAndCreateGrid(), []);
 
@@ -72,14 +72,15 @@ const HomePage: React.FC = () => {
             let opened = gridItems.filter((item: { shown: boolean; }) => item.shown === true);
             if (opened.length === 2) {
 
-                // v1 - se eles são iguais fazer os que tem "shown" permanente
                 if (opened[0].item === opened[1].item) {
-                    let tmpGrid = [...tmpGrid]
+                    // v1 - se eles são iguais fazer os que tem "shown" permanente
+                    let tmpGrid = [...gridItems];
                     for (let i in tmpGrid) {
                         if (tmpGrid[i].shown) {
                             tmpGrid[i].permanentShown = true;
                             tmpGrid[i].shown = false;
                     }
+                }
                     setGridItems(tmpGrid);
                     setShowCount(0);
                     } else {
@@ -94,16 +95,15 @@ const HomePage: React.FC = () => {
                         }, 1000);
 
                     setMovieCount(movieCount => moveCount + 1);
-                };
             };
         };
-    }, [showCount, gridItems]);
+    }, [showCount, gridItem]);
 
     useEffect(() => {
-        if ( moveCount > 0 && gridItems.every((item: { permanentShown: boolean; }) => item.permanentShown === true)) {
+        if ( moveCount > 0 && gridItem.every((item: { permanentShown: boolean; }) => item.permanentShown === true)) {
             setPlaying(false);
         }
-    }, [moveCount, gridItems]);
+    }, [moveCount, gridItem]);
 
     const resetAndCreateGrid = () => {
         // passo 1 - resetar o jogo
@@ -125,14 +125,14 @@ const HomePage: React.FC = () => {
         for (let w = 0; w < 2; w++) {
             for (let i = 0; i < items.length; i++) {
                 let pos = -1;
-                while (pos < 0 || tmGrid[pos].item !== null) {
+                while (pos < 0 || tmpGrid[pos].item !== null) {
                     pos = Math.floor(Math.random() * (items.length * 2));
                 }
-                tmGrid[pos].item = i;
+                tmpGrid[pos].item = i;
             }
         }
         // 2.3 - jogar no state
-        setGridItems(tmGrid);
+        setGridItems(tmpGrid);
 
         // passo 3 - começar o jogo
         setPlaying(true);
@@ -140,15 +140,15 @@ const HomePage: React.FC = () => {
 
     const handleItemClick = (index: number) => {
         if (onplaying && index !== null && showCount < 2) {
-            const tmpGrid = [...gridItems];
+            const tmpGrid = [...gridItem];
 
             if (tmpGrid[index].permanentShown === false && tmpGrid[index].shown === false) {
             tmpGrid[index].show = true;
-            setShowCount(showCount + 1);
-            setGridItems(tmpGrid);
+            setShowCount(setShowCount ++ 1)
             }
+            setGridItems(tmpGrid);
         }
-    };
+    }
 
     return (
         <Container>
