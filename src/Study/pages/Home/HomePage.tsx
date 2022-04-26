@@ -69,41 +69,43 @@ const HomePage: React.FC = () => {
 // verificar se os abertos são iguais
     useEffect(() => {
         if (showCount === 2) {
-            let opened = gridItems.filter((item: { shown: boolean; }) => item.shown === true);
+            let opened = gridItems.filter(item => item.shown === true);
             if (opened.length === 2) {
 
                 if (opened[0].item === opened[1].item) {
-                    // v1 - se eles são iguais fazer os que tem "shown" permanente
+                    // v1 - se eles são iguais torna-los permanentes
                     let tmpGrid = [...gridItems];
-                    for (let i in tmpGrid) {
+                    for(let i in tmpGrid) {
                         if (tmpGrid[i].shown) {
                             tmpGrid[i].permanentShown = true;
                             tmpGrid[i].shown = false;
+                        }
                     }
-                }
                     setGridItems(tmpGrid);
                     setShowCount(0);
-                    } else {
-                        // v2 - se não forem iguais, feche todos os "shown"
-                        setTimeout(() => {
-                            for(let i in tmpGrid) {
-                                tmpGrid[i].shown = false;
-                            }
-                            setGridItems(tmpGrid);
-                            setShowCount(0);
-                        };
-                        }, 1000);
+                } else {
+                    // v2 - se não forem iguais, feche todos os "shown"
+                    setTimeout(()=>{
+                        let tmpGrid = [...gridItems];
+                        for(let i in tmpGrid) {
+                            tmpGrid[i].shown = false;
+                        }
+                        setGridItems(tmpGrid);
+                        setShowCount(0);
+                    }, 1000);
+                }
 
-                    setMovieCount(movieCount => moveCount + 1);
-            };
-        };
-    }, [showCount, gridItem]);
+                setMoveCount(moveCount => moveCount + 1);
+            }
+        }
+    }, [showCount, gridItems]);
 
+    // verifique se o jogo acabou
     useEffect(() => {
-        if ( moveCount > 0 && gridItem.every((item: { permanentShown: boolean; }) => item.permanentShown === true)) {
+        if ( moveCount > 0 && gridItems.every((item: { permanentShown: boolean; }) => item.permanentShown === true)) {
             setPlaying(false);
         }
-    }, [moveCount, gridItem]);
+    }, [moveCount, gridItems]);
 
     const resetAndCreateGrid = () => {
         // passo 1 - resetar o jogo
@@ -140,10 +142,10 @@ const HomePage: React.FC = () => {
 
     const handleItemClick = (index: number) => {
         if (onplaying && index !== null && showCount < 2) {
-            const tmpGrid = [...gridItem];
+            const tmpGrid = [...gridItems];
 
             if (tmpGrid[index].permanentShown === false && tmpGrid[index].shown === false) {
-            tmpGrid[index].show = true;
+            tmpGrid[index].shown = true;
             setShowCount(setShowCount ++ 1)
             }
             setGridItems(tmpGrid);
@@ -166,7 +168,7 @@ const HomePage: React.FC = () => {
             </Info>
             <GridArea>
                 <Grid>
-                    {gridItem.map((item, index) => (
+                    {gridItems.map((item, index) => (
                         <GridItem
                             key={index}
                             item={item}
