@@ -1,3 +1,9 @@
+/* eslint-disable react/no-array-index-key */
+/* eslint-disable @typescript-eslint/no-use-before-define */
+/* eslint-disable max-len */
+/* eslint-disable guard-for-in */
+/* eslint-disable no-restricted-syntax */
+/* eslint-disable no-shadow */
 /* eslint-disable import/extensions */
 /* eslint-disable import/no-unresolved */
 /* eslint-disable no-plusplus */
@@ -66,16 +72,15 @@ const HomePage: React.FC = () => {
         return () => clearInterval(timer);
     }, [playing, timeElapsed]);
 
-// verificar se os abertos são iguais
+    // verificar se os abertos são iguais
     useEffect(() => {
         if (showCount === 2) {
-            let opened = gridItems.filter(item => item.shown === true);
+            const opened = gridItems.filter((item) => item.shown === true);
             if (opened.length === 2) {
-
                 if (opened[0].item === opened[1].item) {
                     // v1 - se eles são iguais torna-los permanentes
-                    let tmpGrid = [...gridItems];
-                    for(let i in tmpGrid) {
+                    const tmpGrid = [...gridItems];
+                    for (const i in tmpGrid) {
                         if (tmpGrid[i].shown) {
                             tmpGrid[i].permanentShown = true;
                             tmpGrid[i].shown = false;
@@ -85,9 +90,9 @@ const HomePage: React.FC = () => {
                     setShowCount(0);
                 } else {
                     // v2 - se não forem iguais, feche todos os "shown"
-                    setTimeout(()=>{
-                        let tmpGrid = [...gridItems];
-                        for(let i in tmpGrid) {
+                    setTimeout(() => {
+                        const tmpGrid = [...gridItems];
+                        for (const i in tmpGrid) {
                             tmpGrid[i].shown = false;
                         }
                         setGridItems(tmpGrid);
@@ -95,14 +100,14 @@ const HomePage: React.FC = () => {
                     }, 1000);
                 }
 
-                setMoveCount(moveCount => moveCount + 1);
+                setMoveCount((moveCount) => moveCount + 1);
             }
         }
     }, [showCount, gridItems]);
 
     // verifique se o jogo acabou
     useEffect(() => {
-        if ( moveCount > 0 && gridItems.every((item: { permanentShown: boolean; }) => item.permanentShown === true)) {
+        if (moveCount > 0 && gridItems.every((item: { permanentShown: boolean; }) => item.permanentShown === true)) {
             setPlaying(false);
         }
     }, [moveCount, gridItems]);
@@ -115,9 +120,9 @@ const HomePage: React.FC = () => {
 
         // passo 2 - criar o grid
         // passo 2.1 - criar um grid vazio
-        const tmGrid: GridItemType[] = [];
+        const tmpGrid: GridItemType[] = [];
         for (let i = 0; i < (items.length * 2); i++) {
-            tmGrid.push({
+            tmpGrid.push({
                 item: null,
                 shown: false,
                 permanentShown: false,
@@ -141,16 +146,16 @@ const HomePage: React.FC = () => {
     };
 
     const handleItemClick = (index: number) => {
-        if (onplaying && index !== null && showCount < 2) {
+        if (playing && index !== null && showCount < 2) {
             const tmpGrid = [...gridItems];
 
             if (tmpGrid[index].permanentShown === false && tmpGrid[index].shown === false) {
-            tmpGrid[index].shown = true;
-            setShowCount(setShowCount ++ 1)
+                tmpGrid[index].shown = true;
+                setShowCount(showCount + 1);
             }
             setGridItems(tmpGrid);
         }
-    }
+    };
 
     return (
         <Container>
@@ -172,7 +177,7 @@ const HomePage: React.FC = () => {
                         <GridItem
                             key={index}
                             item={item}
-                            onClick={() => handleItemClick(item)}
+                            onClick={() => handleItemClick(index)}
                         />
                     ))}
                 </Grid>
@@ -209,4 +214,3 @@ function setMoveCount(arg0: number) {
 function setPlaying(arg0: boolean) {
     throw new Error('Function not implemented.');
 }
-

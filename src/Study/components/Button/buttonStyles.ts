@@ -10,7 +10,7 @@ export const Container = styled.div`
     width: 200px;
     height: 50px;
     display: flex;
-    background-color: ${colors.theme.seila};
+    background-color: ${colors.theme.slateBlue};
     border-radius: 10px;
     cursor: pointer;
     opacity: 1;
