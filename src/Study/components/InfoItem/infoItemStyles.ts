@@ -18,5 +18,5 @@ export const Label = styled.div`
 export const Value = styled.div`
     font-size: 37px;
     font-weight: bold;
-    color: ${colors.theme.seila};
+    color: ${colors.theme.slateBlue};
 `;
