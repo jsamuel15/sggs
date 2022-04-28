@@ -187,30 +187,3 @@ const HomePage: React.FC = () => {
 };
 
 export default HomePage;
-function tmpGrid(tmpGrid: any) {
-    throw new Error('Function not implemented.');
-}
-
-function setGridItems(tmpGrid: any) {
-    throw new Error('Function not implemented.');
-}
-
-function setShowCount(arg0: number) {
-    throw new Error('Function not implemented.');
-}
-
-function setMovieCount(arg0: (movieCount: any) => any) {
-    throw new Error('Function not implemented.');
-}
-
-function setTimeElapsed(arg0: number) {
-    throw new Error('Function not implemented.');
-}
-
-function setMoveCount(arg0: number) {
-    throw new Error('Function not implemented.');
-}
-
-function setPlaying(arg0: boolean) {
-    throw new Error('Function not implemented.');
-}

@@ -12,9 +12,9 @@ export const Container = styled.div`
     display: flex;
     background-color: ${colors.theme.slateBlue};
     border-radius: 10px;
-    cursor: pointer;
     opacity: 1;
     transition: all ease .3s;
+    cursor: pointer;
 
     &:hover {
         opacity: .8s;
