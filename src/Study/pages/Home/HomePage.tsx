@@ -1,5 +1,5 @@
 // libraries
-import React from 'react';
+import React, { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
 // JS
@@ -15,6 +15,7 @@ import {
 
 import {
 } from '../../svgs/svgsIndex';
+import authAPI from '../../services/auth';
 
 // components
 // import HeaderComponent from '../../components/Header/HeaderComponent';
@@ -44,22 +45,38 @@ import {
 // imports
 import { Home } from './Home';
 
-const HomePage: React.FC = () => (
-    <Container>
-        <Header>
-            <Text>Titulo do Site</Text>
-        </Header>
-        <hr />
-        <ContainerInner>
-            <Routes>
-                <Route path="/" />
-            </Routes>
-        </ContainerInner>
-        <hr />
-        <footer>
-            Todos os direitos reservados.
-        </footer>
-    </Container>
-);
+const HomePage: React.FC = () => {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    const ActionLogin = async () => {
+        // Iniciar um loading
+        const test = await authAPI.Login(email, password);
+        if (test.status === 200) {
+            // alert9'login
+        } else {
+            // alert falha ao logar
+        }
+        // Fechar o loading
+    };
+
+    return (
+        <Container>
+            <Header>
+                <Text>Titulo do Site</Text>
+            </Header>
+            <hr />
+            <ContainerInner onClick={ActionLogin}>
+                <Routes>
+                    <Route path="/" />
+                </Routes>
+            </ContainerInner>
+            <hr />
+            <footer>
+                Todos os direitos reservados.
+            </footer>
+        </Container>
+    );
+};
 
 export default HomePage;
