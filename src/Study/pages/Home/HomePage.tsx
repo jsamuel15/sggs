@@ -1,6 +1,6 @@
 // libraries
 import React, { useState } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 
 // JS
 import {
@@ -44,6 +44,7 @@ import authAPI from '../../services/auth';
 
 // imports
 import { Home } from './Home';
+import { AboutItem } from './AboutItem';
 
 const HomePage: React.FC = () => {
     const [email, setEmail] = useState('');
@@ -67,9 +68,8 @@ const HomePage: React.FC = () => {
             </Header>
             <hr />
             <ContainerInner onClick={ActionLogin}>
-                <Routes>
-                    <Route path="/" />
-                </Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/sobre/:slug" element={<AboutItem />} />
             </ContainerInner>
             <hr />
             <footer>
