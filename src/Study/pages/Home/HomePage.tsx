@@ -73,7 +73,7 @@ const HomePage: React.FC = () => {
             </ContainerInner>
             <hr />
             <footer>
-                Todos os direitos reservados.
+                Todos os direitos reservados!
             </footer>
         </Container>
     );
