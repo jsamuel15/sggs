@@ -7,15 +7,13 @@ import colors from '../../styles/colors';
 // styles
 
 export const Container = styled.div`
-    background-color: ${colors.basic.white};
-    padding: 4;
 `;
 
-// export const Header = styled.header`
-// `;
+export const Input = styled.input`
+`;
 
-// export const Text = styled.h1`
-// `;
+export const Button = styled.button`
+`;
 
 // export const ContainerInner = styled.div`
 // `;

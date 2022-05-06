@@ -5,9 +5,8 @@ import React, { useState } from 'react';
 // JS
 import {
     Container,
-    // Header,
-    // Text,
-    // ContainerInner,
+    Button,
+    Input,
 } from './homeStyles';
 
 import {
@@ -63,7 +62,15 @@ const HomePage: React.FC = () => {
 
     return (
         <Container>
-            ...
+            Meu nome é: ... e tenho ... anos.
+            <br />
+            Tema: ...
+
+            <hr />
+            <Input type="text" value="..." />
+
+            <hr />
+            <Button>Switch Theme</Button>
         </Container>
     );
 };
