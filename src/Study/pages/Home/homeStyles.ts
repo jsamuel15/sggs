@@ -11,11 +11,11 @@ export const Container = styled.div`
     padding: 4;
 `;
 
-export const Header = styled.header`
-`;
+// export const Header = styled.header`
+// `;
 
-export const Text = styled.h1`
-`;
+// export const Text = styled.h1`
+// `;
 
-export const ContainerInner = styled.div`
-`;
+// export const ContainerInner = styled.div`
+// `;

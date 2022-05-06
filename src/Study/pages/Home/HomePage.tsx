@@ -1,13 +1,13 @@
 // libraries
 import React, { useState } from 'react';
-import { Route } from 'react-router-dom';
+// import { Route } from 'react-router-dom';
 
 // JS
 import {
     Container,
-    Header,
-    Text,
-    ContainerInner,
+    // Header,
+    // Text,
+    // ContainerInner,
 } from './homeStyles';
 
 import {
@@ -43,8 +43,8 @@ import authAPI from '../../services/auth';
 // import { useContagem } from '../Hooks/Contagem';
 
 // imports
-import { Home } from './Home';
-import { AboutItem } from './AboutItem';
+// import { Home } from './Home';
+// import { AboutItem } from './AboutItem';
 
 const HomePage: React.FC = () => {
     const [email, setEmail] = useState('');
@@ -63,18 +63,7 @@ const HomePage: React.FC = () => {
 
     return (
         <Container>
-            <Header>
-                <Text>Titulo do Site</Text>
-            </Header>
-            <hr />
-            <ContainerInner onClick={ActionLogin}>
-                <Route path="/" element={<Home />} />
-                <Route path="/sobre/:slug" element={<AboutItem />} />
-            </ContainerInner>
-            <hr />
-            <footer>
-                Todos os direitos reservados!
-            </footer>
+            ...
         </Container>
     );
 };
