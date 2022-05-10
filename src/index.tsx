@@ -1,6 +1,7 @@
 // libraries
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
 
 // js
 import App from './App';
@@ -9,7 +10,9 @@ import App from './App';
 function renderElement() {
     return (
         <React.StrictMode>
-            <App />
+            <BrowserRouter>
+                <App />
+            </BrowserRouter>
         </React.StrictMode>
     );
 }
