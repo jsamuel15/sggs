@@ -14,6 +14,3 @@ export const Input = styled.input`
 
 export const Button = styled.button`
 `;
-
-// export const ContainerInner = styled.div`
-// `;

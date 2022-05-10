@@ -14,4 +14,7 @@ export const slice = createSlice({
             state.Age = action.payload;
         }
     }
-    });
+});
+
+export const { setName, setAge } = slice.actions;
+export default slice.reducer;
