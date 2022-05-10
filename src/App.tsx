@@ -12,7 +12,8 @@ import { store } from './ListPerformanceCompany/store/index';
 // import Routes from './FrozenWorldProject/routes';
 // import Routes from './LoginCreation/routes';
 // import Routes from './SearchingCodes/routes';
-import Routes from './Study/routes';
+// import Routes from './Study/routes';
+import Routes from './CoachingServices/routes';
 
 const App: React.FC = () => (
     <Provider store={store}>
