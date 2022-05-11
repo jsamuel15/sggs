@@ -5,6 +5,10 @@ import React, { useState } from 'react';
 // js
 import {
     Container,
+    Text,
+    Texting,
+    Button,
+    ButtonTwo,
 } from './homeStyles';
 
 // renders
@@ -42,7 +46,14 @@ const HomePage: React.FC = () => {
 
     return (
         <Container>
-            ...
+            <Text>Serviços de Coaching</Text>
+            <Texting>
+                Simple Text. Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit. Curabitur id suscipit ex.
+                Suspendisse rhoncus laoreet purus quis elementum.
+            </Texting>
+            <Button>SABER MAIS</Button>
+            <ButtonTwo>DEMONTAÇÃO AO VIVO</ButtonTwo>
         </Container>
     );
 };

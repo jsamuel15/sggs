@@ -146,7 +146,6 @@ export const ButtonEigth = styled.button`
     border-radius: 15px;
     font-size: 12px;
     padding-left: 5px;
-    //margin-left: 3px;
     margin-right: 30px;
     align-items: center;
     justify-content: center;

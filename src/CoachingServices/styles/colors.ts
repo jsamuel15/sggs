@@ -5,6 +5,7 @@ const colors = {
         gray: '#808080',
     },
     theme: {
+        greyHex: '#3b3d41',
         hex: '#58af9b',
         greySlate: '#7f8c8d',
         silver: '#c0c0c0',
