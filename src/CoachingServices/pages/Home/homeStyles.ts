@@ -4,8 +4,14 @@ import styled from 'styled-components';
 // js
 import colors from '../../styles/colors';
 
-export const Container = styled.div`
-    background-image: ${colors.basic.white};
+// interfaces
+interface Container {
+    background: string,
+}
+
+export const Container = styled.div<Container>`
+    background-image: ${(props) => (`url(${props.background})`)};
+    background-color: ${colors.theme.backgroundAuth};
     background-size: cover;
     width: 100vw;
     height: 100vh;

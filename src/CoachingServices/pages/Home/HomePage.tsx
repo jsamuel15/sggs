@@ -10,6 +10,9 @@ import {
     Button,
     ButtonTwo,
 } from './homeStyles';
+import {
+    escritorio,
+} from '../../assets/index';
 
 // renders
 const HomePage: React.FC = () => {
@@ -45,7 +48,7 @@ const HomePage: React.FC = () => {
     };
 
     return (
-        <Container>
+        <Container background={escritorio}>
             <Text>Serviços de Coaching</Text>
             <Texting>
                 Simple Text. Lorem ipsum dolor sit amet,

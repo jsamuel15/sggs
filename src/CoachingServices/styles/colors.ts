@@ -5,6 +5,7 @@ const colors = {
         gray: '#808080',
     },
     theme: {
+        backgroundAuth: 'linear-gradient(140deg, #3b3d41, #3b3d41, #3b3d41, #3b3d41)',
         greyHex: '#3b3d41',
         hex: '#58af9b',
         greySlate: '#7f8c8d',
