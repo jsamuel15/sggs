@@ -5,18 +5,14 @@ import React, { useState } from 'react';
 // js
 import {
     Container,
-    // ContainerInner,
-    Text,
-    Texting,
-    Button,
-    ButtonTwo,
-} from './homeStyles';
-import {
-    escritorio2,
-} from '../../assets/index';
+    // Text,
+    // Texting,
+    // Button,
+    // ButtonTwo,
+} from './loginStyles';
 
 // renders
-const HomePage: React.FC = () => {
+const LoginPage: React.FC = () => {
 // useState
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -49,19 +45,10 @@ const HomePage: React.FC = () => {
     };
 
     return (
-        <Container background={escritorio2}>
-            {/* <ContainerInner> */}
-            <Text>Serviços de Coaching</Text>
-            <Texting>
-                Simple Text. Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit. Curabitur id suscipit ex.
-                Suspendisse rhoncus laoreet purus quis elementum.
-            </Texting>
-            <Button>SABER MAIS</Button>
-            <ButtonTwo>DEMONTAÇÃO AO VIVO</ButtonTwo>
-            {/* </ContainerInner> */}
+        <Container>
+            ...
         </Container>
     );
 };
 
-export default HomePage;
+export default LoginPage;
