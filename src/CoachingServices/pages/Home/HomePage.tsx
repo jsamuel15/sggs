@@ -7,6 +7,8 @@ import {
     Container,
     // ContainerInner,
     Text,
+    Input,
+    TextAction,
     Texting,
     Button,
     ButtonTwo,
@@ -18,23 +20,14 @@ import {
 // renders
 const HomePage: React.FC = () => {
 // useState
+    const [idScreen, setIdScreen] = useState('Login');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-
-    // methods
-    // const GoToLogin = () => {
-    //     setIdScreen('Login');
-    // }
-
-    // Validation
-    const ValidationDisable = (label: string) => {
-        if (label === 'Login') {
-            if (email.length >= 5 && password.length >= 4) {
-                return false;
-            }
-            return true;
-        }
-    };
+    const [emailRegister, setEmailRegister] = useState('');
+    const [nameRegister, setNameRegister] = useState('');
+    const [confirmPasswordRegister, setConfirmPasswordRegister] = useState('');
+    const [passwordRegister, setPasswordRegister] = useState('');
+    const [emailRecover, setEmailRecover] = useState('');
 
     const Bringin = () => {
         alert('Entrou!');
@@ -48,6 +41,50 @@ const HomePage: React.FC = () => {
         setPassword(txt.target.value);
     };
 
+    const onChangeEmailRecover = (txt: React.ChangeEvent<HTMLInputElement>) => {
+        setEmailRecover(txt.target.value);
+    };
+
+    const onChangeNameRegister = (txt: React.ChangeEvent<HTMLInputElement>) => {
+        setNameRegister(txt.target.value);
+    };
+
+    const onChangeEmailRegister = (txt: React.ChangeEvent<HTMLInputElement>) => {
+        setEmailRegister(txt.target.value);
+    };
+
+    const onChangePasswordRegister = (txt: React.ChangeEvent<HTMLInputElement>) => {
+        setPasswordRegister(txt.target.value);
+    };
+
+    const onChangeConfirmPasswordRegister = (txt: React.ChangeEvent<HTMLInputElement>) => {
+        setConfirmPasswordRegister(txt.target.value);
+    };
+
+    if (idScreen === 'RecoverPassword') {
+        return (
+            <Container>
+                <Text>Esqueci a Senha</Text>
+                <Input type="text" placeholder="Email" onChange={onChangeEmailRecover} />
+                <TextAction>Já tem uma conta? Acesse</TextAction>
+            </Container>
+        );
+    }
+
+    if (idScreen === 'Register') {
+        return (
+            <Container>
+                <Text>Cadastro</Text>
+                <Input type="text" placeholder="Nome" onChange={onChangeNameRegister} />
+                <Input type="text" placeholder="Email" onChange={onChangeEmailRegister} />
+                <Input type="password" placeholder="Senha" onChange={onChangePasswordRegister} />
+                <Input type="password" placeholder="Confirma senha" onChange={onChangeConfirmPasswordRegister} />
+                <TextAction>Já tem uma conta? Acesse</TextAction>
+            </Container>
+        );
+    }
+
+    // main
     return (
         <Container background={escritorio2}>
             {/* <ContainerInner> */}
