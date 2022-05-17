@@ -11,7 +11,6 @@ interface Container {
 
 export const Container = styled.div<Container>`
     background-image: ${(props) => (`url(${props.background})`)};
-    background-color: ${colors.theme.backgroundAuth};
     background-size: cover;
     width: 100vw;
     height: 100vh;
@@ -20,6 +19,17 @@ export const Container = styled.div<Container>`
     flex-direction: column;
     overflow-x: auto;
 `;
+
+/* export const ContainerInner = styled.div`
+    background-image: ${colors.theme.backgroundAuth};
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    overflow-x: auto;
+`; */
 
 export const Text = styled.h1`
     color: ${colors.basic.white};
@@ -39,6 +49,30 @@ export const Texting = styled.h3`
     margin-bottom: 40px;
 `;
 
+export const Input = styled.input`
+    background-color: ${colors.theme.hex};
+    color: ${colors.theme.silver};
+    border-radius: 5px;
+    border: 1px solid ${colors.theme.darkGray};
+    width: 30%;
+    /* height: 40px; */
+    margin-bottom: 15px;
+    padding: 8px;
+    display: flex;
+    ::placeholder{
+        color: ${colors.basic.gray};
+    }
+`;
+
+export const TextAction = styled.text`
+    border-radius: 20px;
+    color: ${colors.basic.white};
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    margin-bottom: 15px;
+`;
+
 export const Button = styled.button`
     background-color: transparent;
     color: ${colors.basic.white};
@@ -53,6 +87,7 @@ export const Button = styled.button`
     text-align: center;
     align-items: center;
     justify-content: center;
+    margin-left: 30px;
 `;
 
 export const ButtonTwo = styled.button`
@@ -69,4 +104,5 @@ export const ButtonTwo = styled.button`
     text-align: center;
     align-items: center;
     justify-content: center;
+    margin-right: 30px;
 `;
