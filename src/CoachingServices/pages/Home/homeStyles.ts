@@ -55,7 +55,7 @@ export const Input = styled.input`
     border-radius: 5px;
     border: 1px solid ${colors.theme.darkGray};
     width: 30%;
-    /* height: 40px; */
+    height: 40px;
     margin-bottom: 15px;
     padding: 8px;
     display: flex;

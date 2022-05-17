@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import colors from '../../styles/colors';
 
 export const Container = styled.div`
+    background-color: ${colors.basic.black};
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -43,18 +44,16 @@ export const Texting = styled.h3`
 `;
 
 export const Input = styled.input`
-    background-color: ${colors.theme.hex};
-    color: ${colors.theme.silver};
+    background-color: ${colors.theme.slateGrey};
+    color: ${colors.basic.black};
     border-radius: 5px;
     border: 1px solid ${colors.theme.darkGray};
     width: 30%;
-    /* height: 40px; */
+    height: 40px;
     margin-bottom: 15px;
     padding: 8px;
+    margin-left: 35%;
     display: flex;
-    ::placeholder{
-        color: ${colors.basic.gray};
-    }
 `;
 
 export const TextAction = styled.text`
@@ -64,6 +63,7 @@ export const TextAction = styled.text`
     font-size: 16px;
     display: flex;
     margin-bottom: 15px;
+    margin-left: 43%;
 `;
 
 export const Button = styled.button`
@@ -80,7 +80,7 @@ export const Button = styled.button`
     text-align: center;
     align-items: center;
     justify-content: center;
-    margin-left: 30px;
+    margin-left: 43%;
 `;
 
 export const ButtonTwo = styled.button`

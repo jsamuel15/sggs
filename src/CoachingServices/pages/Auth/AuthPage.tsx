@@ -16,7 +16,7 @@ import ToNavigation from '../../routes/navigation';
 
 const AuthPage: React.FC = () => {
     // useState
-    const [idScreen, setIdScreen] = useState('Register');
+    const [idScreen, setIdScreen] = useState('Login');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [emailRegister, setEmailRegister] = useState('');
@@ -29,15 +29,26 @@ const AuthPage: React.FC = () => {
 
     // methods
     const GoToHome = () => {
-        // const infoUser = {
-        //     email: emailRegister,
-        //     name: nameRegister,
-        //     telephone: telephoneRegister,
-        //     CPF: CPFRegister,
-        // };
-        // localStorage.setItem('infoUser', JSON.stringify(infoUser));
+        const infoUser = {
+            email: emailRegister,
+            name: nameRegister,
+            confirmarSenha: passwordRegister,
+        };
+        localStorage.setItem('infoUser', JSON.stringify(infoUser));
         setPathRoute('/home');
         setRedirect(true);
+    };
+
+    const GoToLogin = () => {
+        setIdScreen('Login');
+    };
+
+    const GoToRecoverPassword = () => {
+        setIdScreen('RecoverPassword');
+    };
+
+    const GoToRegister = () => {
+        setIdScreen('Register');
     };
 
     const onChangeEmail = (txt: React.ChangeEvent<HTMLInputElement>) => {
@@ -70,12 +81,26 @@ const AuthPage: React.FC = () => {
 
     // renders
     const RenderFrame = () => {
+        if (idScreen === 'Login') {
+            return (
+                <Container>
+                    <Text>Login</Text>
+                    {/* <InputFree type="checkbox" name="scales" /> */}
+                    <Input type="text" placeholder="E-mail" value={email} onChange={onChangeEmail} />
+                    <Input type="password" placeholder="Senha" value={password} onChange={onChangePassword} />
+                    <TextAction>Esqueci senha</TextAction>
+                    <Button onClick={GoToHome}>Entrar</Button>
+                    <TextAction>Não tem uma conta? Clique aqui</TextAction>
+                </Container>
+            );
+        }
+
         if (idScreen === 'RecoverPassword') {
             return (
                 <Container>
                     <ContainerInner>
                         <Text>Esqueci a Senha</Text>
-                        <Input type="text" placeholder="Email" onChange={onChangeEmailRecover} />
+                        <Input type="text" placeholder="Email" value={emailRecover} onChange={onChangeEmailRecover} />
                         <TextAction>Já tem uma conta? Acesse!</TextAction>
                     </ContainerInner>
                 </Container>
@@ -87,11 +112,11 @@ const AuthPage: React.FC = () => {
                 <Container>
                     <ContainerInner>
                         <Text>Cadastro</Text>
-                        <Input type="text" placeholder="Nome" onChange={onChangeNameRegister} />
-                        <Input type="text" placeholder="Email" onChange={onChangeEmailRegister} />
-                        <Input type="password" placeholder="Senha" onChange={onChangePasswordRegister} />
-                        <Input type="password" placeholder="Confirma senha" onChange={onChangeConfirmPasswordRegister} />
-                        <TextAction onClick={GoToHome}>Já tem uma conta? Acesse</TextAction>
+                        <Input type="text" placeholder="Nome" value={nameRegister} onChange={onChangeNameRegister} />
+                        <Input type="text" placeholder="Email" value={emailRegister} onChange={onChangeEmailRegister} />
+                        <Input type="password" placeholder="Senha" value={passwordRegister} onChange={onChangePasswordRegister} />
+                        <Input type="password" placeholder="Confirma senha" value={confirmPasswordRegister} onChange={onChangeConfirmPasswordRegister} />
+                        <TextAction>Já tem uma conta? Acesse</TextAction>
                     </ContainerInner>
                 </Container>
             );
