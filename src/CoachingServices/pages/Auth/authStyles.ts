@@ -4,14 +4,7 @@ import styled from 'styled-components';
 // js
 import colors from '../../styles/colors';
 
-// interfaces
-interface Container {
-    background?: string,
-}
-
-export const Container = styled.div<Container>`
-    background-image: ${(props) => (`url(${props.background})`)};
-    background-size: cover;
+export const Container = styled.div`
     width: 100vw;
     height: 100vh;
     display: flex;
