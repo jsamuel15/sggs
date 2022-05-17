@@ -66,7 +66,7 @@ const HomePage: React.FC = () => {
             <Container>
                 <Text>Esqueci a Senha</Text>
                 <Input type="text" placeholder="Email" onChange={onChangeEmailRecover} />
-                <TextAction>Já tem uma conta? Acesse</TextAction>
+                <TextAction>Já tem uma conta? Acesse!</TextAction>
             </Container>
         );
     }
