@@ -10,12 +10,12 @@ import {
     ButtonTwo,
 } from './homeStyles';
 import {
-    escritorio2,
+    escritorio,
 } from '../../assets/index';
 
 // renders
 const HomePage: React.FC = () => (
-    <Container background={escritorio2}>
+    <Container background={escritorio}>
         {/* <ContainerInner> */}
         <Text>Serviços de Coaching</Text>
         <Texting>
@@ -23,7 +23,7 @@ const HomePage: React.FC = () => (
             consectetur adipiscing elit. Curabitur id suscipit ex.
             Suspendisse rhoncus laoreet purus quis elementum.
         </Texting>
-        <Button>SABER MAIS</Button>
+        <Button>VOLTAR</Button>
         <ButtonTwo>DEMONTAÇÃO AO VIVO</ButtonTwo>
         {/* </ContainerInner> */}
     </Container>

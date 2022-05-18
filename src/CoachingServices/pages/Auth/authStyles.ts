@@ -56,6 +56,19 @@ export const Input = styled.input`
     display: flex;
 `;
 
+export const TextTipe = styled.text`
+    border-radius: 20px;
+    color: ${colors.basic.white};
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    margin-bottom: 15px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    /* margin-left: 45%; */
+`;
+
 export const TextAction = styled.text`
     border-radius: 20px;
     color: ${colors.basic.white};
@@ -63,7 +76,10 @@ export const TextAction = styled.text`
     font-size: 16px;
     display: flex;
     margin-bottom: 15px;
-    margin-left: 43%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    /* margin-left: 43%; */
 `;
 
 export const Button = styled.button`
@@ -80,7 +96,8 @@ export const Button = styled.button`
     text-align: center;
     align-items: center;
     justify-content: center;
-    margin-left: 43%;
+    margin-left: 47%;
+    margin-bottom: 15px;
 `;
 
 export const ButtonTwo = styled.button`

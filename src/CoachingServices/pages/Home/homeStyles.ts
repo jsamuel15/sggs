@@ -87,7 +87,8 @@ export const Button = styled.button`
     text-align: center;
     align-items: center;
     justify-content: center;
-    margin-left: 30px;
+    margin-left: 47%;
+    margin-bottom: 15px;
 `;
 
 export const ButtonTwo = styled.button`
@@ -104,5 +105,6 @@ export const ButtonTwo = styled.button`
     text-align: center;
     align-items: center;
     justify-content: center;
-    margin-right: 30px;
+    margin-left: 47%;
+    margin-bottom: 15px;
 `;
