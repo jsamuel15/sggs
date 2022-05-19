@@ -119,6 +119,7 @@ const AuthPage: React.FC = () => {
     const RenderButtons = (label: string, id: 'Recover' | 'Register' | 'Login', goToClick?: any) => (
         <Button
             disabled={ValidationDisabled(id)}
+            activeCursor={ValidationDisabled(id)}
             onClick={goToClick}
         >
             {label}
@@ -134,7 +135,7 @@ const AuthPage: React.FC = () => {
                     <Input type="text" placeholder="E-mail" value={email} onChange={onChangeEmail} />
                     <Input type="password" placeholder="Senha" value={password} onChange={onChangePassword} />
                     <TextTipe onClick={GoToRecoverPassword}>Esqueci senha</TextTipe>
-                    <Button onClick={GoToHome}>Entrar</Button>
+                    <Button activeCursor={ValidationDisabled(id)} onClick={GoToHome}>Entrar</Button>
                     <TextAction onClick={GoToRegister}>Não tem uma conta? Clique aqui</TextAction>
                 </Container>
             );
