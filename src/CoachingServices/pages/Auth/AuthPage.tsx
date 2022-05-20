@@ -13,6 +13,7 @@ import {
     Button,
     ContainerInner,
 } from './authStyles';
+import auth from '../../services/auth';
 
 // components
 import ToNavigation from '../../routes/navigation';
@@ -132,16 +133,19 @@ const AuthPage: React.FC = () => {
         setConfirmPasswordRegister(txt.target.value);
     };
 
-    const Signin = () => {
+    const Signin = async () => {
         if (email.length >= 6 && password.length >= 6) {
-            if (checked) {
-                localStorage.setItem('SaveEmail', email);
+            const ApplyRequestLogin = await auth.ActionLogin(email, password);
+            if (ApplyRequestLogin?.status === 200) {
+                if (checked) {
+                    localStorage.setItem('SaveEmail', email);
+                }
+                if (!checked && GetEmail?.length > 0) {
+                    localStorage.removeItem('SaveEmail');
+                }
+                localStorage.setItem('infoUser', JSON.stringify(ApplyRequestLogin?.result));
+                window.location.replace('/home');
             }
-            if (!checked && GetEmail?.length > 0) {
-                localStorage.removeItem('SaveEmail');
-            }
-            localStorage.setItem('EmailUser', email);
-            window.location.replace('/home');
         }
     };
 

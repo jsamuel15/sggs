@@ -16,6 +16,8 @@ import {
 // renders
 const HomePage: React.FC = () => {
     const Signout = () => {
+        localStorage.removeItem('EmailUser');
+        localStorage.removeItem('infoUser');
         window.location.replace('/');
     };
 
