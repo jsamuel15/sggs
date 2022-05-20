@@ -1,6 +1,7 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 // libraries
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 // js
 import {
@@ -17,9 +18,12 @@ import {
 import ToNavigation from '../../routes/navigation';
 
 const AuthPage: React.FC = () => {
+    const GetEmail = localStorage.getItem('SaveEmail') || '';
+
     // useState
+    const [checked, setChecked] = useState(GetEmail?.length > 0);
     const [idScreen, setIdScreen] = useState('Login');
-    const [email, setEmail] = useState('');
+    const [email, setEmail] = useState(GetEmail);
     const [password, setPassword] = useState('');
     const [emailRegister, setEmailRegister] = useState('');
     const [nameRegister, setNameRegister] = useState('');
@@ -28,6 +32,15 @@ const AuthPage: React.FC = () => {
     const [emailRecover, setEmailRecover] = useState('');
     const [pathRoute, setPathRoute] = useState('');
     const [redirect, setRedirect] = useState(false);
+
+    // useEffect
+    useEffect(() => {
+        const SetUser = localStorage.getItem('infoUser') || '';
+        const GetUser = localStorage.getItem('EmailUser') || '';
+        if (GetUser.length > 0 || SetUser.length > 0) {
+            window.location.replace('/home');
+        }
+    }, []);
 
     // methods
     const GoToHome = () => {
@@ -51,6 +64,10 @@ const AuthPage: React.FC = () => {
 
     const GoToRegister = () => {
         setIdScreen('Register');
+    };
+
+    const onChangeChecked = () => {
+        setChecked(!checked);
     };
 
     const ValidationDisabled = (id: string) => {
@@ -115,6 +132,19 @@ const AuthPage: React.FC = () => {
         setConfirmPasswordRegister(txt.target.value);
     };
 
+    const Signin = () => {
+        if (email.length >= 6 && password.length >= 6) {
+            if (checked) {
+                localStorage.setItem('SaveEmail', email);
+            }
+            if (!checked && GetEmail?.length > 0) {
+                localStorage.removeItem('SaveEmail');
+            }
+            localStorage.setItem('EmailUser', email);
+            window.location.replace('/home');
+        }
+    };
+
     // renders
     const RenderButtons = (label: string, id: 'Recover' | 'Register' | 'Login', goToClick?: any) => (
         <Button
@@ -135,7 +165,7 @@ const AuthPage: React.FC = () => {
                     <Input type="text" placeholder="E-mail" value={email} onChange={onChangeEmail} />
                     <Input type="password" placeholder="Senha" value={password} onChange={onChangePassword} />
                     <TextTipe onClick={GoToRecoverPassword}>Esqueci senha</TextTipe>
-                    <Button activeCursor={ValidationDisabled(id)} onClick={GoToHome}>Entrar</Button>
+                    {RenderButtons('ENTRAR', 'Login', Signin)}
                     <TextAction onClick={GoToRegister}>Não tem uma conta? Clique aqui</TextAction>
                 </Container>
             );
