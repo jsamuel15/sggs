@@ -7,7 +7,7 @@ import {
     Text,
     Texting,
     Button,
-    // ButtonTwo,
+    ContainerInner,
 } from './homeStyles';
 import {
     escritorio,
@@ -22,17 +22,17 @@ const HomePage: React.FC = () => {
     };
 
     return (
-        <Container background={escritorio}>
-            {/* <ContainerInner> */}
-            <Text>Serviços de Coaching</Text>
-            <Texting>
-                Simple Text. Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit. Curabitur id suscipit ex.
-                Suspendisse rhoncus laoreet purus quis elementum.
-            </Texting>
-            <Button onClick={Signout}>VOLTAR</Button>
-            {/* </ContainerInner> */}
-        </Container>
+        <ContainerInner>
+            <Container background={escritorio}>
+                <Text>Serviços de Coaching</Text>
+                <Texting>
+                    Simple Text. Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit. Curabitur id suscipit ex.
+                    Suspendisse rhoncus laoreet purus quis elementum.
+                </Texting>
+                <Button onClick={Signout}>VOLTAR</Button>
+            </Container>
+        </ContainerInner>
     );
 };
 

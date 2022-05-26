@@ -22,13 +22,6 @@ export const Container = styled.div<Container>`
 
 export const ContainerInner = styled.div`
     background-color: ${colors.theme.backgroundAuth};
-    background-size: cover;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    overflow-x: auto;
 `;
 
 export const Text = styled.h1`
