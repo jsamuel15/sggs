@@ -1,5 +1,5 @@
 // libraries
-import React from 'react';
+import React, { useEffect } from 'react';
 
 // js
 import {
@@ -15,6 +15,16 @@ import {
 
 // renders
 const HomePage: React.FC = () => {
+    const SetUser = localStorage.getItem('infoUser') || '';
+    const GetUser = localStorage.getItem('EmailUser') || '';
+
+    // useEffect
+    useEffect(() => {
+        if (!GetUser && !SetUser) {
+            window.location.replace('/');
+        }
+    }, []);
+
     const Signout = () => {
         localStorage.removeItem('EmailUser');
         localStorage.removeItem('infoUser');

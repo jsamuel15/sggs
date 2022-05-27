@@ -11,6 +11,7 @@ interface Container {
 
 export const Container = styled.div<Container>`
     background-image: ${(props) => (`url(${props.background})`)};
+    background-color: ${colors.theme.backgroundAuth};
     background-size: cover;
     width: 100vw;
     height: 100vh;
@@ -22,6 +23,7 @@ export const Container = styled.div<Container>`
 
 export const ContainerInner = styled.div`
     background-color: ${colors.theme.backgroundAuth};
+    background-image: ${colors.theme.backgroundAuth};
 `;
 
 export const Text = styled.h1`
