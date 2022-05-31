@@ -59,6 +59,15 @@ export const Input = styled.input`
     padding: 8px;
     margin-left: 35%;
     display: flex;
+    @media (max-width: 800px) {
+        min-height: 30px;
+        font-size: 10px;
+    }
+    @media (max-height: 450px) {
+        min-height: 30px;
+        font-size: 10px;
+        margin-top: 2px;
+    }
 `;
 
 export const TextTipe = styled.text`

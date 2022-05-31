@@ -19,13 +19,13 @@ export const Container = styled.div<Container>`
     flex: 1;
     flex-direction: column;
     overflow-x: auto;
-    @media (max-width: 600px) {
+    @media (max-width: 300px) {
         display: none;
+        text-align: center;
     }
 `;
 
 export const ContainerInner = styled.div`
-    background-color: ${colors.theme.backgroundAuth};
     background-image: ${colors.theme.backgroundAuth};
 `;
 
@@ -34,9 +34,10 @@ export const Text = styled.h1`
     padding: 90px 300px 10px 300px;
     align-items: center;
     font-size: 70px;
+    font-weight: bold;
     text-align: center;
     @media (max-width: 800px) {
-        font-size: 20px;
+        font-size: 35px;
     }
 `;
 
@@ -62,7 +63,7 @@ export const Button = styled.button`
     border: solid 2px ${colors.basic.black};
     display: flex;
     cursor: pointer;
-    width: 90px;
+    max-width: 90px;
     height: 40px;
     border-radius: 20px;
     font-size: 12px;
@@ -72,10 +73,6 @@ export const Button = styled.button`
     justify-content: center;
     margin-left: 47%;
     margin-bottom: 15px;
-    @media (max-height: 450px) {
-        margin-top: 10px;
-        padding: 5px;
-    }
 `;
 
 export const ContainerCube = styled.div`
