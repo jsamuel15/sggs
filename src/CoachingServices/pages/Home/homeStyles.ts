@@ -19,6 +19,9 @@ export const Container = styled.div<Container>`
     flex: 1;
     flex-direction: column;
     overflow-x: auto;
+    @media (max-width: 600px) {
+        display: none;
+    }
 `;
 
 export const ContainerInner = styled.div`
@@ -32,6 +35,9 @@ export const Text = styled.h1`
     align-items: center;
     font-size: 70px;
     text-align: center;
+    @media (max-width: 800px) {
+        font-size: 20px;
+    }
 `;
 
 export const Texting = styled.h3`
@@ -41,37 +47,19 @@ export const Texting = styled.h3`
     margin-top: 10px;
     align-items: center;
     text-align: center;
-    margin-bottom: 40px;
-`;
-
-export const Input = styled.input`
-    background-color: ${colors.theme.hex};
-    color: ${colors.theme.silver};
-    border-radius: 5px;
-    border: 1px solid ${colors.theme.darkGray};
-    width: 30%;
-    height: 40px;
-    margin-bottom: 15px;
-    padding: 8px;
-    display: flex;
-    ::placeholder{
-        color: ${colors.basic.gray};
+    margin-bottom: 200px;
+    @media (max-width: 800px) {
+        font-size: 20px;
     }
-`;
-
-export const TextAction = styled.text`
-    border-radius: 20px;
-    color: ${colors.basic.black};
-    cursor: pointer;
-    font-size: 16px;
-    display: flex;
-    margin-bottom: 15px;
+    @media (max-height: 450px) {
+        font-size: 20px;
+    }
 `;
 
 export const Button = styled.button`
     background-color: transparent;
-    color: ${colors.basic.white};
-    border: solid 2px ${colors.basic.white};
+    color: ${colors.basic.black};
+    border: solid 2px ${colors.basic.black};
     display: flex;
     cursor: pointer;
     width: 90px;
@@ -84,6 +72,10 @@ export const Button = styled.button`
     justify-content: center;
     margin-left: 47%;
     margin-bottom: 15px;
+    @media (max-height: 450px) {
+        margin-top: 10px;
+        padding: 5px;
+    }
 `;
 
 export const ContainerCube = styled.div`
