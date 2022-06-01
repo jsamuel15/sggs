@@ -61,6 +61,7 @@ export const Texting = styled.h3`
         font-size: 13px;
         flex-direction: row;
         margim-bottom: 90px;
+        padding: 45px 100px 5px 100px;
     }
 `;
 
