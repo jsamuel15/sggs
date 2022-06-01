@@ -20,7 +20,6 @@ export const Container = styled.div<Container>`
     flex-direction: column;
     overflow-x: auto;
     @media (width: 600px) {
-        display: none;
         text-align: center;
     }
     @media (max-width: 300px) {
@@ -41,8 +40,12 @@ export const Text = styled.h1`
     font-size: 70px;
     font-weight: bold;
     text-align: center;
-    @media (max-width: 800px) {
+    @media (max-width: 640px) {
         font-size: 35px;
+    }
+    @media (max-width: 470px) {
+        font-size: 20px;
+        padding: 45px 100px 5px 100px;
     }
 `;
 
@@ -53,12 +56,11 @@ export const Texting = styled.h3`
     margin-top: 10px;
     align-items: center;
     text-align: center;
-    margin-bottom: 200px;
-    @media (max-width: 800px) {
-        font-size: 20px;
-    }
-    @media (max-height: 450px) {
-        font-size: 20px;
+    margin-bottom: 190px;
+    @media (max-width: 570px) {
+        font-size: 13px;
+        flex-direction: row;
+        margim-bottom: 90px;
     }
 `;
 
@@ -69,7 +71,7 @@ export const Button = styled.button`
     display: flex;
     cursor: pointer;
     max-width: 90px;
-    height: 40px;
+    max-height: 60px;
     border-radius: 20px;
     font-size: 12px;
     vertical-align: middle;
@@ -77,11 +79,12 @@ export const Button = styled.button`
     align-items: center;
     justify-content: center;
     margin-left: 47%;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 `;
 
 export const ContainerCube = styled.div`
     flex-direction: row;
+    max-width: 1060px;
 `;
 
 export const IconG = styled.img`
@@ -95,8 +98,11 @@ export const IconG = styled.img`
     justify-content: center;
     text-align: center;
     margin-left: 25px;
-    margin-bottom: 40px;
-    margin-right: 548px;
+    // margin-bottom: 40px;
+    margin-right: 250px;
+    @media (max-width: 570px) {
+        margin-right: 20px;
+    }
 `;
 
 export const IconM = styled.img`
@@ -110,7 +116,7 @@ export const IconM = styled.img`
     justify-content: center;
     text-align: center;
     margin-left: 25px;
-    margin-bottom: 40px;
+    // margin-bottom: 40px;
 `;
 
 export const IconW = styled.img`
@@ -124,7 +130,7 @@ export const IconW = styled.img`
     justify-content: center;
     text-align: center;
     margin-left: 25px;
-    margin-bottom: 40px;
+    // margin-bottom: 40px;
 `;
 
 export const IconF = styled.img`
@@ -137,5 +143,6 @@ export const IconF = styled.img`
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin-bottom: 40px;
+    // margin-bottom: 40px;
+    margin-left: 10px;
 `;
