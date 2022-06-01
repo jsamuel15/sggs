@@ -19,9 +19,14 @@ export const Container = styled.div<Container>`
     flex: 1;
     flex-direction: column;
     overflow-x: auto;
+    @media (width: 600px) {
+        display: none;
+        text-align: center;
+    }
     @media (max-width: 300px) {
         display: none;
         text-align: center;
+        justify-content: center;
     }
 `;
 
