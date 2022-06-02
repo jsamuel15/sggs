@@ -5,29 +5,11 @@ import styled from 'styled-components';
 import colors from '../../styles/colors';
 
 // interfaces
-interface ContainerInner {
+interface Container {
     background?: string,
 }
 
-export const Container = styled.div`
-    background-image: rgba(0, 0, 0, 0.5);
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    overflow-x: auto;
-    @media (width: 600px) {
-        text-align: center;
-    }
-    @media (max-width: 300px) {
-        display: none;
-        text-align: center;
-        justify-content: center;
-    }
-`;
-
-export const ContainerInner = styled.div<ContainerInner>`
+export const Container = styled.div<Container>`
     background-image: ${(props) => (`url(${props.background})`)};
     width: 100vw;
     height: 100vh;
@@ -35,6 +17,15 @@ export const ContainerInner = styled.div<ContainerInner>`
     flex: 1;
     flex-direction: column;
     overflow-x: auto;
+`;
+
+export const ContainerInner = styled.div`
+    background-image: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
     @media (width: 600px) {
         text-align: center;
     }
