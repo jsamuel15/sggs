@@ -17,6 +17,14 @@ export const Container = styled.div<Container>`
     flex: 1;
     flex-direction: column;
     overflow-x: auto;
+    @media (width: 600px) {
+        text-align: center;
+    }
+    @media (max-width: 300px) {
+        display: none;
+        text-align: center;
+        justify-content: center;
+    }
 `;
 
 export const ContainerInner = styled.div`
@@ -102,7 +110,6 @@ export const IconG = styled.img`
     justify-content: center;
     text-align: center;
     margin-left: 25px;
-    // margin-bottom: 40px;
     margin-right: 250px;
     @media (max-width: 570px) {
         margin-right: 20px;
@@ -120,7 +127,6 @@ export const IconM = styled.img`
     justify-content: center;
     text-align: center;
     margin-left: 25px;
-    // margin-bottom: 40px;
 `;
 
 export const IconW = styled.img`
@@ -134,7 +140,6 @@ export const IconW = styled.img`
     justify-content: center;
     text-align: center;
     margin-left: 25px;
-    // margin-bottom: 40px;
 `;
 
 export const IconF = styled.img`
@@ -147,6 +152,5 @@ export const IconF = styled.img`
     align-items: center;
     justify-content: center;
     text-align: center;
-    // margin-bottom: 40px;
     margin-left: 10px;
 `;
