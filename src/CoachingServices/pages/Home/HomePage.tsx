@@ -48,8 +48,8 @@ const HomePage: React.FC = () => {
     };
 
     return (
-        <ContainerInner>
-            <Container background={escritorio}>
+        <Container>
+            <ContainerInner background={escritorio}>
                 <Text>Serviços de Coaching</Text>
                 <Texting>
                     Simple Text. Lorem ipsum dolor sit amet,
@@ -63,8 +63,8 @@ const HomePage: React.FC = () => {
                     <IconW src={LogoW} onClick={NavigationWhatsApp} />
                     <IconF src={LogoF} onClick={NavigationFacebook} />
                 </ContainerCube>
-            </Container>
-        </ContainerInner>
+            </ContainerInner>
+        </Container>
     );
 };
 

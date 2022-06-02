@@ -20,7 +20,6 @@ export const Container = styled.div`
 `;
 
 export const ContainerInner = styled.div`
-    background-color: ${colors.theme.backgroundAuth};
     background-size: cover;
     width: 100vw;
     height: 100vh;

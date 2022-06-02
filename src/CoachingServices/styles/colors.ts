@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-use-before-define */
 const colors = {
     basic: {
         black: '#000000',
@@ -5,7 +7,7 @@ const colors = {
         gray: '#808080',
     },
     theme: {
-        backgroundAuth: 'linear-gradient(140deg, #3b3d41, #3b3d41, #3b3d41, #3b3d41)',
+        backgroundAuth: rgba(0, 0, 0, 0.5),
         greyHex: '#3b3d41',
         hex: '#58af9b',
         greySlate: '#7f8c8d',
@@ -17,3 +19,6 @@ const colors = {
 };
 
 export default colors;
+function rgba(arg0: number, arg1: number, arg2: number, arg3: number) {
+    throw new Error('Function not implemented.');
+}

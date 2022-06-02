@@ -5,14 +5,12 @@ import styled from 'styled-components';
 import colors from '../../styles/colors';
 
 // interfaces
-interface Container {
+interface ContainerInner {
     background?: string,
 }
 
-export const Container = styled.div<Container>`
-    background-image: ${(props) => (`url(${props.background})`)};
-    background-color: ${colors.theme.backgroundAuth};
-    background-size: cover;
+export const Container = styled.div`
+    background-image: rgba(0, 0, 0, 0.5);
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -29,8 +27,22 @@ export const Container = styled.div<Container>`
     }
 `;
 
-export const ContainerInner = styled.div`
-    background-image: ${colors.theme.backgroundAuth};
+export const ContainerInner = styled.div<ContainerInner>`
+    background-image: ${(props) => (`url(${props.background})`)};
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    overflow-x: auto;
+    @media (width: 600px) {
+        text-align: center;
+    }
+    @media (max-width: 300px) {
+        display: none;
+        text-align: center;
+        justify-content: center;
+    }
 `;
 
 export const Text = styled.h1`
