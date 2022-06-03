@@ -10,7 +10,9 @@ interface Container {
 }
 
 export const Container = styled.div<Container>`
-    background-image: ${(props) => (`url(${props.background})`)};
+    background-image: ${(props) => (`url(${props.background})`)}
+    opacity: 0.5;
+    background-size: cover;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -28,7 +30,8 @@ export const Container = styled.div<Container>`
 `;
 
 export const ContainerInner = styled.div`
-    background-image: rgba(0, 0, 0, 0.5);
+    background-image: ${colors.basic.black};
+    opacity: 0.5;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -45,6 +48,7 @@ export const ContainerInner = styled.div`
 `;
 
 export const Text = styled.h1`
+    display: flex;
     color: ${colors.basic.black};
     padding: 90px 300px 10px 300px;
     align-items: center;
@@ -73,6 +77,12 @@ export const Texting = styled.h3`
         flex-direction: row;
         margim-bottom: 90px;
         padding: 45px 100px 5px 100px;
+    }
+    @media (max-width: 470px) {
+        font-size: 10px;
+        flex-direction: row;
+        margim-bottom: 70px;
+        padding: 35px 80px 5px 80px;
     }
 `;
 
